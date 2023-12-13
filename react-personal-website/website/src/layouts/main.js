@@ -10,7 +10,7 @@ import Navbar from "../components/navbar";
 const MainLayout = () => {
   return (
     <>
-      <Stack direction={"row"}>
+      <Stack>
         <Navbar />
         <Outlet />
       </Stack>
