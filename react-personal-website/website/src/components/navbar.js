@@ -2,6 +2,8 @@ import React from "react";
 import { Box, IconButton, Stack, Tab, Tabs } from "@mui/material";
 import { InstagramLogo, LinkedinLogo } from "phosphor-react";
 
+import { NavTab, NavTabs } from "./nav-tab";
+
 
 // ---------------------------------------------------------
 
@@ -32,11 +34,11 @@ const Navbar = () => {
           {/* Navigation Tabs */}
           {/* --------------- */}
           <Stack>
-            <Tabs value={value} onChange={handleChange}>
-              <Tab label="Media" />
-              <Tab label="Links" />
-              <Tab label="Docs" />
-            </Tabs>
+            <NavTabs value={value} onChange={handleChange}>
+              <NavTab label="Media" />
+              <NavTab label="Links" />
+              <NavTab label="Docs" />
+            </NavTabs>
             {/* IIFE (Immediately Invoked Function Expressions) */}
             {(() => {
               switch (value) {
