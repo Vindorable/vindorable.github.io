@@ -1,13 +1,12 @@
-// Routes.
-import Router from "./routes";
+import React from "react";
 
 
 // ---------------------------------------------------------
 
-function App() {
+const Page404 = () => {
   return (
     <>
-      <Router />
+      404
     </>
   );
 }
@@ -15,4 +14,4 @@ function App() {
 
 // ---------------------------------------------------------
 
-export default App;
+export default Page404;
