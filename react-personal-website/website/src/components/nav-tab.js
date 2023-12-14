@@ -14,6 +14,8 @@ const NavTabs = styled(Tabs)(({ theme }) => ({
 
 // Customized Material UI Tab Component
 const NavTab = styled(Tab)(({ theme }) => ({
+  minWidth: 130,
+  width: 130,
   color: 'rgba(0, 0, 0, 0.6)',
   '&.Mui-selected': {
     color: '#fff',
