@@ -23,7 +23,27 @@ const NavTab = styled(Tab)(({ theme }) => ({
   },
 }));
 
+// Customized Material UI Tabs Component (Vertical Orientation)
+const NavTabsV = styled(Tabs)(({ theme }) => ({
+  '& .MuiTabs-indicator': {
+    width: '100%',
+    borderRadius: '8px',
+  },
+}));
+
+// Customized Material UI Tab Component (Vertical Orientation)
+const NavTabV = styled(Tab)(({ theme }) => ({
+  justifyContent: 'left',
+  minHeight: 48,
+  height: 48,
+  color: 'rgba(0, 0, 0, 0.6)',
+  '&.Mui-selected': {
+    color: '#fff',
+    zIndex: '1',
+  },
+}));
+
 
 // ---------------------------------------------------------
 
-export { NavTab, NavTabs };
+export { NavTab, NavTabs, NavTabV, NavTabsV };
