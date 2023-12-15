@@ -25,7 +25,7 @@ const Navbar = () => {
         sx={{
           backgroundColor: "#F8FAFF",
           boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.25)",
-          //height: 100,
+          height: 60,
           width: "100vw",
         }}
       >
