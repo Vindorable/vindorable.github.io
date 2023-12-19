@@ -27,6 +27,8 @@ const Work = Loadable(lazy(() => import("../pages/work")));
 const Playground = Loadable(lazy(() => import("../pages/playground")));
 const Contact = Loadable(lazy(() => import("../pages/contact")));
 
+const Pokemon = Loadable(lazy(() => import("../pages/pokemon")));
+
 const Page404 = Loadable(lazy(() => import("../pages/page-404")));
 
 
@@ -44,6 +46,8 @@ export default function Router() {
         { path: "work", element: <Work /> },
         { path: "playground", element: <Playground /> },
         { path: "contact", element: <Contact /> },
+
+        { path: "playground/pokemon", element: <Pokemon /> },
 
         { path: "404", element: <Page404 /> },
         { path: "*", element: <Navigate to="/404" replace /> },

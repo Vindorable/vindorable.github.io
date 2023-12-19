@@ -25,7 +25,7 @@ const Playground = () => {
 
   const items = [
     {
-      pathName: "/test",
+      pathName: PATH_WEBPAGE.playgroundSubpage.pokemon,
       openInNewTab: false,
       label: "Pokemon (Fan-Made)",
       icon: <NumberCircleOne size={26} />,

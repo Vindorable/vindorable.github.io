@@ -21,4 +21,7 @@ export const PATH_WEBPAGE = {
     playground: path(ROOTS_WEBPAGE, "playground"),
     contact: path(ROOTS_WEBPAGE, "contact"),
   },
+  playgroundSubpage: {
+    pokemon: path(`${ROOTS_WEBPAGE}playground/`, "pokemon")
+  },
 };
