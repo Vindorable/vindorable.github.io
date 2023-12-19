@@ -25,6 +25,14 @@ const NavTab = styled(Tab)(({ theme }) => ({
     color: '#fff',
     zIndex: '1',
   },
+  "&:hover": {
+    color: "black",
+    opacity: 1,
+    '&.Mui-selected': {
+      color: '#fff',
+      zIndex: '1',
+    },
+  }
 }));
 
 // Customized Material UI Tabs Component (Vertical Orientation)
@@ -45,6 +53,14 @@ const NavTabV = styled(Tab)(({ theme }) => ({
     color: '#fff',
     zIndex: '1',
   },
+  "&:hover": {
+    color: "black",
+    opacity: 1,
+    '&.Mui-selected': {
+      color: '#fff',
+      zIndex: '1',
+    },
+  }
 }));
 
 
