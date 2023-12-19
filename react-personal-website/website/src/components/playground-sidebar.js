@@ -58,7 +58,7 @@ const PlaygroundSidebar = () => {
 
   return (
     <>
-      <Box height={"calc(100vh - 60px)"}>
+      <Box height={"calc(100vh - 60px)"} position={"absolute"} zIndex={"100"}>
         <Stack height={"100%"} justifyContent={"space-evenly"} >
           <Box
             py={1.5}
