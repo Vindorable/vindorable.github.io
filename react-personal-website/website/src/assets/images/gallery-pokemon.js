@@ -35,6 +35,70 @@ const imageList = [
     img: importedImages[5],
     title: "",
   },
+  {
+    img: importedImages[6],
+    title: "",
+  },
+  {
+    img: importedImages[7],
+    title: "",
+  },
+  {
+    img: importedImages[8],
+    title: "",
+  },
+  {
+    img: importedImages[9],
+    title: "",
+  },
+  {
+    img: importedImages[10],
+    title: "",
+  },
+  {
+    img: importedImages[11],
+    title: "",
+  },
+  {
+    img: importedImages[12],
+    title: "",
+  },
+  {
+    img: importedImages[13],
+    title: "",
+  },
+  {
+    img: importedImages[14],
+    title: "",
+  },
+  {
+    img: importedImages[15],
+    title: "",
+  },
+  {
+    img: importedImages[16],
+    title: "",
+  },
+  {
+    img: importedImages[17],
+    title: "",
+  },
+  {
+    img: importedImages[18],
+    title: "",
+  },
+  {
+    img: importedImages[19],
+    title: "",
+  },
+  {
+    img: importedImages[20],
+    title: "",
+  },
+  {
+    img: importedImages[21],
+    title: "",
+  },
 ];
 
 
