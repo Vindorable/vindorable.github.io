@@ -16,7 +16,10 @@ const Pokemon = () => {
 
       <Stack
         p={2}
-        sx={{ width: "100vw" }}
+        sx={{
+          width: "100vw",
+          maxWidth: "100%", // This is very Important else there will be the 100vw scrollbar issue.
+        }}
       >
         <Stack
           direction={"row"}
