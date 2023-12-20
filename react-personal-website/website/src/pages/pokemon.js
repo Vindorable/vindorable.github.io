@@ -14,10 +14,13 @@ const Pokemon = () => {
     <>
       <PlaygroundSidebar />
 
-      <Stack p={2}>
+      <Stack
+        p={2}
+        sx={{ width: "100vw" }}
+      >
         <Stack
           direction={"row"}
-          sx={{ width: "100vw" }}
+          sx={{ width: "100%" }}
           justifyContent={"space-evenly"}
         >
           <Stack
@@ -26,7 +29,11 @@ const Pokemon = () => {
             sx={{
               backgroundColor: "#F8FAFF",
               boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.25)",
-              width: "60%",
+              width: {
+                xs: "auto", // 0px
+                md: "80%",  // 900px
+                lg: "60%",  // 1200px
+              },
             }}
           >
             <Typography variant="h6">
