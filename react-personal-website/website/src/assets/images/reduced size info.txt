@@ -1,0 +1,3 @@
+Png file size was reduced for web loading optimization.
+ > https://tinypng.com/
+ > https://compresspng.com/ (for files >5mb)
