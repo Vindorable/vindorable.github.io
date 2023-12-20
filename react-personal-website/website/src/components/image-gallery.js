@@ -14,15 +14,18 @@ const ImageGallery = ({ imageSet, columns, width, height, padding }) => {
     <>
       <ImageList
         sx={{
-          width: (_width * _columns) + ((_columns - 1) * _padding),
-          height: (_height * Math.ceil(imageSet.length / _columns)) + ((Math.ceil(imageSet.length / _columns) - 1) * _padding),
+          width: "auto",
+          height: "auto",
         }}
         cols={_columns}
-        rowHeight={_height}
+        rowHeight={"auto"}
         gap={_padding}
       >
         {imageSet.map((item) => (
-          <ImageListItem key={item.img}>
+          <ImageListItem
+            key={item.img}
+            sx={{ aspectRatio: 1 / 1 }}
+          >
             <img
               srcSet={`${item.img}`}
               src={`${item.img}`}
@@ -30,6 +33,8 @@ const ImageGallery = ({ imageSet, columns, width, height, padding }) => {
               style={{
                 width: _width,
                 height: _height,
+                maxWidth: "100%",
+                maxHeight: "100%",
               }}
               loading="lazy"
             />
