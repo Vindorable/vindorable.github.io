@@ -6,7 +6,7 @@ import { NumberCircleFive, NumberCircleFour, NumberCircleOne, NumberCircleThree,
 import { NavTabV, NavTabsV } from "../components/nav-tab";
 
 // Routes.
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { PATH_WEBPAGE } from "../routes/paths";
 
 
@@ -14,6 +14,7 @@ import { PATH_WEBPAGE } from "../routes/paths";
 
 const PlaygroundSidebar = () => {
   const theme = useTheme();
+  const navigate = useNavigate();
 
   // Tabs.
   const [value, setValue] = React.useState(0);
@@ -26,31 +27,31 @@ const PlaygroundSidebar = () => {
   const items = [
     {
       pathName: PATH_WEBPAGE.playgroundSubpage.pokemon,
-      openInNewTab: false,
+      externalLink: false,
       label: "Pokemon (Fan-Made)",
       icon: <NumberCircleOne size={26} />,
     },
     {
       pathName: "/test",
-      openInNewTab: false,
+      externalLink: false,
       label: "Mobile Games",
       icon: <NumberCircleTwo size={26} />,
     },
     {
       pathName: "/test",
-      openInNewTab: false,
+      externalLink: false,
       label: "7 Second Vines",
       icon: <NumberCircleThree size={26} />,
     },
     {
       pathName: "http://www.google.com/",
-      openInNewTab: true,
+      externalLink: true,
       label: "Clothing (Unruly Gent)",
       icon: <NumberCircleFour size={26} />,
     },
     {
       pathName: "/test",
-      openInNewTab: false,
+      externalLink: false,
       label: "Don't Stave Together Mods",
       icon: <NumberCircleFive size={26} />,
     },
@@ -92,7 +93,13 @@ const PlaygroundSidebar = () => {
                     icon={item.icon}
                     iconPosition="start"
                     label={labelVisibility && item.label}
-                    onClick={() => window.open(item.pathName, (item.openInNewTab ? "_blank" : "_self"))}
+                    // onClick={() => window.open(item.pathName, (item.openInNewTab ? "_blank" : "_self"))}
+                    onClick={() =>
+                      item.externalLink ?
+                        window.open(item.pathName, "_blank")
+                        :
+                        navigate(item.pathName)
+                    }
                   />
                 ))}
               </NavTabsV>
