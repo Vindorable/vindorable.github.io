@@ -20,6 +20,9 @@ const Pokemon = () => {
         sx={{
           width: "100vw",
           maxWidth: "100%", // This is very Important else there will be the 100vw scrollbar issue.
+          flexGrow: 1,
+          height: "100%",
+          overflowY: "scroll",
         }}
       >
         <Stack

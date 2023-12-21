@@ -11,7 +11,7 @@ import Navbar02 from "../components/navbar-02";
 const MainLayout = () => {
   return (
     <>
-      <Stack>
+      <Stack height={"100%"} maxHeight={"100vh"} width={"auto"}>
         <Navbar02 />
         <Outlet />
       </Stack>
