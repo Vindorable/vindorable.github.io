@@ -3,6 +3,7 @@ import { Divider, List, ListItem, Stack, Typography } from "@mui/material";
 
 import PlaygroundSidebar from "../components/playground-sidebar";
 import ImageGallery from "../components/image-gallery";
+import YoutubeEmbed from "../components/youtube-embed";
 
 import { imageList as PokemonImages } from "../assets/images/gallery-pokemon";
 
@@ -97,6 +98,12 @@ const Pokemon = () => {
                 height={164}
                 width={164}
               />
+            </Stack>
+
+            <Stack direction={"row"} justifyContent={"space-evenly"}>
+              <Stack width={"60%"}>
+                <YoutubeEmbed embedId={"E7GK102Bw-E"} />
+              </Stack>
             </Stack>
           </Stack>
         </Stack>
