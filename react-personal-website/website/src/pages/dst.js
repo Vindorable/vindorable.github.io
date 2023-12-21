@@ -10,7 +10,6 @@ import DSTDotaWeaponData from "../components/dst-dota-weapon-data";
 const DST = () => {
   return (
     <>
-      DST
       <PlaygroundSidebar />
 
       <Stack
@@ -94,6 +93,189 @@ const DST = () => {
                   </Stack>
                   <Typography variant="body2">
                     Weapon is not upgradable (some weapons can be upgraded to form a stronger version of itself).
+                  </Typography>
+                </Stack>
+              }
+
+              disclaimer={
+                <Typography variant="body2">
+                  This weapon art is based of this. <br />
+                  The weapon is adapted, modified, and/or build upon its original content to fit the Don't Starve Together's gameplay.
+                </Typography>
+              }
+            />
+
+            <DSTDotaWeaponData
+              weaponName={"KRAKEN BRINGER"}
+
+              dotaHeroName={"Kunkka"}
+
+              releaseStatus={"Public Release"}
+
+              lore={
+                <Typography variant="body2">
+                  Anyone who holds the Krakenbringer feels a greater presence gravitating on them. Some say the blade is the vengeful Kraken himself. Even though, it has the power to command it's brethren in battle, those careless find themselves entangled in psychosis. After all, the Kraken is still alive and breathing...
+                </Typography>
+              }
+
+              abilities={
+                <Stack p={0.75}>
+                  <Typography variant="body2">
+                    <List sx={{ listStyleType: 'disc', padding: "0" }}>
+                      <ListItem sx={{ display: 'list-item', listStylePosition: "inside", padding: "0" }}>
+                        Has 150 uses with 41 damage.
+                      </ListItem>
+                      <ListItem sx={{ display: 'list-item', listStylePosition: "inside", padding: "0" }}>
+                        Drains sanity similar to the Night Sword when equipped.
+                      </ListItem>
+                      <ListItem sx={{ display: 'list-item', listStylePosition: "inside", padding: "0" }}>
+                        Every hit spawns a Tentacle, Kraken Brethren, to support you in battle. Kraken Brethren only hits once and does same damage as the Tentacle.
+                      </ListItem>
+                    </List>
+                  </Typography>
+                </Stack>
+              }
+
+              moreInfo={
+                <Stack>
+                  <Typography variant="body2">
+                    Found under the War (weapons) tab. Weapon recipe configuration available:
+                  </Typography>
+                  <Stack p={0.75}>
+                    <Typography variant="body2">
+                      <List sx={{ listStyleType: 'disc', padding: "0" }}>
+                        <ListItem sx={{ display: 'list-item', listStylePosition: "inside", padding: "0" }}>
+                          Easy - Tentacle Spots=2, Tentacle Spike=1, Gold Nugget=4
+                        </ListItem>
+                        <ListItem sx={{ display: 'list-item', listStylePosition: "inside", padding: "0" }}>
+                          Normal - Tentacle Spots=6, Tentacle Spike=3, Gold Nugget=8
+                        </ListItem>
+                        <ListItem sx={{ display: 'list-item', listStylePosition: "inside", padding: "0" }}>
+                          Hard - Tentacle Spots=8, Tentacle Spike=6, Gold Nugget=12
+                        </ListItem>
+                      </List>
+                    </Typography>
+                  </Stack>
+                  <Typography variant="body2">
+                    Weapon is not upgradable (some weapons can be upgraded to form a stronger version of itself).
+                  </Typography>
+                </Stack>
+              }
+
+              disclaimer={
+                <Typography variant="body2">
+                  This weapon art is based of this. <br />
+                  The weapon is adapted, modified, and/or build upon its original content to fit the Don't Starve Together's gameplay.
+                </Typography>
+              }
+            />
+
+            <DSTDotaWeaponData
+              weaponName={"WULDASTRON"}
+
+              dotaHeroName={"Sven"}
+
+              releaseStatus={"Private Release (don't ask me for it..)"}
+
+              lore={
+                <Typography variant="body2">
+                  A blade that can only be held by the mightiest. A blade that brings great honour. Wuldastron is the most prized great sword amongst the Kings that has been passed down for generations to only those worthy. It's swift judgement leaves no one to question it's wielder's ulterior motives.
+                </Typography>
+              }
+
+              abilities={
+                <Stack p={0.75}>
+                  <Typography variant="body2">
+                    <List sx={{ listStyleType: 'disc', padding: "0" }}>
+                      <ListItem sx={{ display: 'list-item', listStylePosition: "inside", padding: "0" }}>
+                        [Not Comfirmed]
+                      </ListItem>
+                    </List>
+                  </Typography>
+                </Stack>
+              }
+
+              moreInfo={
+                <Stack>
+                  <Typography variant="body2">
+                    Found under the War (weapons) tab. Weapon recipe configuration available:
+                  </Typography>
+                  <Stack p={0.75}>
+                    <Typography variant="body2">
+                      <List sx={{ listStyleType: 'disc', padding: "0" }}>
+                        <ListItem sx={{ display: 'list-item', listStylePosition: "inside", padding: "0" }}>
+                          Easy - [Not Comfirmed]
+                        </ListItem>
+                        <ListItem sx={{ display: 'list-item', listStylePosition: "inside", padding: "0" }}>
+                          Normal - [Not Comfirmed]
+                        </ListItem>
+                        <ListItem sx={{ display: 'list-item', listStylePosition: "inside", padding: "0" }}>
+                          Hard - [Not Comfirmed]
+                        </ListItem>
+                      </List>
+                    </Typography>
+                  </Stack>
+                  <Typography variant="body2">
+                    Weapon is upgradable to an evil and stronger version - the Cursed Wuldast.
+                  </Typography>
+                </Stack>
+              }
+
+              disclaimer={
+                <Typography variant="body2">
+                  This weapon art is based of this. <br />
+                  The weapon is adapted, modified, and/or build upon its original content to fit the Don't Starve Together's gameplay.
+                </Typography>
+              }
+            />
+
+            <DSTDotaWeaponData
+              weaponName={"CURSED WULDAST"}
+
+              dotaHeroName={"Sven"}
+
+              releaseStatus={"Private Release (don't ask me for it..)"}
+
+              lore={
+                <Typography variant="body2">
+                  ...darkness...
+                </Typography>
+              }
+
+              abilities={
+                <Stack p={0.75}>
+                  <Typography variant="body2">
+                    <List sx={{ listStyleType: 'disc', padding: "0" }}>
+                      <ListItem sx={{ display: 'list-item', listStylePosition: "inside", padding: "0" }}>
+                        [Not Comfirmed]
+                      </ListItem>
+                    </List>
+                  </Typography>
+                </Stack>
+              }
+
+              moreInfo={
+                <Stack>
+                  <Typography variant="body2">
+                    Found under the War (weapons) tab. Weapon recipe configuration available:
+                  </Typography>
+                  <Stack p={0.75}>
+                    <Typography variant="body2">
+                      <List sx={{ listStyleType: 'disc', padding: "0" }}>
+                        <ListItem sx={{ display: 'list-item', listStylePosition: "inside", padding: "0" }}>
+                          Easy - [Not Comfirmed]
+                        </ListItem>
+                        <ListItem sx={{ display: 'list-item', listStylePosition: "inside", padding: "0" }}>
+                          Normal - [Not Comfirmed]
+                        </ListItem>
+                        <ListItem sx={{ display: 'list-item', listStylePosition: "inside", padding: "0" }}>
+                          Hard - [Not Comfirmed]
+                        </ListItem>
+                      </List>
+                    </Typography>
+                  </Stack>
+                  <Typography variant="body2">
+                    Weapon is an upgraded version of Wuldastron.
                   </Typography>
                 </Stack>
               }
