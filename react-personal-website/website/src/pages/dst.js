@@ -3,6 +3,10 @@ import { Box, List, ListItem, Stack, Typography } from "@mui/material";
 
 import PlaygroundSidebar from "../components/playground-sidebar";
 import DSTDotaWeaponData from "../components/dst-dota-weapon-data";
+import NIGHTMAREBLADE from "../assets/images/dst/NIGHTMARE BLADE.png"
+import KRAKENBRINGER from "../assets/images/dst/KRAKEN BRINGER.png"
+import WULDASTRON from "../assets/images/dst/WULDASTRON.png"
+import CURSEDWULDAST from "../assets/images/dst/CURSED WULDAST.png"
 
 
 // ---------------------------------------------------------
@@ -41,6 +45,8 @@ const DST = () => {
             }}
           >
             <DSTDotaWeaponData
+              weaponIcon={NIGHTMAREBLADE}
+
               weaponName={"NIGHTMARE BLADE"}
 
               dotaHeroName={"Axe"}
@@ -106,6 +112,8 @@ const DST = () => {
             />
 
             <DSTDotaWeaponData
+              weaponIcon={KRAKENBRINGER}
+
               weaponName={"KRAKEN BRINGER"}
 
               dotaHeroName={"Kunkka"}
@@ -171,6 +179,8 @@ const DST = () => {
             />
 
             <DSTDotaWeaponData
+              weaponIcon={WULDASTRON}
+
               weaponName={"WULDASTRON"}
 
               dotaHeroName={"Sven"}
@@ -230,6 +240,8 @@ const DST = () => {
             />
 
             <DSTDotaWeaponData
+              weaponIcon={CURSEDWULDAST}
+
               weaponName={"CURSED WULDAST"}
 
               dotaHeroName={"Sven"}

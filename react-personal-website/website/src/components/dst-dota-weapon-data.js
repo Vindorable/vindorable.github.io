@@ -18,7 +18,7 @@ const BoxText = styled(Box)(({ theme }) => ({
 
 // ---------------------------------------------------------
 
-const DSTDotaWeaponData = ({ weaponName, dotaHeroName, releaseStatus, lore, abilities, moreInfo, disclaimer }) => {
+const DSTDotaWeaponData = ({ weaponIcon, weaponName, dotaHeroName, releaseStatus, lore, abilities, moreInfo, disclaimer }) => {
   // Tabs.
   const [value, setValue] = React.useState(0);
   const handleChange = (event, newValue) => {
@@ -28,10 +28,18 @@ const DSTDotaWeaponData = ({ weaponName, dotaHeroName, releaseStatus, lore, abil
   return (
     <>
       <Stack>
-        <Stack>
-          <Typography variant="h6">{weaponName}</Typography>
-          <Typography variant="body2">{dotaHeroName}'s weapon.</Typography>
-          <Typography variant="body2">Status: {releaseStatus}</Typography>
+        <Stack direction={"row"} spacing={2}>
+          <Box
+            component="img"
+            sx={{ width: "150px", height: "auto", }}
+            alt=""
+            src={weaponIcon}
+          />
+          <Stack>
+            <Typography variant="h6">{weaponName}</Typography>
+            <Typography variant="body2">{dotaHeroName}'s weapon.</Typography>
+            <Typography variant="body2">Status: {releaseStatus}</Typography>
+          </Stack>
         </Stack>
 
         <NavTabs value={value} onChange={handleChange}>
