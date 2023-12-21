@@ -50,7 +50,7 @@ const PlaygroundSidebar = () => {
       icon: <NumberCircleFour size={26} />,
     },
     {
-      pathName: "/test",
+      pathName: PATH_WEBPAGE.playgroundSubpage.dst,
       externalLink: false,
       label: "Don't Stave Together Mods",
       icon: <NumberCircleFive size={26} />,

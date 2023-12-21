@@ -22,6 +22,7 @@ export const PATH_WEBPAGE = {
     contact: path(ROOTS_WEBPAGE, "contact"),
   },
   playgroundSubpage: {
-    pokemon: path(`${ROOTS_WEBPAGE}playground/`, "pokemon")
+    pokemon: path(`${ROOTS_WEBPAGE}playground/`, "pokemon"),
+    dst: path(`${ROOTS_WEBPAGE}playground/`, "dst"),
   },
 };
