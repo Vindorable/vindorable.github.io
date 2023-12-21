@@ -40,6 +40,10 @@ const Pokemon = () => {
               },
             }}
           >
+            <Typography variant="h5">
+              THE BACKGROUND STORY
+            </Typography>
+
             <Typography variant="h6">
               Why Pokemon?
             </Typography>
@@ -92,6 +96,15 @@ const Pokemon = () => {
               </Typography>
             </Stack>
 
+            <Divider />
+
+            <Typography variant="h5">
+              MY POKEMON FAN-WORKS
+            </Typography>
+
+            <Typography variant="h6">
+              Adding 3D Pokemons To Real-Life Images, Etc (2019)
+            </Typography>
             <Stack direction={"row"} justifyContent={"space-evenly"}>
               <ImageGallery
                 imageSet={PokemonImages}
@@ -100,9 +113,33 @@ const Pokemon = () => {
               />
             </Stack>
 
-            <Stack direction={"row"} justifyContent={"space-evenly"}>
-              <Stack width={"60%"}>
+            <Typography variant="h6">
+              Live-action with Charmander - My First Starter (2019)
+            </Typography>
+            <Stack direction={"row"} justifyContent={"space-evenly"} width={"100%"}>
+              <Stack width={"100%"} maxWidth={"800px"}>
                 <YoutubeEmbed embedId={"E7GK102Bw-E"} />
+              </Stack>
+            </Stack>
+
+            <Typography variant="h6">
+              Outros for my YouTube Videos with Aron (2015)
+            </Typography>
+            <Stack p={0.75}>
+              <Typography variant="body2">
+                There was a time when I was really free... Ahh, how I wish I could go back in time... *snap* Oh sorry!
+                <br /><br />
+                So, these are the couple of different outros I did for my YouTube videos.
+              </Typography>
+            </Stack>
+            <Stack direction={"row"} justifyContent={"space-evenly"} width={"100%"}>
+              <Stack width={"100%"} maxWidth={"800px"}>
+                <YoutubeEmbed embedId={"foiH9YqUvs4?rel=0&showinfo=0&autohide=1&start=102"} />
+              </Stack>
+            </Stack>
+            <Stack direction={"row"} justifyContent={"space-evenly"} width={"100%"}>
+              <Stack width={"100%"} maxWidth={"800px"}>
+                <YoutubeEmbed embedId={"2O1720q1vpA?rel=0&showinfo=0&autohide=1&start=137"} />
               </Stack>
             </Stack>
           </Stack>
