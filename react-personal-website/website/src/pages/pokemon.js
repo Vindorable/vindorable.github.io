@@ -1,5 +1,6 @@
 import React from "react";
 import { Divider, List, ListItem, Stack, Typography } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 import PlaygroundSidebar from "../components/playground-sidebar";
 import ImageGallery from "../components/image-gallery";
@@ -11,6 +12,8 @@ import { imageList as PokemonImages } from "../assets/images/gallery-pokemon";
 // ---------------------------------------------------------
 
 const Pokemon = () => {
+  const theme = useTheme();
+
   return (
     <>
       <PlaygroundSidebar />
@@ -34,7 +37,8 @@ const Pokemon = () => {
             spacing={1}
             p={3}
             sx={{
-              backgroundColor: "#F8FAFF",
+              //backgroundColor: theme.palette.mode === "light" ? "#FFFF00" : "#EE9626",
+              backgroundColor: theme.palette.background.test,
               boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.25)",
               width: {
                 xs: "auto", // 0px

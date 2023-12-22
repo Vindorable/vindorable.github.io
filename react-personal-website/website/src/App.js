@@ -1,13 +1,18 @@
 // Routes.
 import Router from "./routes";
 
+// Theme.
+import ThemeProvider from "./theme";
+
 
 // ---------------------------------------------------------
 
 function App() {
   return (
     <>
-      <Router />
+      <ThemeProvider>
+        <Router />
+      </ThemeProvider>
     </>
   );
 }
