@@ -6,7 +6,7 @@ import { styled, useTheme } from "@mui/material/styles";
 // ---------------------------------------------------------
 
 // https://stackoverflow.com/a/70613180
-const ImageListGallery = styled('ul')(({ theme }) => ({
+const ImageListGallery = styled('ul')(({ theme, cols }) => ({
   display: 'grid',
   padding: 0,
   margin: 0,
@@ -15,23 +15,27 @@ const ImageListGallery = styled('ul')(({ theme }) => ({
   rowHeight: "auto",
   gap: 12,
   [theme.breakpoints.up('xs')]: {
-    gridTemplateColumns: 'repeat(3, 1fr)'
+    gridTemplateColumns: cols < 3 ? `repeat(${cols}, 1fr)` : 'repeat(3, 1fr)'
+    //gridTemplateColumns: 'repeat(3, 1fr)'
   },
   [theme.breakpoints.up('sm')]: {
-    gridTemplateColumns: 'repeat(4, 1fr)'
+    gridTemplateColumns: cols < 4 ? `repeat(${cols}, 1fr)` : 'repeat(4, 1fr)'
+    //gridTemplateColumns: 'repeat(4, 1fr)'
   },
   [theme.breakpoints.up('md')]: {
-    gridTemplateColumns: 'repeat(5, 1fr)'
+    gridTemplateColumns: cols < 5 ? `repeat(${cols}, 1fr)` : 'repeat(5, 1fr)'
+    //gridTemplateColumns: 'repeat(5, 1fr)'
   },
   [theme.breakpoints.up('lg')]: {
-    gridTemplateColumns: 'repeat(5, 1fr)'
+    gridTemplateColumns: cols < 5 ? `repeat(${cols}, 1fr)` : 'repeat(5, 1fr)'
+    //gridTemplateColumns: 'repeat(5, 1fr)'
   },
 }));
 
 
 // ---------------------------------------------------------
 
-const ImageGallery = ({ imageSet, width, height }) => {
+const ImageGallery = ({ imageSet, width, height, columns }) => {
   const theme = useTheme();
 
   const _width = width;
@@ -39,7 +43,7 @@ const ImageGallery = ({ imageSet, width, height }) => {
 
   return (
     <>
-      <ImageListGallery>
+      <ImageListGallery cols={columns}>
         {imageSet.map((item) => (
           <ImageListItem
             key={item.img}
