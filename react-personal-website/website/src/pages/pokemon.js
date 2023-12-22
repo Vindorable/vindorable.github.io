@@ -38,7 +38,7 @@ const Pokemon = () => {
             p={3}
             sx={{
               //backgroundColor: theme.palette.mode === "light" ? "#FFFF00" : "#EE9626",
-              backgroundColor: theme.palette.background.test,
+              backgroundColor: theme.palette.background.paper,
               boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.25)",
               width: {
                 xs: "auto", // 0px

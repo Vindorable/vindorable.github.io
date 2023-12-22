@@ -1,5 +1,6 @@
 import React from "react";
 import { Box, Icon, Stack, Typography } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 import { UserCircle } from "phosphor-react";
 
 import { NavTab, NavTabs } from "./nav-tab";
@@ -12,6 +13,8 @@ import { PATH_WEBPAGE } from "../routes/paths";
 // ---------------------------------------------------------
 
 const Navbar = () => {
+  const theme = useTheme();
+
   // Tabs.
   const [value, setValue] = React.useState(0);
   const handleChange = (event, newValue) => {
@@ -23,8 +26,8 @@ const Navbar = () => {
       <Box
         p={2} // 2 * 8 (mui internal value) = 16px
         sx={{
-          backgroundColor: "#F8FAFF",
-          boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.25)",
+          backgroundColor: theme.palette.background.default,
+          boxShadow: `0px 0px 2px ${theme.palette.dividerCustom.strong}`,
           height: 60,
           width: "100vw",
           maxWidth: "100%", // This is very Important else there will be the 100vw scrollbar issue.

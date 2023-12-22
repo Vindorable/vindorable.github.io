@@ -11,6 +11,10 @@ const NavTabs = styled(Tabs)(({ theme }) => ({
   '& .MuiTabs-indicator': {
     height: '100%',
     borderRadius: '22px',
+    backgroundColor: theme.palette.background.defaultInverse,
+  },
+  '& .MuiTouchRipple-root': {
+    display: 'none',
   },
 }));
 
@@ -20,16 +24,16 @@ const NavTab = styled(Tab)(({ theme }) => ({
   height: 40, // Default = 48px
   minWidth: 130,
   width: 130,
-  color: 'rgba(0, 0, 0, 0.6)',
+  color: theme.palette.text.disabled,
   '&.Mui-selected': {
-    color: '#fff',
+    color: theme.palette.background.default,
     zIndex: '1',
   },
   "&:hover": {
-    color: "black",
+    color: theme.palette.text.primary,
     opacity: 1,
     '&.Mui-selected': {
-      color: '#fff',
+      color: theme.palette.background.default,
       zIndex: '1',
     },
   }
