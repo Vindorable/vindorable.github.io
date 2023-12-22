@@ -3,11 +3,18 @@ import { Box, Divider, List, ListItem, Stack, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 import PlaygroundSidebar from "../components/playground-sidebar";
+
+import DSTModData from "../components/dst-mod-data";
+
+import BootyPackModBanner from "../assets/images/dst/01-booty-pack-mod/dst+bday+cake+mod+steam+dp.png";
+import BootyPackDescArt from "../assets/images/dst/01-booty-pack-mod/dst+bday+cake+mod+desc+art.png";
+import { imageList as PokemonImages } from "../assets/images/gallery-pokemon";
+
 import DSTDotaWeaponData from "../components/dst-dota-weapon-data";
-import NIGHTMAREBLADE from "../assets/images/dst/NIGHTMARE BLADE.png"
-import KRAKENBRINGER from "../assets/images/dst/KRAKEN BRINGER.png"
-import WULDASTRON from "../assets/images/dst/WULDASTRON.png"
-import CURSEDWULDAST from "../assets/images/dst/CURSED WULDAST.png"
+import NIGHTMAREBLADE from "../assets/images/dst/03-dota-weapons-mod/NIGHTMARE BLADE.png"
+import KRAKENBRINGER from "../assets/images/dst/03-dota-weapons-mod/KRAKEN BRINGER.png"
+import WULDASTRON from "../assets/images/dst/03-dota-weapons-mod/WULDASTRON.png"
+import CURSEDWULDAST from "../assets/images/dst/03-dota-weapons-mod/CURSED WULDAST.png"
 
 
 // ---------------------------------------------------------
@@ -47,6 +54,35 @@ const DST = () => {
               },
             }}
           >
+
+            <DSTModData
+              modBanner={BootyPackModBanner}
+              modName={"BIRTHDAY CAKE (+CREATOR KIT)"}
+              modShortDesc={<>
+                Do you play DST often with your love ones?
+                <br />
+                Do you wish you can show them your love through one of your favourite games?
+                <br />
+                If so, this mod is just the tool for you! You can even have <b>their name on the cake!</b>
+              </>}
+              modDescArt={BootyPackDescArt}
+              modScreenshots={PokemonImages}
+              modLongDesc={<>
+                Yes! You can now create a custom named birthday cake for your special someone!
+                <br /><br />
+                The cake does not appear in any tabs. You have to use to console to spawn it.
+                <br />
+                Why? Because this is a birthday cake that should only be baked on someone's birthday!
+                <br /><br />
+                It provides 100 hunger, 100 sanity and 100 health once eaten.
+                <br />
+                To spawn the basic "HAPPY" and "BIRTHDAY" cakes that is provided, copy / paste this codes in the console:
+
+              </>}
+            />
+
+            <Divider />
+
             <DSTDotaWeaponData
               weaponIcon={NIGHTMAREBLADE}
 

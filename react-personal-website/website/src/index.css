@@ -4,6 +4,10 @@ html {
   padding: 0;
 }
 
+/* body {
+  background-image: url(https://desktop.github.com/images/star-bg.svg);
+} */
+
 * {
   box-sizing: border-box;
 }
