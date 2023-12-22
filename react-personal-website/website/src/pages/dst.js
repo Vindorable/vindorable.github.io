@@ -1,5 +1,6 @@
 import React from "react";
-import { Box, List, ListItem, Stack, Typography } from "@mui/material";
+import { Box, Divider, List, ListItem, Stack, Typography } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
 
 import PlaygroundSidebar from "../components/playground-sidebar";
 import DSTDotaWeaponData from "../components/dst-dota-weapon-data";
@@ -12,6 +13,8 @@ import CURSEDWULDAST from "../assets/images/dst/CURSED WULDAST.png"
 // ---------------------------------------------------------
 
 const DST = () => {
+  const theme = useTheme();
+
   return (
     <>
       <PlaygroundSidebar />
@@ -35,7 +38,7 @@ const DST = () => {
             spacing={1}
             p={3}
             sx={{
-              backgroundColor: "#F8FAFF",
+              backgroundColor: theme.palette.background.paper,
               boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.25)",
               width: {
                 xs: "auto", // 0px
@@ -111,6 +114,8 @@ const DST = () => {
               }
             />
 
+            <Divider sx={{ visibility: "hidden", borderBottomWidth: 10 }} />
+
             <DSTDotaWeaponData
               weaponIcon={KRAKENBRINGER}
 
@@ -178,6 +183,8 @@ const DST = () => {
               }
             />
 
+            <Divider sx={{ visibility: "hidden", borderBottomWidth: 10 }} />
+
             <DSTDotaWeaponData
               weaponIcon={WULDASTRON}
 
@@ -238,6 +245,8 @@ const DST = () => {
                 </Typography>
               }
             />
+
+            <Divider sx={{ visibility: "hidden", borderBottomWidth: 10 }} />
 
             <DSTDotaWeaponData
               weaponIcon={CURSEDWULDAST}

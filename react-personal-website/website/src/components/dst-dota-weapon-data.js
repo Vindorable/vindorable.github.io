@@ -9,8 +9,9 @@ import { NavTab, NavTabs } from "./nav-tab";
 
 const BoxText = styled(Box)(({ theme }) => ({
   padding: "calc(1.25 * 8px)",
-  backgroundColor: "#F8FAFF",
-  boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.25)",
+  backgroundColor: "rgb(12, 12, 12)",
+  borderRadius: "8px",
+  boxShadow: `0px 0px 2px ${theme.palette.dividerCustom.strong}`,
   width: "100%",
   height: "auto",
 }));
@@ -27,7 +28,7 @@ const DSTDotaWeaponData = ({ weaponIcon, weaponName, dotaHeroName, releaseStatus
 
   return (
     <>
-      <Stack>
+      <Stack spacing={1.25}>
         <Stack direction={"row"} spacing={2}>
           <Box
             component="img"
