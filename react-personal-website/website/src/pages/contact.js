@@ -117,6 +117,7 @@ const Contact = () => {
                   <FormHelperText id="message">Please do not include confidential or sensitive information in your message.</FormHelperText>
                   <TextField
                     fullWidth
+                    multiline
                     id="message"
                     name="message"
                     label="* Message"
