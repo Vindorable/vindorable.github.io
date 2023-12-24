@@ -69,6 +69,14 @@ const Contact = () => {
     },
   });
 
+  function resetFormikFieldCondition(fieldName, compareOne, isNotCompareTwo) {
+    if (compareOne !== isNotCompareTwo) {
+      formik.setFieldValue(fieldName, "", false)
+      formik.setFieldTouched(fieldName, false, false);
+      formik.setFieldError(fieldName, false, false);
+    }
+  };
+
   return (
     <>
       <Stack
@@ -132,8 +140,14 @@ const Contact = () => {
                   name="purpose"
                   label="* Purpose"
                   value={formik.values.purpose}
-                  onChange={formik.handleChange}
-                  onBlur={formik.handleBlur}
+                  onChange={(e) => {
+                    formik.handleChange(e);
+                    resetFormikFieldCondition("mobileGame", formik.values.purpose, "Mobile Games");
+                  }}
+                  onBlur={(e) => {
+                    formik.handleBlur(e);
+                    resetFormikFieldCondition("mobileGame", formik.values.purpose, "Mobile Games");
+                  }}
                   error={formik.touched.purpose && Boolean(formik.errors.purpose)}
                   helperText={formik.touched.purpose && formik.errors.purpose}
                 >
