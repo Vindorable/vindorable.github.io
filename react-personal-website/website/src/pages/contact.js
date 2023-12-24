@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, FormHelperText, Stack, TextField, Typography } from "@mui/material";
+import { Button, FormControlLabel, FormHelperText, MenuItem, Radio, RadioGroup, Stack, TextField, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 import { useFormik } from "formik";
@@ -16,6 +16,18 @@ const validationSchema = yup.object({
     .string("Enter your email.")
     .email("Enter a valid email.")
     .required("Email is required."),
+  purpose: yup
+    .string("Enter your purpose.")
+    .required("Purpose is required."),
+  mobileGame: yup
+    .string().when("purpose", {
+      is: (purpose) => (purpose === "Mobile Games"),
+      then: () => yup
+        .string("Select your game.")
+        .required("Game selection is required."),
+      otherwise: () => yup
+        .string(),
+    }),
   subject: yup
     .string("Enter your subject.")
     .required("Subject is required."),
@@ -24,6 +36,17 @@ const validationSchema = yup.object({
     .min(5, "Message is too short.")
     .required("Message is required."),
 });
+
+const purposeOptions = [
+  "General",
+  "Mobile Games",
+];
+
+const mobileGames = [
+  "Frankrit Eats Meat",
+  "Shark-A-Boom",
+  "Dino with a Gun",
+];
 
 
 // ---------------------------------------------------------
@@ -35,6 +58,8 @@ const Contact = () => {
     initialValues: {
       name: "",
       email: "",
+      purpose: "",
+      mobileGame: "",
       subject: "",
       message: "",
     },
@@ -99,6 +124,62 @@ const Contact = () => {
                   error={formik.touched.email && Boolean(formik.errors.email)}
                   helperText={formik.touched.email && formik.errors.email}
                 />
+
+                <TextField
+                  fullWidth
+                  select
+                  id="purpose"
+                  name="purpose"
+                  label="* Purpose"
+                  value={formik.values.purpose}
+                  onChange={formik.handleChange}
+                  onBlur={formik.handleBlur}
+                  error={formik.touched.purpose && Boolean(formik.errors.purpose)}
+                  helperText={formik.touched.purpose && formik.errors.purpose}
+                >
+                  {purposeOptions.map((option, index) => (
+                    <MenuItem key={index} value={option}>
+                      {option}
+                    </MenuItem>
+                  ))}
+                </TextField>
+
+                {formik.values.purpose === "Mobile Games" &&
+                  <RadioGroup sx={{ px: "20px" }}>
+                    <Typography
+                      variant="body2"
+                      color={formik.touched["mobileGame"] && formik.errors["mobileGame"] && theme.palette.error.main}
+                    >
+                      * Select the game:
+                    </Typography>
+                    {mobileGames.map((option, index) => (
+                      <FormControlLabel
+                        key={index}
+                        id="mobileGame"
+                        name="mobileGame"
+                        label={<Typography variant="body2">{option}</Typography>}
+                        value={option}
+                        onChange={formik.handleChange}
+                        onBlur={formik.handleBlur}
+                        error={formik.touched.mobileGame && Boolean(formik.errors.mobileGame)}
+                        helperText={formik.touched.mobileGame && formik.errors.mobileGame}
+                        control={<Radio
+                          sx={{
+                            color: formik.touched["mobileGame"] && formik.errors["mobileGame"] && theme.palette.error.main
+                          }}
+                        />}
+                        sx={{
+                          color: formik.touched["mobileGame"] && formik.errors["mobileGame"] && theme.palette.error.main
+                        }}
+                      />
+                    ))}
+                    {formik.touched["mobileGame"] && formik.errors["mobileGame"] && (
+                      <FormHelperText sx={{ color: theme.palette.error.main }} id="mobileGame">
+                        {formik.errors["mobileGame"]}
+                      </FormHelperText>
+                    )}
+                  </RadioGroup>
+                }
 
                 <TextField
                   fullWidth
