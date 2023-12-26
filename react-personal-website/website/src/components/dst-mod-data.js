@@ -8,7 +8,7 @@ import ImageGallery from "./image-gallery";
 
 // ---------------------------------------------------------
 
-const DSTModData = ({ modBanner, modName, modShortDesc, modDescArt, modScreenshots, modLongDesc, steamWorkshopLink, changelogImgLink }) => {
+const DSTModData = ({ modBanner, modName, modShortDesc, modDescArt, modScreenshots, modLongDesc, steamWorkshopLink, changelogImgLink, others }) => {
   const theme = useTheme();
 
   const [showChangelog, setShowChangelog] = useState(false);
@@ -33,24 +33,30 @@ const DSTModData = ({ modBanner, modName, modShortDesc, modDescArt, modScreensho
 
         <Divider />
 
-        <Stack direction={"row"}>
-          <Stack width={"70%"}>
-            <Box
-              component="img"
-              sx={{ width: "100%", height: "auto" }}
-              alt=""
-              src={modDescArt}
-            />
+        <>{(modDescArt || modScreenshots) &&
+          <Stack direction={"row"}>
+            <>{modDescArt &&
+              <Stack width={"70%"}>
+                <Box
+                  component="img"
+                  sx={{ width: "100%", height: "auto" }}
+                  alt=""
+                  src={modDescArt}
+                />
+              </Stack>
+            }</>
+            <>{modScreenshots &&
+              <Stack width={"30%"}>
+                <ImageGallery
+                  imageSet={modScreenshots}
+                  height={164}
+                  width={164}
+                  columns={2}
+                />
+              </Stack>
+            }</>
           </Stack>
-          <Stack width={"30%"}>
-            <ImageGallery
-              imageSet={modScreenshots}
-              height={164}
-              width={164}
-              columns={2}
-            />
-          </Stack>
-        </Stack>
+        }</>
 
         <Typography variant="h6">Description</Typography>
         <Stack p={0.75}>
@@ -68,31 +74,37 @@ const DSTModData = ({ modBanner, modName, modShortDesc, modDescArt, modScreensho
           </Button>
         </Box>
 
-        <Box
-          p={1}
-          sx={{
-            borderRadius: "8px",
-            border: 1,
-            borderColor: theme.palette.divider,
-          }}
-        >
-          <Stack spacing={1}>
-            <Box>
-              <Button onClick={() => setShowChangelog(prev => !prev)}>
-                {showChangelog ? "Hide Changelog" : "View Changelog"}
-              </Button>
-            </Box>
+        <>{changelogImgLink &&
+          <Box
+            p={1}
+            sx={{
+              borderRadius: "8px",
+              border: 1,
+              borderColor: theme.palette.divider,
+            }}
+          >
+            <Stack spacing={1}>
+              <Box>
+                <Button onClick={() => setShowChangelog(prev => !prev)}>
+                  {showChangelog ? "Hide Changelog" : "View Changelog"}
+                </Button>
+              </Box>
 
-            {showChangelog &&
-              <Box
-                component="img"
-                sx={{ width: "630px", maxWidth: "100%", height: "auto" }}
-                alt=""
-                src={changelogImgLink}
-                style={{ borderRadius: "8px" }}
-              />
-            }
-          </Stack>
+              {showChangelog &&
+                <Box
+                  component="img"
+                  sx={{ width: "630px", maxWidth: "100%", height: "auto" }}
+                  alt=""
+                  src={changelogImgLink}
+                  style={{ borderRadius: "8px" }}
+                />
+              }
+            </Stack>
+          </Box>
+        }</>
+
+        <Box sx={{ width: "100%", height: "auto" }}>
+          {others}
         </Box>
       </Stack>
     </>
