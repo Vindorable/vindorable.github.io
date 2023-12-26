@@ -1,12 +1,18 @@
-import React from "react";
-import { Box, Divider, Stack, Typography, } from "@mui/material";
+import React, { useState } from "react";
+import { Box, Button, Divider, Stack, Typography, } from "@mui/material";
+import { useTheme } from "@mui/material/styles";
+import { ArrowElbowLeft } from "phosphor-react";
 
 import ImageGallery from "./image-gallery";
 
 
 // ---------------------------------------------------------
 
-const DSTModData = ({ modBanner, modName, modShortDesc, modDescArt, modScreenshots, modLongDesc }) => {
+const DSTModData = ({ modBanner, modName, modShortDesc, modDescArt, modScreenshots, modLongDesc, steamWorkshopLink, changelogImgLink }) => {
+  const theme = useTheme();
+
+  const [showChangelog, setShowChangelog] = useState(false);
+
   return (
     <>
       <Stack spacing={1.25}>
@@ -50,6 +56,44 @@ const DSTModData = ({ modBanner, modName, modShortDesc, modDescArt, modScreensho
         <Stack p={0.75}>
           <Typography variant="body2">{modLongDesc}</Typography>
         </Stack>
+
+        <Box>
+          <Button
+            disableElevation
+            variant="outlined"
+            startIcon={<ArrowElbowLeft />}
+            onClick={() => window.open(steamWorkshopLink, "_blank")}
+          >
+            Steam Workshop Link
+          </Button>
+        </Box>
+
+        <Box
+          p={1}
+          sx={{
+            borderRadius: "8px",
+            border: 1,
+            borderColor: theme.palette.divider,
+          }}
+        >
+          <Stack spacing={1}>
+            <Box>
+              <Button onClick={() => setShowChangelog(prev => !prev)}>
+                {showChangelog ? "Hide Changelog" : "View Changelog"}
+              </Button>
+            </Box>
+
+            {showChangelog &&
+              <Box
+                component="img"
+                sx={{ width: "630px", maxWidth: "100%", height: "auto" }}
+                alt=""
+                src={changelogImgLink}
+                style={{ borderRadius: "8px" }}
+              />
+            }
+          </Stack>
+        </Box>
       </Stack>
     </>
   );
