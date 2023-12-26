@@ -3,6 +3,8 @@ import { Button, Stack } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { FileArrowDown } from "phosphor-react";
 
+import BodyWrapper from "../components/body-wrapper";
+
 const ResumeFile = "http://localhost:3000/resume.pdf"
 
 
@@ -31,45 +33,16 @@ const Experience = () => {
 
   return (
     <>
-      <Stack
-        p={2}
-        sx={{
-          width: "100vw",
-          maxWidth: "100%", // This is very Important else there will be the 100vw scrollbar issue.
-          flexGrow: 1,
-          height: "100%",
-          overflowY: "scroll",
-        }}
-      >
-        <Stack
-          direction={"row"}
-          sx={{ width: "100%" }}
-          justifyContent={"space-evenly"}
+      <BodyWrapper>
+        <Button
+          variant="contained"
+          color="info"
+          startIcon={<FileArrowDown size={26} />}
+          onClick={() => downloadFileFromURL(ResumeFile)}
         >
-          <Stack
-            spacing={1}
-            p={3}
-            sx={{
-              backgroundColor: theme.palette.background.paper,
-              boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.25)",
-              width: {
-                xs: "auto", // 0px
-                md: "80%",  // 900px
-                lg: "60%",  // 1200px
-              },
-            }}
-          >
-            <Button
-              variant="contained"
-              color="info"
-              startIcon={<FileArrowDown size={26} />}
-              onClick={() => downloadFileFromURL(ResumeFile)}
-            >
-              Resume
-            </Button>
-          </Stack>
-        </Stack>
-      </Stack>
+          Resume
+        </Button>
+      </BodyWrapper>
     </>
   );
 }
