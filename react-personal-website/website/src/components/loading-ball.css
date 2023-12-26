@@ -1,0 +1,46 @@
+.loading {
+  position: relative;
+  width: 20px;
+  height: 20px;
+  background: #0ff;
+  animation: 1s spin infinite;
+}
+
+.loading::before,
+.loading::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  animation: 0.5s infinite alternate linear;
+}
+
+.loading::before {
+  background: #f0f;
+  animation-name: blur1;
+}
+
+.loading::after {
+  background: #fff;
+  animation-name: blur2;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes blur1 {
+  to {
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes blur2 {
+  to {
+    transform: rotate(-15deg);
+  }
+}
