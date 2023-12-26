@@ -58,10 +58,12 @@ const DSTModData = ({ modBanner, modName, modShortDesc, modDescArt, modScreensho
           </Stack>
         }</>
 
-        <Typography variant="h6">Description</Typography>
-        <Stack p={0.75}>
-          <Typography variant="body2">{modLongDesc}</Typography>
-        </Stack>
+        <>{modLongDesc && <>
+          <Typography variant="h6">Description</Typography>
+          <Stack p={0.75}>
+            <Typography variant="body2">{modLongDesc}</Typography>
+          </Stack>
+        </>}</>
 
         <Box>
           <Button

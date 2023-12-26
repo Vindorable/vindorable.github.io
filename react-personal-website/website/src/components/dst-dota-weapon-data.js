@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Stack, Typography, } from "@mui/material";
-import { styled } from "@mui/material/styles";
+import { styled, useTheme } from "@mui/material/styles";
 
 import { NavTab, NavTabs } from "./nav-tab";
 
@@ -20,6 +20,8 @@ const BoxText = styled(Box)(({ theme }) => ({
 // ---------------------------------------------------------
 
 const DSTDotaWeaponData = ({ weaponIcon, weaponName, dotaHeroName, releaseStatus, lore, abilities, moreInfo, disclaimer }) => {
+  const theme = useTheme();
+
   // Tabs.
   const [value, setValue] = React.useState(0);
   const handleChange = (event, newValue) => {
@@ -28,7 +30,15 @@ const DSTDotaWeaponData = ({ weaponIcon, weaponName, dotaHeroName, releaseStatus
 
   return (
     <>
-      <Stack spacing={1.25}>
+      <Stack
+        spacing={1.25}
+        p={1}
+        sx={{
+          borderRadius: "8px",
+          border: 1,
+          borderColor: theme.palette.divider,
+        }}
+      >
         <Stack direction={"row"} spacing={2}>
           <Box
             component="img"
