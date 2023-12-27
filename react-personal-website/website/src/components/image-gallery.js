@@ -1,5 +1,5 @@
 import React from "react";
-import { Backdrop, Box, Fade, ImageList, ImageListItem, Modal } from "@mui/material";
+import { Backdrop, Box, Button, Fade, ImageList, ImageListItem, Modal, Stack } from "@mui/material";
 import { styled, useTheme } from "@mui/material/styles";
 
 
@@ -42,13 +42,37 @@ const ImageGallery = ({ imageSet, width, height, columns }) => {
   const _height = height;
 
   // Modal.
+  const [imageItem, setImageItem] = React.useState("false");
   const [image, setImage] = React.useState("false");
   const [open, setOpen] = React.useState(false);
   const handleOpen = (value) => {
-    setImage(value);
+    setImageItem(value);
+    setImage(value.img);
     setOpen(true);
   }
   const handleClose = () => setOpen(false);
+
+  const modalNext = () => {
+    let currentIndex = imageSet.indexOf(imageItem);
+    if (currentIndex >= imageSet.length - 1) {
+      setOpen(false);
+    } else {
+      let nextImageItem = imageSet[currentIndex + 1];
+      setImageItem(nextImageItem);
+      setImage(nextImageItem.img);
+    }
+  };
+
+  const modalBack = () => {
+    let currentIndex = imageSet.indexOf(imageItem);
+    if (currentIndex <= 0) {
+      setOpen(false);
+    } else {
+      let nextImageItem = imageSet[currentIndex - 1];
+      setImageItem(nextImageItem);
+      setImage(nextImageItem.img);
+    }
+  };
 
   return (
     <>
@@ -78,7 +102,7 @@ const ImageGallery = ({ imageSet, width, height, columns }) => {
                 borderRadius: "8px",
               }}
               loading="lazy"
-              onClick={(e) => handleOpen(item.img)}
+              onClick={(e) => handleOpen(item)}
             />
           </ImageListItem>
         ))}
@@ -97,26 +121,43 @@ const ImageGallery = ({ imageSet, width, height, columns }) => {
       >
         <Fade in={open}>
           <Box
-            component="img"
             sx={{
-              position: "absolute",
-              top: "50%",
-              left: "50%",
-              transform: "translate(-50%, -50%)",
-              width: image.width,
-              height: "auto",
-              maxWidth: "100%",
-              maxHeight: "90%",
-              bgcolor: "background.paper",
-              border: "1px solid #fff",
-              boxShadow: 24,
-              outline: "none",
-              objectFit: "contain"
+              width: "100vw",
+              height: "100vh",
+              backgroundColor: "#000",
             }}
-            alt=""
-            src={image}
-            style={{ objectFit: "contain", borderRadius: "8px" }}
-          />
+          >
+            <Box
+              component="img"
+              sx={{
+                position: "absolute",
+                top: "50%",
+                left: "50%",
+                transform: "translate(-50%, -50%)",
+                width: image.width,
+                height: "auto",
+                maxWidth: "100%",
+                maxHeight: "90%",
+                bgcolor: "background.paper",
+                border: "1px solid #fff",
+                boxShadow: 24,
+                outline: "none",
+                objectFit: "contain"
+              }}
+              alt=""
+              src={image}
+              style={{ objectFit: "contain", borderRadius: "8px" }}
+            />
+
+            <Stack direction={"row"} alignItems={"center"} justifyContent={"space-between"}>
+              <Button onClick={() => modalBack()}>
+                Back
+              </Button>
+              <Button onClick={() => modalNext()}>
+                Next
+              </Button>
+            </Stack>
+          </Box>
         </Fade>
       </Modal>
     </>
