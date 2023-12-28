@@ -1,10 +1,14 @@
 import React from "react";
 import { Box, Stack } from "@mui/material";
 
+import { useNavigate } from "react-router-dom";
+
 
 // ---------------------------------------------------------
 
-const StyledImage01 = ({ imageLink, imageAlt, emptyHiddenSpace }) => {
+const StyledImage01 = ({ imageLink, imageAlt, emptyHiddenSpace, url, isURLExternal }) => {
+  const navigate = useNavigate();
+
   return (
     <>
       <Stack py={2} px={1}>
@@ -33,6 +37,12 @@ const StyledImage01 = ({ imageLink, imageAlt, emptyHiddenSpace }) => {
           alt={imageAlt}
           src={imageLink}
           style={{ borderRadius: "8px" }}
+          onClick={() =>
+            isURLExternal ?
+              window.open(url, "_blank")
+              :
+              navigate(url)
+          }
         />
       </Stack>
     </>
