@@ -1,6 +1,7 @@
 import React from "react";
-import { Backdrop, Box, Button, Fade, ImageList, ImageListItem, Modal, Stack } from "@mui/material";
+import { Backdrop, Box, Button, Fade, IconButton, ImageList, ImageListItem, Modal, Stack } from "@mui/material";
 import { styled, useTheme } from "@mui/material/styles";
+import { CaretCircleLeft, CaretCircleRight, XCircle } from "phosphor-react";
 
 
 // ---------------------------------------------------------
@@ -150,13 +151,38 @@ const ImageGallery = ({ imageSet, width, height, columns }) => {
               style={{ objectFit: "contain", borderRadius: "8px" }}
             />
 
-            <Stack direction={"row"} alignItems={"center"} justifyContent={"space-between"}>
-              <Button onClick={() => modalBack()}>
-                Back
-              </Button>
-              <Button onClick={() => modalNext()}>
-                Next
-              </Button>
+            <Stack sx={{ width: "100vw", height: "100vh" }}>
+              <Stack
+                sx={{ width: "100%", height: "100%" }}
+                p={1}
+                justifyContent={"center"}
+              >
+                <Stack
+                  direction={"row"}
+                  alignItems={"center"}
+                  justifyContent={"space-between"}
+                >
+                  <IconButton onClick={() => modalBack()}>
+                    <CaretCircleLeft size={32} />
+                  </IconButton>
+                  <IconButton onClick={() => modalNext()}>
+                    <CaretCircleRight size={32} />
+                  </IconButton>
+                </Stack>
+              </Stack>
+
+              <Stack
+                direction={"row"}
+                sx={{ width: "100%" }}
+                position={"absolute"}
+                p={1}
+                alignItems={"center"}
+                justifyContent={"end"}
+              >
+                <IconButton onClick={() => setOpen(false)}>
+                  <XCircle size={32} />
+                </IconButton>
+              </Stack>
             </Stack>
           </Box>
         </Fade>
