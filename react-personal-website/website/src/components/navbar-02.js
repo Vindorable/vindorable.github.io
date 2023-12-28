@@ -1,7 +1,7 @@
 import React from "react";
-import { Box, Icon, Stack, Typography } from "@mui/material";
+import { Box, Icon, IconButton, Stack, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import { UserCircle } from "phosphor-react";
+import { LinkedinLogo, UserCircle } from "phosphor-react";
 
 import { NavTab, NavTabs } from "./nav-tab";
 
@@ -66,7 +66,7 @@ const Navbar = () => {
 
           {/* Navigation Tabs */}
           {/* --------------- */}
-          <Stack>
+          <Stack direction={"row"} spacing={2} alignItems={"center"} justifyContent={"center"}>
             <NavTabs value={value} onChange={handleChange}>
               <NavTab label="Experience" component={Link} to={PATH_WEBPAGE.general.experience} />
               {/* <NavTab label="Work" component={Link} to={PATH_WEBPAGE.general.work} /> */}
@@ -90,6 +90,12 @@ const Navbar = () => {
                   break;
               }
             })()}
+
+            <IconButton
+              onClick={() => window.open("https://www.linkedin.com/in/jay-raj-97508742/", "_blank")}
+            >
+              <LinkedinLogo size={32} />
+            </IconButton>
           </Stack>
         </Stack>
       </Box>
