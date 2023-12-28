@@ -31,9 +31,11 @@ const BodyWrapper = ({ children }) => {
             sx={{
               //backgroundColor: theme.palette.background.paper,
               //boxShadow: "0px 0px 2px rgba(0, 0, 0, 0.25)",
-              borderRadius: "8px",
-              border: 1,
-              borderColor: theme.palette.divider,
+
+              // borderRadius: "8px",
+              // border: 1,
+              // borderColor: theme.palette.divider,
+
               width: {
                 xs: "auto", // 0px
                 md: "80%",  // 900px

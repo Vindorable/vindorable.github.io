@@ -1,8 +1,9 @@
 import React from "react";
-import { Button, FormControlLabel, FormHelperText, MenuItem, Radio, RadioGroup, Stack, TextField, Typography } from "@mui/material";
+import { Button, Divider, FormControlLabel, FormHelperText, MenuItem, Radio, RadioGroup, Stack, TextField, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 import BodyWrapper from "../components/body-wrapper";
+import Spacer from "../components/spacer";
 
 import { useFormik } from "formik";
 import * as yup from "yup";
@@ -82,6 +83,14 @@ const Contact = () => {
   return (
     <>
       <BodyWrapper>
+        <Divider />
+        <Stack alignItems={"center"} justifyContent={"center"}>
+          <Typography variant="body2">Drop Me A Message</Typography>
+          <Typography variant="subtitle2">Note: This form currently don't have a service/backend api so the submit don't work.</Typography>
+        </Stack>
+        <Divider />
+        <Spacer amount={10} />
+
         <form onSubmit={formik.handleSubmit}>
           <Stack spacing={2}>
             <TextField

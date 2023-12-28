@@ -69,7 +69,7 @@ const Navbar = () => {
           <Stack>
             <NavTabs value={value} onChange={handleChange}>
               <NavTab label="Experience" component={Link} to={PATH_WEBPAGE.general.experience} />
-              <NavTab label="Work" component={Link} to={PATH_WEBPAGE.general.work} />
+              {/* <NavTab label="Work" component={Link} to={PATH_WEBPAGE.general.work} /> */}
               <NavTab label="Playground" component={Link} to={PATH_WEBPAGE.general.playground} />
               <NavTab label="Contact" component={Link} to={PATH_WEBPAGE.general.contact} />
             </NavTabs>
