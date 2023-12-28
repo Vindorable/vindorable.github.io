@@ -1,11 +1,14 @@
 import React from "react";
-import { Button, Stack } from "@mui/material";
+import { Box, Button, Divider, Stack, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { FileArrowDown } from "phosphor-react";
+import { ReadCvLogo } from "@phosphor-icons/react";
 
 import BodyWrapper from "../components/body-wrapper";
+import Spacer from "../components/spacer";
 
-const ResumeFile = "http://localhost:3000/resume.pdf"
+const ResumeFilePDF = "http://localhost:3000/jayraj-resume.pdf"
+const ResumeFileDocx = "http://localhost:3000/jayraj-resume.docx"
 
 
 // ---------------------------------------------------------
@@ -34,14 +37,43 @@ const Experience = () => {
   return (
     <>
       <BodyWrapper>
-        <Button
-          variant="contained"
-          color="info"
-          startIcon={<FileArrowDown size={26} />}
-          onClick={() => downloadFileFromURL(ResumeFile)}
+        <Box
+          p={2}
+          sx={{
+            borderRadius: "8px",
+            border: 1,
+            borderColor: theme.palette.divider,
+          }}
         >
-          Resume
-        </Button>
+          <Stack spacing={2}>
+            <Stack spacing={1} alignItems={"center"} justifyContent={"center"}>
+              <ReadCvLogo size={32} />
+              <Typography variant="body2">Resume</Typography>
+            </Stack>
+
+            <Divider />
+
+            <Button
+              variant="contained"
+              color="info"
+              startIcon={<FileArrowDown size={26} />}
+              onClick={() => downloadFileFromURL(ResumeFilePDF)}
+              sx={{ textTransform: "none" }}
+            >
+              Download a PDF
+            </Button>
+
+            <Button
+              variant="contained"
+              color="info"
+              startIcon={<FileArrowDown size={26} />}
+              onClick={() => downloadFileFromURL(ResumeFileDocx)}
+              sx={{ textTransform: "none" }}
+            >
+              Download a .docx
+            </Button>
+          </Stack>
+        </Box>
       </BodyWrapper>
     </>
   );
