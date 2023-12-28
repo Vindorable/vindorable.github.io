@@ -87,7 +87,8 @@ const ImageGallery = ({ imageSet, width, height, columns }) => {
                 duration: theme.transitions.duration.leavingScreen
               }),
               "&:hover": { transform: "scale3d(1.05, 1.05, 1)" },
-              "&:active": { transform: "scale3d(0.95, 0.95, 1)" }
+              "&:active": { transform: "scale3d(0.95, 0.95, 1)" },
+              cursor: "pointer",
             }}
           >
             <img

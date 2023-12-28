@@ -33,6 +33,8 @@ const StyledImage01 = ({ imageLink, imageAlt, emptyHiddenSpace, url, isURLExtern
             },
 
             visibility: emptyHiddenSpace ? "hidden" : "",
+
+            cursor: url ? "pointer" : "default"
           }}
           alt={imageAlt}
           src={imageLink}
