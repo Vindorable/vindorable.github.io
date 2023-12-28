@@ -13,7 +13,7 @@ import { PATH_WEBPAGE } from "../routes/paths";
 const Playground = () => {
   return (
     <>
-      <PlaygroundSidebar />
+      {/* <PlaygroundSidebar /> */}
 
       <BodyWrapper>
         <Stack direction={"row"}>
@@ -40,6 +40,7 @@ const Playground = () => {
           <StyledImage01
             imageAlt="dst mods"
             imageLink="https://images.squarespace-cdn.com/content/v1/52485ff0e4b016b87cc4bf2f/1469322178513-A0PQINIFRVOFEO5SIJ7S/DST+Mods+Links.png"
+            url={PATH_WEBPAGE.playgroundSubpage.dst}
           />
 
           <StyledImage01

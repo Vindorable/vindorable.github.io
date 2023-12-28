@@ -17,7 +17,7 @@ const Pokemon = () => {
 
   return (
     <>
-      <PlaygroundSidebar />
+      {/* <PlaygroundSidebar /> */}
 
       <BodyWrapper>
         <Typography variant="h5">
