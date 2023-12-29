@@ -33,7 +33,7 @@ const Image = ({ src, alt, url, lightbox }) => {
 
   function handleClick() {
     if (url) return isExternalURL(url) ? window.open(url, "_blank") : navigate(url);
-    if (lightbox) return lightboxRef.current.openLightbox();
+    if (lightbox) return lightboxRef.current.openLightbox(imageList[0]);
   };
 
   return (
@@ -53,7 +53,7 @@ const Image = ({ src, alt, url, lightbox }) => {
         />
       </Stack>
 
-      <Lightbox ref={lightboxRef} imageSet={imageList} focusedImageItem={imageList[0]} />
+      <Lightbox ref={lightboxRef} imageSet={imageList} />
     </>
   );
 }

@@ -5,9 +5,9 @@ import { CaretCircleLeft, CaretCircleRight, XCircle } from "phosphor-react";
 
 // ---------------------------------------------------------
 
-const Lightbox = forwardRef(({ imageSet, focusedImageItem }, ref) => {
+const Lightbox = forwardRef(({ imageSet }, ref) => {
   useImperativeHandle(ref, () => ({
-    openLightbox() {
+    openLightbox(focusedImageItem) {
       handleOpen(focusedImageItem);
     },
   }));
