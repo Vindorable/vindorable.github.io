@@ -20,6 +20,7 @@ const Playground = () => {
           <StyledImage01
             imageAlt="frankrit eats meat mobile game"
             imageLink="https://images.squarespace-cdn.com/content/v1/52485ff0e4b016b87cc4bf2f/1488975377441-L4PULVVO0Q01I0PTNUEG/image-asset.png"
+            url={PATH_WEBPAGE.playgroundSubpage.games}
           />
 
           <StyledImage01

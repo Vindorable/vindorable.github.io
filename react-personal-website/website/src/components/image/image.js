@@ -9,7 +9,7 @@ import Lightbox from "./lightbox";
 
 // ---------------------------------------------------------
 
-const Image = ({ src, alt, url, lightbox }) => {
+const Image = ({ src, alt, url, lightbox, height }) => {
   const theme = useTheme();
   const navigate = useNavigate();
 
@@ -43,12 +43,13 @@ const Image = ({ src, alt, url, lightbox }) => {
           component="img"
           sx={{
             width: "100%",
-            height: "auto",
+            height: height ? height : "auto",
             cursor: (url || lightbox) ? "pointer" : "default",
+            objectFit: "contain"
           }}
           alt={alt}
           src={src}
-          style={{ borderRadius: "8px" }}
+          style={{ objectFit: "contain", borderRadius: "8px" }}
           onClick={handleClick}
         />
       </Stack>
