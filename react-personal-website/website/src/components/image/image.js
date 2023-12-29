@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Box, Stack, } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 
 import { useNavigate } from "react-router-dom";
+
+import Lightbox from "./lightbox";
 
 
 // ---------------------------------------------------------
@@ -10,6 +12,15 @@ import { useNavigate } from "react-router-dom";
 const Image = ({ src, alt, url, lightbox }) => {
   const theme = useTheme();
   const navigate = useNavigate();
+
+  const lightboxRef = useRef(null);
+  // Lightbox takes in an image set as prop.
+  const imageList = [
+    {
+      img: src,
+      title: alt,
+    },
+  ]
 
   // https://stackoverflow.com/a/28054735
   function checkDomain(url) {
@@ -22,7 +33,7 @@ const Image = ({ src, alt, url, lightbox }) => {
 
   function handleClick() {
     if (url) return isExternalURL(url) ? window.open(url, "_blank") : navigate(url);
-    if (lightbox) return undefined;
+    if (lightbox) return lightboxRef.current.openLightbox();
   };
 
   return (
@@ -41,6 +52,8 @@ const Image = ({ src, alt, url, lightbox }) => {
           onClick={handleClick}
         />
       </Stack>
+
+      <Lightbox ref={lightboxRef} imageSet={imageList} focusedImageItem={imageList[0]} />
     </>
   );
 }
