@@ -1,6 +1,6 @@
 import React from "react";
-import { Divider, Stack, Typography } from "@mui/material";
-import { Question } from "phosphor-react";
+import { Accordion, AccordionDetails, AccordionSummary, Divider, Stack, Typography } from "@mui/material";
+import { CaretDown, DownloadSimple, Question } from "phosphor-react";
 
 import BodyWrapper from "../../../components/body-wrapper";
 import Image from "../../../components/image/image";
@@ -12,6 +12,8 @@ import CameronProfilePic from "../../../assets/images/games/dev-cameron-e.png";
 import GerardProfilePic from "../../../assets/images/games/dev-gerard-n.png";
 import { imageList as GameShowcase } from "../../../assets/images/games/game-fem-showcase/gallery-game-fem-showcase";
 import Artwork from "../../../assets/images/games/fem-artwork.png";
+import AppIcon from "../../../assets/images/games/game-frankrit-eats-meat.png";
+import PlayStoreDLButton from "../../../assets/images/games/playstore-download-button.png";
 
 
 // ---------------------------------------------------------
@@ -108,6 +110,560 @@ const FrankritEatsMeat = () => {
         <Spacer amount={30} />
         <Divider />
         <Spacer amount={20} />
+
+
+
+
+
+
+
+
+
+
+        {/* --------------------------------------------------------- */}
+        {/* DOWNLOAD ------------------------------------------------ */}
+        {/* --------------------------------------------------------- */}
+        <Stack direction={"row"} alignItems={"center"} justifyContent={"center"} spacing={0.75}>
+          <DownloadSimple size={28} />
+          <Typography variant="h5">DOWNLOAD</Typography>
+        </Stack>
+        <Spacer amount={10} />
+
+        <Image
+          src={AppIcon}
+          height={180}
+        />
+        <Image
+          src={PlayStoreDLButton}
+          height={56}
+          url="https://play.google.com/store/apps/details?id=com.jgamesentertainment.frankriteatsmeat"
+        />
+
+        <Stack spacing={0.5}>
+          <Typography variant="h6">
+            Current version:
+          </Typography>
+          <Stack p={0.75}>
+            <Typography variant="body2">
+              v2.6.3 [Public Release]
+            </Typography>
+          </Stack>
+        </Stack>
+
+        <Stack>
+          <Typography variant="h6">Changelog</Typography>
+        </Stack>
+
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-01-content"
+            id="accordion-01-header"
+          >
+            <Typography variant="body2">(12/03/17)&nbsp;&nbsp;&nbsp;v1.0.0</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              • Initial release. App got rejected by Google due to "libpng" security issue.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-02-content"
+            id="accordion-02-header"
+          >
+            <Typography variant="body2">(12/03/17)&nbsp;&nbsp;&nbsp;v1.0.1 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              • Critical bug fix: Solved "libpng" security issue.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-03-content"
+            id="accordion-03-header"
+          >
+            <Typography variant="body2">(15/03/17)&nbsp;&nbsp;&nbsp;v1.0.2</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              • Added "How-to-play" tutorial. <br />
+              • Added Premium IAP function. Exported APK to test its IAP functionality by uploading it to the Play Console.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-04-content"
+            id="accordion-04-header"
+          >
+            <Typography variant="body2">(17/03/17)&nbsp;&nbsp;&nbsp;v1.1.0 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              • Locked Premium room. IAP functionality failed to work.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-05-content"
+            id="accordion-05-header"
+          >
+            <Typography variant="body2">(22/03/17)&nbsp;&nbsp;&nbsp;v1.2.0 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              • Added "randomize()" to change Hookables spawning seed. <br />
+              • Fixed bug of Gem always spanwing at 100%. <br />
+              • Adjusted Gem movement speed. <br />
+              • Increased Hook base speed. <br />
+              • Hook speed upgrades now improve speed exponentially, instead of linearly. <br />
+              • Reworked Hookables spawn pattern. Intervals are now 20s, instead of 15s. Doom lasts for 10s, instead of 15s. <br />
+              • Improved Meat-'The Things' ratio based on spawn pattern.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-06-content"
+            id="accordion-06-header"
+          >
+            <Typography variant="body2">(26/03/17)&nbsp;&nbsp;&nbsp;v1.3.0 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              • Added Hook Streak combos score popup in Game room. <br />
+              • Removed Upgrades Panel. Upgrade buttons are now displayed outside for easy one-click upgrade. <br />
+              • Pressing the device's native back key while in the Menu room now ends the game. <br />
+              • Fixed the "white flash" transition effect bug for devices with large screen resolution.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-07-content"
+            id="accordion-07-header"
+          >
+            <Typography variant="body2">(02/04/17)&nbsp;&nbsp;&nbsp;v1.4.0 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              • Optimized game speed by improving texture pages swaps of using outline shader. <br />
+              •  Increased game music volume. <br />
+              •  Fixed bug of Gems rewarded from unlocking an Achievement not saving locally. <br />
+              •  Changed "Options" button and room title board to "More" and "More Stuff" respectively. <br />
+              •  Fixed drawing depth of timer display counter in Game room. <br />
+              •  Added game version number id in Menu room. <br />
+              •  Unlocked Settings room and added the function to turn ON / OFF game tutorial with preferences saved locally.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-08-content"
+            id="accordion-08-header"
+          >
+            <Typography variant="body2">(09/04/17)&nbsp;&nbsp;&nbsp;v1.5.0 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              •  Updated the app permissions for features releasing on future updates. <br />
+              •  Added NEW Fresh Meats: Sushi (Sake, Ebi &amp; Tamago). <br />
+              •  Added NEW Popup Talkers for the respective Sushi types.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-09-content"
+            id="accordion-09-header"
+          >
+            <Typography variant="body2">(17/04/17)&nbsp;&nbsp;&nbsp;v1.6.0 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              •  Added Backup &amp; Restore function. <br />
+              •  Fixed bug of pressing of the device's native back key not working in Settings room. <br />
+              •  Fixed bug of banner sprites (_UILongImage) showing gaps.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-10-content"
+            id="accordion-10-header"
+          >
+            <Typography variant="body2">(25/04/17)&nbsp;&nbsp;&nbsp;v1.7.0 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              •  Further improved Hook speed. <br />
+              •  Added a NEW Hook: A-Beloved Hook. It has "specials": Emote System.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-11-content"
+            id="accordion-11-header"
+          >
+            <Typography variant="body2">(01/05/17)&nbsp;&nbsp;&nbsp;v1.7.5 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              •  Game file size optimization: Reduced all animation's sprite frames by half and adopted the "ping-pong" looping animation. Removed GeekStats sprites. <br />
+              •  A little texture pages cleanup. <br />
+              •  Improved Hook reel back mechanics. <br />
+              •  Simplified the Hook combo score popup design. <br />
+              •  Changed "Design Builder" name to "Wardrobe". <br />
+              •  Improved "How-to-play" tutorial. <br />
+              •  Added Camera Shake and Vibrations with the option to ON / OFF them from the Settings. <br />
+              •  Increased Healthbar shake on hurt.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-12-content"
+            id="accordion-12-header"
+          >
+            <Typography variant="body2">(01/05/17)&nbsp;&nbsp;&nbsp;v1.7.6</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              • Exported APK to test its IAP functionality by uploading it to the Play Console again.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-13-content"
+            id="accordion-13-header"
+          >
+            <Typography variant="body2">(13/05/17)&nbsp;&nbsp;&nbsp;v1.8.0 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              • IAP functionality works fine now. <br />
+              • Opened the Premium room to purchase the Premium version of the game. Removes Ads and gifts a one-time 100 Gems pack on purchase. <br />
+              • Made the "How-to-play" tutorial more compact. <br />
+              • Optimized texture pages swaps of using outline shader in Wardrobe room. <br />
+              • Added health popup to display the amount of health gained or lost in Game room. <br />
+              • Improved gameover popup visuals. <br />
+              • Added a NEW in-game currency, Stars, that is awared after a gameplay round ends. <br />
+              • Shop room is now opened and you can buy permanent upgrades of Hook Size and Speed using the Stars earned.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-14-content"
+            id="accordion-14-header"
+          >
+            <Typography variant="body2">(06/06/17)&nbsp;&nbsp;&nbsp;v1.8.5 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              • Revamped the Menu room layout. <br />
+              • Locked Shop room again (sorry..) <br />
+              • Permanent upgrades bought from the Shop is now moved over to the Skill Tree room. All your purchased upgrades are converted to skill levels. <br />
+              • Added Doom (a state where only Cleavers, "The Things", spawn) display indicator. <br />
+              • Fixed bug of game crashing when the Android OS back button is pressed while a popup is open.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-15-content"
+            id="accordion-15-header"
+          >
+            <Typography variant="body2">(27/06/17)&nbsp;&nbsp;&nbsp;v1.8.7 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              • Added 2 NEW Hooks: Buddha's Love & Buddha's Lost Relic. <br />
+              • Made it slightly harder to earn Stars. <br />
+              • Temporarily removed the broken Reward Video Ads button from the Wardrobe room until its fixed. <br />
+              • Fixed minor bug of chains distance issue in Game room.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-16-content"
+            id="accordion-16-header"
+          >
+            <Typography variant="body2">(20/07/17)&nbsp;&nbsp;&nbsp;v1.9.0 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              • Added a NEW game mode! Two players battle royale! You can now battle your friend on the same device. <br />
+              • Added Patreon button in Menu room. <br />
+              • Opened the Shop where you can purchase Gems (finally!).
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-17-content"
+            id="accordion-17-header"
+          >
+            <Typography variant="body2">(26/08/17)&nbsp;&nbsp;&nbsp;v1.9.5 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              <b>MEGA UPDATE!!!</b> <br />
+              <b>General</b> <br />
+              • Changed Play room game modes selection layout. <br />
+              • Game size optimisation and many other small improvements. <br />
+              <b>Single Player game mode</b> <br />
+              • Created a popup to notify Hook upgrade (size / speed) purchases in Game room. <br />
+              • The Ultimate Skill has been unlocked in the Skill Tree room! The NEW Ultimate Skill ability can now be activated at will in Game room! <br />
+              <b>Two Players game mode</b> <br />
+              • Added "blood splat" fx and sound fx for Cleaver in Two Players game room when it hurts a Frankrit from being tossed at by the other. <br />
+              • Frankrit Duo (player 2; your friend) will now get a random skin applied every time when playing the Two Players game mode. At times, you might see skins that are not YET available in the Wardrobe! <br />
+              <b>What's really new?!</b> <br />
+              • Changed all Frankrit's animations from traditional spritesheets to native Skeleton Animation system (Hooray!!). <br />
+              • Added 5 NEW Hooks! <br />
+              • Added NEW Skins category in Wardrobe! <br />
+              • Added NEW Spiderkrit skin for the Skins category! <br />
+              • Skins purchased from Wardrobe will now be instantly applied on purchase.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-18-content"
+            id="accordion-18-header"
+          >
+            <Typography variant="body2">(03/10/17)&nbsp;&nbsp;&nbsp;v1.9.7 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              • New permission required: Get Accounts. Needed as we are testing out Push Notifications. <br />
+              • New Story mode games! Unlock the mysteries behind Frankrit's existence. <br />
+              • New skins type: Hats. Available in Wardrobe room. Some are unlocked by completing Story mode chapters on perfect score. <br />
+              • Added Cleaver hurt fx & sfx in normal game mode. <br />
+              • Added a blog shop link where you can purchase Developer's side project merchandises in More room. <br />
+              • **Note: Hats are not yet available in Two Players game mode.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-19-content"
+            id="accordion-19-header"
+          >
+            <Typography variant="body2">(13/10/17)&nbsp;&nbsp;&nbsp;v1.9.8 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              • Added Chapter 2 of the Story game mode. <br />
+              • Added NEW hat style: Sugegasa Black. Which can be purchased normally after unlocking Sugegasa by completing Chapter 2 with a perfect score. <br />
+              • Added NEW full skin: Spiderkrit Black Suit. <br />
+              • Minor tweaks & improvements.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-20-content"
+            id="accordion-20-header"
+          >
+            <Typography variant="body2">(16/10/17)&nbsp;&nbsp;&nbsp;v1.9.9 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              • Fixed critical issue with the game failing to start on Android version 7.0 and above.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-21-content"
+            id="accordion-21-header"
+          >
+            <Typography variant="body2">(28/10/17)&nbsp;&nbsp;&nbsp;v2.0.0 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              • Added a new Hat style: Captain's Hat.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-22-content"
+            id="accordion-22-header"
+          >
+            <Typography variant="body2">(02/03/18)&nbsp;&nbsp;&nbsp;v2.5.0 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              <b>*** ONLINE MODE ADDED ***</b> <br />
+              • Many minor optimizations. <br />
+              • Fixed bug of Android native back button not working in certain rooms. <br />
+              • Added 4 NEW Hooks! <br />
+              • Added a new items display layout in Wardrobe room. <br />
+              • Cleavers no longer have the 50% chance to throw back at the other player in multi-player game modes. <br />
+              • Added a new item, Coconade, in multi-player game modes. <br />
+              • Added category sorting for game modes in Game Zone; NEW Online multi-player mode added! <br />
+              • New permission required: Get Accounts. For the online multi-player mode.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-23-content"
+            id="accordion-23-header"
+          >
+            <Typography variant="body2">(19/09/18)&nbsp;&nbsp;&nbsp;v2.6.0</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              • Test (codes porting [GM2] - internal).
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-24-content"
+            id="accordion-24-header"
+          >
+            <Typography variant="body2">(20/09/18)&nbsp;&nbsp;&nbsp;v2.6.1</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              • Test (codes porting [GM2] - internal).
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-25-content"
+            id="accordion-25-header"
+          >
+            <Typography variant="body2">(26/09/18)&nbsp;&nbsp;&nbsp;v2.6.2 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              IMPORTANT: Our vendor has changed their game engine. Had to port the game over as the old game engine will no longer be supported anymore. There are many compatibility issues porting over. I managed to fix most of them. If you do encounter any, please let me know and I'll fix it asap. Game has been updated to the new Google SDK rules and GDPR requirements.
+              • Online mode removed due to some complication from the porting. <br />
+              • Vibrations removed due to some complication from the porting. <br />
+              • Added NEW full skin: Justice Franko.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<CaretDown size={24} />}
+            aria-controls="accordion-26-content"
+            id="accordion-26-header"
+          >
+            <Typography variant="body2">(04/10/18)&nbsp;&nbsp;&nbsp;v2.6.3 [Public Release]</Typography>
+          </AccordionSummary>
+          <AccordionDetails>
+            <Typography variant="subtitle2">
+              • Fixed a small bug in the Wardrobe room. <br />
+              • Texture drawing optimization. <br />
+              • Updated game Credits room.
+            </Typography>
+          </AccordionDetails>
+        </Accordion>
+        {/* ========================= */}
+        {/* ========================= */}
+        <Spacer amount={20} />
+        <Divider />
+        <Spacer amount={20} />
+
+
+
+
+
+
+
+
+
 
         {/* --------------------------------------------------------- */}
         {/* FAQS ---------------------------------------------------- */}
