@@ -45,6 +45,12 @@ const Image = ({ src, alt, url, lightbox, height }) => {
             width: "100%",
             height: height ? height : "auto",
             cursor: (url || lightbox) ? "pointer" : "default",
+            transition: theme.transitions.create("all", {
+              easing: theme.transitions.easing.sharp,
+              duration: theme.transitions.duration.leavingScreen
+            }),
+            "&:hover": (url || lightbox) ? { transform: "scale3d(1.05, 1.05, 1)" } : undefined,
+            "&:active": (url || lightbox) ? { transform: "scale3d(0.95, 0.95, 1)" } : undefined,
             objectFit: "contain"
           }}
           alt={alt}

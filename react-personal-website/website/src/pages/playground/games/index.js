@@ -11,10 +11,15 @@ import FrankritEatsMeat from "../../../assets/images/games/game-frankrit-eats-me
 import SharkABoom from "../../../assets/images/games/game-shark-a-boom.png";
 import DinoWithAGun from "../../../assets/images/games/game-dino-with-a-gun.png";
 
+import { PATH_WEBPAGE } from "../../../routes/paths";
+import { useNavigate } from "react-router-dom";
+
 
 // ---------------------------------------------------------
 
 const Games = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       <BodyWrapper>
@@ -25,7 +30,7 @@ const Games = () => {
             disableElevation
             variant="outlined"
             startIcon={<DevToLogo size={28} />}
-          //onClick={() => window.open(steamWorkshopLink, "_blank")}
+            onClick={() => navigate(PATH_WEBPAGE.playgroundSubpage.gameDevJourney)}
           >
             My Journey as a Solo Indie Game Dev
           </Button>
@@ -36,7 +41,7 @@ const Games = () => {
             disableElevation
             variant="outlined"
             startIcon={<Gavel size={28} />}
-          //onClick={() => window.open(steamWorkshopLink, "_blank")}
+            onClick={() => navigate(PATH_WEBPAGE.playgroundSubpage.gamePrivacyPolicy)}
           >
             Games Privacy Policy
           </Button>
@@ -53,17 +58,17 @@ const Games = () => {
           <Image
             src={FrankritEatsMeat}
             height={180}
-            url=""
+            url={PATH_WEBPAGE.playgroundSubpage.gameFrankritEatsMeat}
           />
           <Image
             src={SharkABoom}
             height={180}
-            url=""
+            url={PATH_WEBPAGE.playgroundSubpage.gameSharkABoom}
           />
           <Image
             src={DinoWithAGun}
             height={180}
-            url=""
+            url={PATH_WEBPAGE.playgroundSubpage.gameDinoWithAGun}
           />
         </Stack>
       </BodyWrapper>

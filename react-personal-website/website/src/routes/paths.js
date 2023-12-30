@@ -25,5 +25,10 @@ export const PATH_WEBPAGE = {
     pokemon: path(`${ROOTS_WEBPAGE}playground/`, "pokemon"),
     dst: path(`${ROOTS_WEBPAGE}playground/`, "dst"),
     games: path(`${ROOTS_WEBPAGE}playground/`, "games"),
+    gameFrankritEatsMeat: path(`${ROOTS_WEBPAGE}playground/games/`, "frankrit-eats-meat"),
+    gameSharkABoom: path(`${ROOTS_WEBPAGE}playground/games/`, "shark-a-boom"),
+    gameDinoWithAGun: path(`${ROOTS_WEBPAGE}playground/games/`, "dino-with-a-gun"),
+    gameDevJourney: path(`${ROOTS_WEBPAGE}playground/games/`, "dev-journey"),
+    gamePrivacyPolicy: path(`${ROOTS_WEBPAGE}playground/games/`, "privacy-policy"),
   },
 };

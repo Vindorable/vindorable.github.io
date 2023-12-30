@@ -30,6 +30,11 @@ const Contact = Loadable(lazy(() => import("../pages/contact")));
 const Pokemon = Loadable(lazy(() => import("../pages/pokemon")));
 const DST = Loadable(lazy(() => import("../pages/dst")));
 const Games = Loadable(lazy(() => import("../pages/playground/games")));
+const GameFrankritEatsMeat = Loadable(lazy(() => import("../pages/playground/games/frankrit-eats-meat")));
+const GameSharkABoom = Loadable(lazy(() => import("../pages/playground/games/shark-a-boom")));
+const GameDinoWithAGun = Loadable(lazy(() => import("../pages/playground/games/dino-with-a-gun")));
+const GameDevJourney = Loadable(lazy(() => import("../pages/playground/games/dev-journey")));
+const GamePrivacyPolicy = Loadable(lazy(() => import("../pages/playground/games/privacy-policy")));
 
 const Page404 = Loadable(lazy(() => import("../pages/page-404")));
 
@@ -52,6 +57,11 @@ export default function Router() {
         { path: "playground/pokemon", element: <Pokemon /> },
         { path: "playground/dst", element: <DST /> },
         { path: "playground/games", element: <Games /> },
+        { path: "playground/games/frankrit-eats-meat", element: <GameFrankritEatsMeat /> },
+        { path: "playground/games/shark-a-boom", element: <GameSharkABoom /> },
+        { path: "playground/games/dino-with-a-gun", element: <GameDinoWithAGun /> },
+        { path: "playground/games/dev-journey", element: <GameDevJourney /> },
+        { path: "playground/games/privacy-policy", element: <GamePrivacyPolicy /> },
 
         { path: "404", element: <Page404 /> },
         { path: "*", element: <Navigate to="/404" replace /> },
