@@ -38,26 +38,28 @@ const Image = ({ src, alt, url, lightbox, height }) => {
 
   return (
     <>
-      <Stack>
-        <Box
-          component="img"
-          sx={{
-            width: "100%",
-            height: height ? height : "auto",
-            cursor: (url || lightbox) ? "pointer" : "default",
-            transition: theme.transitions.create("all", {
-              easing: theme.transitions.easing.sharp,
-              duration: theme.transitions.duration.leavingScreen
-            }),
-            "&:hover": (url || lightbox) ? { transform: "scale3d(1.05, 1.05, 1)" } : undefined,
-            "&:active": (url || lightbox) ? { transform: "scale3d(0.95, 0.95, 1)" } : undefined,
-            objectFit: "contain"
-          }}
-          alt={alt}
-          src={src}
-          style={{ objectFit: "contain", borderRadius: "8px" }}
-          onClick={handleClick}
-        />
+      <Stack alignItems={"center"} justifyContent={"center"} sx={{ width: "100%" }}>
+        <Stack>
+          <Box
+            component="img"
+            sx={{
+              width: "100%",
+              height: height ? height : "auto",
+              cursor: (url || lightbox) ? "pointer" : "default",
+              transition: theme.transitions.create("all", {
+                easing: theme.transitions.easing.sharp,
+                duration: theme.transitions.duration.leavingScreen
+              }),
+              "&:hover": (url || lightbox) ? { transform: "scale3d(1.05, 1.05, 1)" } : undefined,
+              "&:active": (url || lightbox) ? { transform: "scale3d(0.95, 0.95, 1)" } : undefined,
+              objectFit: "contain"
+            }}
+            alt={alt}
+            src={src}
+            style={{ objectFit: "contain", borderRadius: "8px" }}
+            onClick={handleClick}
+          />
+        </Stack>
       </Stack>
 
       <Lightbox ref={lightboxRef} imageSet={imageList} />
