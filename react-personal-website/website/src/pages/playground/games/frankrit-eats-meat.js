@@ -31,7 +31,7 @@ const FrankritEatsMeat = () => {
           </Typography>
         </Stack>
         <Spacer amount={5} />
-        <ImageGallery imageSet={GameShowcase} columns={4} />
+        <ImageGallery imageSet={GameShowcase} columns={4} aspectRatio={16 / 9} />
         <Spacer amount={30} />
 
         {/* --------------------------------------------------------- */}

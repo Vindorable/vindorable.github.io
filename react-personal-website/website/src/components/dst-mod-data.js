@@ -49,9 +49,10 @@ const DSTModData = ({ modBanner, modName, modShortDesc, modDescArt, modScreensho
               <Stack width={"30%"}>
                 <ImageGallery
                   imageSet={modScreenshots}
-                  height={164}
-                  width={164}
-                  columns={2}
+                  height={200}
+                  width={200}
+                  columns={1}
+                  aspectRatio={16 / 9}
                 />
               </Stack>
             }</>

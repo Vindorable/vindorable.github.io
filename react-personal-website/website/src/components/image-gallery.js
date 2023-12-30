@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { ImageList, ImageListItem } from "@mui/material";
+import { ImageList, ImageListItem, Stack } from "@mui/material";
 import { styled, useTheme } from "@mui/material/styles";
 
 import Lightbox from "./image/lightbox";
@@ -37,7 +37,7 @@ const ImageListGallery = styled('ul')(({ theme, cols }) => ({
 
 // ---------------------------------------------------------
 
-const ImageGallery = ({ imageSet, width, height, columns }) => {
+const ImageGallery = ({ imageSet, width, height, columns, aspectRatio }) => {
   const theme = useTheme();
 
   const _width = width;
@@ -47,38 +47,40 @@ const ImageGallery = ({ imageSet, width, height, columns }) => {
 
   return (
     <>
-      <ImageListGallery cols={columns}>
-        {imageSet.map((item) => (
-          <ImageListItem
-            key={item.img}
-            sx={{
-              aspectRatio: 1 / 1,
-              transition: theme.transitions.create("all", {
-                easing: theme.transitions.easing.sharp,
-                duration: theme.transitions.duration.leavingScreen
-              }),
-              "&:hover": { transform: "scale3d(1.05, 1.05, 1)" },
-              "&:active": { transform: "scale3d(0.95, 0.95, 1)" },
-              cursor: "pointer",
-            }}
-          >
-            <img
-              srcSet={`${item.img}`}
-              src={`${item.img}`}
-              alt={item.title}
-              style={{
-                width: _width,
-                height: _height,
-                maxWidth: "100%",
-                maxHeight: "100%",
-                borderRadius: "8px",
+      <Stack alignItems={"center"} justifyContent={"center"} sx={{ width: "100%" }}>
+        <ImageListGallery cols={columns}>
+          {imageSet.map((item) => (
+            <ImageListItem
+              key={item.img}
+              sx={{
+                aspectRatio: aspectRatio ? aspectRatio : 1 / 1,
+                transition: theme.transitions.create("all", {
+                  easing: theme.transitions.easing.sharp,
+                  duration: theme.transitions.duration.leavingScreen
+                }),
+                "&:hover": { transform: "scale3d(1.05, 1.05, 1)" },
+                "&:active": { transform: "scale3d(0.95, 0.95, 1)" },
+                cursor: "pointer",
               }}
-              loading="lazy"
-              onClick={(e) => lightboxRef.current.openLightbox(item)}
-            />
-          </ImageListItem>
-        ))}
-      </ImageListGallery>
+            >
+              <img
+                srcSet={`${item.img}`}
+                src={`${item.img}`}
+                alt={item.title}
+                style={{
+                  width: _width,
+                  height: _height,
+                  maxWidth: "100%",
+                  maxHeight: "100%",
+                  borderRadius: "8px",
+                }}
+                loading="lazy"
+                onClick={(e) => lightboxRef.current.openLightbox(item)}
+              />
+            </ImageListItem>
+          ))}
+        </ImageListGallery>
+      </Stack>
 
       <Lightbox ref={lightboxRef} imageSet={imageSet} />
     </>
