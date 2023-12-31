@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import { Accordion, AccordionDetails, AccordionSummary, Divider, IconButton, Menu, MenuItem, Stack, Typography } from "@mui/material";
 import { CaretDown, DownloadSimple, ListBullets, Question } from "phosphor-react";
 
@@ -6,6 +6,7 @@ import BodyWrapper from "../../../components/body-wrapper";
 import Image from "../../../components/image/image";
 import Spacer from "../../../components/spacer";
 import ImageGallery from "../../../components/image-gallery";
+import FloatingContentMenu from "../../../components/floating-content-menu";
 
 import JayProfilePic from "../../../assets/images/games/dev-jay-r.png";
 import CameronProfilePic from "../../../assets/images/games/dev-cameron-e.png";
@@ -19,85 +20,20 @@ import PlayStoreDLButton from "../../../assets/images/games/playstore-download-b
 // ---------------------------------------------------------
 
 const FrankritEatsMeat = () => {
-  // Page content - using Mui Menu component.
-  const [anchorEl, setAnchorEl] = React.useState(null);
-  const open = Boolean(anchorEl);
-  const handleClick = (event) => {
-    setAnchorEl(event.currentTarget);
-  };
-  const handleClose = () => {
-    setAnchorEl(null);
-  };
-  // Using Mui Menu to scroll to content.
-  const scrollTo = (elementID) => {
-    document.getElementById(elementID).scrollIntoView({ block: 'start', behavior: 'smooth' });
-    handleClose();
-  };
+  // FloatingContentMenu
+  const fcm = useRef(null);
 
   return (
     <>
       <BodyWrapper>
-        <Stack
-          sx={{
-            position: "absolute",
-            top: "0px",
-            left: "0px",
-          }}
-        >
-          <Stack
-            sx={{
-              position: "fixed",
-              transform: "translateX(-50%)",
-            }}
-          >
-            <IconButton
-              id="basic-button"
-              aria-controls={open ? 'basic-menu' : undefined}
-              aria-haspopup="true"
-              aria-expanded={open ? 'true' : undefined}
-              onClick={handleClick}
-            >
-              <ListBullets />
-            </IconButton>
-            <Menu
-              id="basic-menu"
-              anchorEl={anchorEl}
-              open={open}
-              onClose={handleClose}
-              MenuListProps={{
-                'aria-labelledby': 'basic-button',
-                dense: true,
-                sx: {
-                  paddingTop: "0px",
-                  width: "200px",
-                }
-              }}
-            >
-              <MenuItem disabled>
-                <Stack
-                  direction={"row"}
-                  alignItems={"center"}
-                  justifyContent={"start"}
-                  spacing={0.75}
-                >
-                  <ListBullets />
-                  <Typography variant="body2">Contents:</Typography>
-                </Stack>
-              </MenuItem>
-
-              <Divider sx={{ marginTop: "0px !important" }} />
-
-              <Stack px={2}>
-                <MenuItem sx={{ borderRadius: "8px" }} onClick={() => scrollTo("about")}>◆ &nbsp; About</MenuItem>
-                <MenuItem sx={{ borderRadius: "8px" }} onClick={() => scrollTo("features")}>◆ &nbsp; Features</MenuItem>
-                <MenuItem sx={{ borderRadius: "8px" }} onClick={() => scrollTo("developers")}>◆ &nbsp; Developers</MenuItem>
-                <MenuItem sx={{ borderRadius: "8px" }} onClick={() => scrollTo("download")}>◆ &nbsp; Download</MenuItem>
-                <MenuItem sx={{ borderRadius: "8px" }} onClick={() => scrollTo("changelog")}>◆ &nbsp; Changelog</MenuItem>
-                <MenuItem sx={{ borderRadius: "8px" }} onClick={() => scrollTo("faqs")}>◆ &nbsp; FAQs</MenuItem>
-              </Stack>
-            </Menu>
-          </Stack>
-        </Stack>
+        <FloatingContentMenu ref={fcm}>
+          <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("about")}>◆ &nbsp; About</MenuItem>
+          <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("features")}>◆ &nbsp; Features</MenuItem>
+          <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("developers")}>◆ &nbsp; Developers</MenuItem>
+          <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("download")}>◆ &nbsp; Download</MenuItem>
+          <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("changelog")}>◆ &nbsp; Changelog</MenuItem>
+          <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("faqs")}>◆ &nbsp; FAQs</MenuItem>
+        </FloatingContentMenu>
 
 
         {/* --------------------------------------------------------- */}
