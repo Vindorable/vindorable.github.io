@@ -66,14 +66,35 @@ const FrankritEatsMeat = () => {
               onClose={handleClose}
               MenuListProps={{
                 'aria-labelledby': 'basic-button',
+                dense: true,
+                sx: {
+                  paddingTop: "0px",
+                  width: "200px",
+                }
               }}
             >
-              <MenuItem onClick={() => scrollTo("about")}>About</MenuItem>
-              <MenuItem onClick={() => scrollTo("features")}>Features</MenuItem>
-              <MenuItem onClick={() => scrollTo("developers")}>Developers</MenuItem>
-              <MenuItem onClick={() => scrollTo("download")}>Download</MenuItem>
-              <MenuItem onClick={() => scrollTo("changelog")}>Changelog</MenuItem>
-              <MenuItem onClick={() => scrollTo("faqs")}>FAQs</MenuItem>
+              <MenuItem disabled>
+                <Stack
+                  direction={"row"}
+                  alignItems={"center"}
+                  justifyContent={"start"}
+                  spacing={0.75}
+                >
+                  <ListBullets />
+                  <Typography variant="body2">Contents:</Typography>
+                </Stack>
+              </MenuItem>
+
+              <Divider sx={{ marginTop: "0px !important" }} />
+
+              <Stack px={2}>
+                <MenuItem sx={{ borderRadius: "8px" }} onClick={() => scrollTo("about")}>◆ &nbsp; About</MenuItem>
+                <MenuItem sx={{ borderRadius: "8px" }} onClick={() => scrollTo("features")}>◆ &nbsp; Features</MenuItem>
+                <MenuItem sx={{ borderRadius: "8px" }} onClick={() => scrollTo("developers")}>◆ &nbsp; Developers</MenuItem>
+                <MenuItem sx={{ borderRadius: "8px" }} onClick={() => scrollTo("download")}>◆ &nbsp; Download</MenuItem>
+                <MenuItem sx={{ borderRadius: "8px" }} onClick={() => scrollTo("changelog")}>◆ &nbsp; Changelog</MenuItem>
+                <MenuItem sx={{ borderRadius: "8px" }} onClick={() => scrollTo("faqs")}>◆ &nbsp; FAQs</MenuItem>
+              </Stack>
             </Menu>
           </Stack>
         </Stack>
