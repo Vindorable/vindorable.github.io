@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
-import { Accordion, AccordionDetails, AccordionSummary, Divider, IconButton, Menu, MenuItem, Stack, Typography } from "@mui/material";
-import { CaretDown, DownloadSimple, ListBullets, Question } from "phosphor-react";
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Divider, IconButton, Menu, MenuItem, Stack, Typography } from "@mui/material";
+import { CaretDown, DownloadSimple, ListBullets, Question, Table } from "phosphor-react";
+import { Gavel } from "@phosphor-icons/react";
 
 import BodyWrapper from "../../../components/body-wrapper";
 import Image from "../../../components/image/image";
@@ -16,12 +17,17 @@ import Artwork from "../../../assets/images/games/fem-artwork.png";
 import AppIcon from "../../../assets/images/games/game-frankrit-eats-meat.png";
 import PlayStoreDLButton from "../../../assets/images/games/playstore-download-button.png";
 
+import { PATH_WEBPAGE } from "../../../routes/paths";
+import { useNavigate } from "react-router-dom";
+
 
 // ---------------------------------------------------------
 
 const FrankritEatsMeat = () => {
   // FloatingContentMenu
   const fcm = useRef(null);
+
+  const navigate = useNavigate();
 
   return (
     <>
@@ -33,6 +39,8 @@ const FrankritEatsMeat = () => {
           <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("download")}>◆ &nbsp; Download</MenuItem>
           <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("changelog")}>◆ &nbsp; Changelog</MenuItem>
           <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("faqs")}>◆ &nbsp; FAQs</MenuItem>
+          <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("contact")}>◆ &nbsp; Contact</MenuItem>
+          <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("privacypolicy")}>◆ &nbsp; Privacy Policy</MenuItem>
         </FloatingContentMenu>
 
 
@@ -787,6 +795,30 @@ const FrankritEatsMeat = () => {
             </Stack>
           </Stack>
         </Stack>
+
+        <div id="contact"></div>
+        <Box>
+          <Button
+            disableElevation
+            variant="outlined"
+            startIcon={<Table size={28} />}
+            onClick={() => navigate(PATH_WEBPAGE.general.contact)}
+          >
+            Contact Form
+          </Button>
+        </Box>
+
+        <div id="privacypolicy"></div>
+        <Box>
+          <Button
+            disableElevation
+            variant="outlined"
+            startIcon={<Gavel size={28} />}
+            onClick={() => navigate(PATH_WEBPAGE.playgroundSubpage.gamePrivacyPolicy)}
+          >
+            Privacy Policy
+          </Button>
+        </Box>
       </BodyWrapper>
     </>
   );
