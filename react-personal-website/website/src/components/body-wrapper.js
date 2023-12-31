@@ -26,6 +26,7 @@ const BodyWrapper = ({ children }) => {
           justifyContent={"space-evenly"}
         >
           <Stack
+            position={"relative"}
             spacing={1}
             p={3}
             sx={{
@@ -41,7 +42,7 @@ const BodyWrapper = ({ children }) => {
                 md: "80%",  // 900px
                 lg: "60%",  // 1200px
               },
-              maxWidth: "896px"
+              maxWidth: "896px",
             }}
           >
 

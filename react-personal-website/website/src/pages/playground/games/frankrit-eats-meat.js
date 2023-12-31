@@ -1,6 +1,6 @@
 import React from "react";
-import { Accordion, AccordionDetails, AccordionSummary, Divider, Stack, Typography } from "@mui/material";
-import { CaretDown, DownloadSimple, Question } from "phosphor-react";
+import { Accordion, AccordionDetails, AccordionSummary, Divider, IconButton, Menu, MenuItem, Stack, Typography } from "@mui/material";
+import { CaretDown, DownloadSimple, ListBullets, Question } from "phosphor-react";
 
 import BodyWrapper from "../../../components/body-wrapper";
 import Image from "../../../components/image/image";
@@ -19,9 +19,70 @@ import PlayStoreDLButton from "../../../assets/images/games/playstore-download-b
 // ---------------------------------------------------------
 
 const FrankritEatsMeat = () => {
+  // Page content - using Mui Menu component.
+  const [anchorEl, setAnchorEl] = React.useState(null);
+  const open = Boolean(anchorEl);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+  // Using Mui Menu to scroll to content.
+  const scrollTo = (elementID) => {
+    document.getElementById(elementID).scrollIntoView({ block: 'start', behavior: 'smooth' });
+    handleClose();
+  };
+
   return (
     <>
       <BodyWrapper>
+        <Stack
+          sx={{
+            position: "absolute",
+            top: "0px",
+            left: "0px",
+          }}
+        >
+          <Stack
+            sx={{
+              position: "fixed",
+              transform: "translateX(-50%)",
+            }}
+          >
+            <IconButton
+              id="basic-button"
+              aria-controls={open ? 'basic-menu' : undefined}
+              aria-haspopup="true"
+              aria-expanded={open ? 'true' : undefined}
+              onClick={handleClick}
+            >
+              <ListBullets />
+            </IconButton>
+            <Menu
+              id="basic-menu"
+              anchorEl={anchorEl}
+              open={open}
+              onClose={handleClose}
+              MenuListProps={{
+                'aria-labelledby': 'basic-button',
+              }}
+            >
+              <MenuItem onClick={() => scrollTo("about")}>About</MenuItem>
+              <MenuItem onClick={() => scrollTo("features")}>Features</MenuItem>
+              <MenuItem onClick={() => scrollTo("developers")}>Developers</MenuItem>
+              <MenuItem onClick={() => scrollTo("download")}>Download</MenuItem>
+              <MenuItem onClick={() => scrollTo("changelog")}>Changelog</MenuItem>
+              <MenuItem onClick={() => scrollTo("faqs")}>FAQs</MenuItem>
+            </Menu>
+          </Stack>
+        </Stack>
+
+
+        {/* --------------------------------------------------------- */}
+        {/* ABOUT --------------------------------------------------- */}
+        {/* --------------------------------------------------------- */}
+        <div id="about"></div>
         <Image src={Artwork} height={400} />
         <Stack>
           <Typography inline align="center" variant="body2">
@@ -37,6 +98,7 @@ const FrankritEatsMeat = () => {
         {/* --------------------------------------------------------- */}
         {/* FEATURES ------------------------------------------------ */}
         {/* --------------------------------------------------------- */}
+        <div id="features"></div>
         <Stack alignItems={"center"} justifyContent={"center"}>
           <Typography variant="h6">❖ Features ❖</Typography>
         </Stack>
@@ -57,6 +119,7 @@ const FrankritEatsMeat = () => {
         {/* --------------------------------------------------------- */}
         {/* DEVS ---------------------------------------------------- */}
         {/* --------------------------------------------------------- */}
+        <div id="developers"></div>
         <Stack alignItems={"center"} justifyContent={"center"}>
           <Typography variant="h6">❖ MEAT the Developers ❖</Typography>
         </Stack>
@@ -123,6 +186,7 @@ const FrankritEatsMeat = () => {
         {/* --------------------------------------------------------- */}
         {/* DOWNLOAD ------------------------------------------------ */}
         {/* --------------------------------------------------------- */}
+        <div id="download"></div>
         <Stack direction={"row"} alignItems={"center"} justifyContent={"center"} spacing={0.75}>
           <DownloadSimple size={28} />
           <Typography variant="h5">DOWNLOAD</Typography>
@@ -150,6 +214,7 @@ const FrankritEatsMeat = () => {
           </Stack>
         </Stack>
 
+        <div id="changelog"></div>
         <Stack>
           <Typography variant="h6">Changelog</Typography>
         </Stack>
@@ -668,6 +733,7 @@ const FrankritEatsMeat = () => {
         {/* --------------------------------------------------------- */}
         {/* FAQS ---------------------------------------------------- */}
         {/* --------------------------------------------------------- */}
+        <div id="faqs"></div>
         <Stack direction={"row"} alignItems={"center"} justifyContent={"center"} spacing={0.75}>
           <Question size={28} />
           <Typography variant="h5">FAQs</Typography>
