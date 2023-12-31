@@ -1,11 +1,13 @@
-import React from "react";
-import { Accordion, AccordionDetails, AccordionSummary, Divider, Stack, Typography } from "@mui/material";
-import { CaretDown, DownloadSimple, Question } from "phosphor-react";
+import React, { useRef } from "react";
+import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Divider, MenuItem, Stack, Typography } from "@mui/material";
+import { CaretDown, DownloadSimple, Question, Table } from "phosphor-react";
+import { Gavel } from "@phosphor-icons/react";
 
 import BodyWrapper from "../../../components/body-wrapper";
 import Spacer from "../../../components/spacer";
 import Image from "../../../components/image/image";
 import ImageGallery from "../../../components/image-gallery";
+import FloatingContentMenu from "../../../components/floating-content-menu";
 
 import AppIcon from "../../../assets/images/games/game-shark-a-boom.png";
 import PlayStoreDLButton from "../../../assets/images/games/playstore-download-button.png";
@@ -14,13 +16,33 @@ import OliverProfilePic from "../../../assets/images/games/dev-oliver.png";
 import { imageList as GameShowcase } from "../../../assets/images/games/game-sab-showcase/gallery-game-sab-showcase";
 import Artwork from "../../../assets/images/games/sab-artwork.png";
 
+import { PATH_WEBPAGE } from "../../../routes/paths";
+import { useNavigate } from "react-router-dom";
+
 
 // ---------------------------------------------------------
 
 const Sharkaboom = () => {
+  // FloatingContentMenu
+  const fcm = useRef(null);
+
+  const navigate = useNavigate();
+
   return (
     <>
       <BodyWrapper>
+        <FloatingContentMenu ref={fcm}>
+          <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("about")}>◆ &nbsp; About</MenuItem>
+          <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("features")}>◆ &nbsp; Features</MenuItem>
+          <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("developers")}>◆ &nbsp; Developers</MenuItem>
+          <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("download")}>◆ &nbsp; Download</MenuItem>
+          <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("changelog")}>◆ &nbsp; Changelog</MenuItem>
+          <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("faqs")}>◆ &nbsp; FAQs</MenuItem>
+          <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("contact")}>◆ &nbsp; Contact</MenuItem>
+          <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("privacypolicy")}>◆ &nbsp; Privacy Policy</MenuItem>
+        </FloatingContentMenu>
+
+
         {/* --------------------------------------------------------- */}
         {/* ABOUT --------------------------------------------------- */}
         {/* --------------------------------------------------------- */}
@@ -254,6 +276,30 @@ const Sharkaboom = () => {
             </Stack>
           </Stack>
         </Stack>
+
+        <div id="contact"></div>
+        <Box>
+          <Button
+            disableElevation
+            variant="outlined"
+            startIcon={<Table size={28} />}
+            onClick={() => navigate(PATH_WEBPAGE.general.contact)}
+          >
+            Contact Form
+          </Button>
+        </Box>
+
+        <div id="privacypolicy"></div>
+        <Box>
+          <Button
+            disableElevation
+            variant="outlined"
+            startIcon={<Gavel size={28} />}
+            onClick={() => navigate(PATH_WEBPAGE.playgroundSubpage.gamePrivacyPolicy)}
+          >
+            Privacy Policy
+          </Button>
+        </Box>
       </BodyWrapper>
     </>
   );
