@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Divider, IconButton, Menu, MenuItem, Stack, Typography } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Alert, Box, Button, Divider, IconButton, Menu, MenuItem, Stack, Typography } from "@mui/material";
 import { CaretDown, DownloadSimple, ListBullets, Question, Table } from "phosphor-react";
 import { Gavel } from "@phosphor-icons/react";
 
@@ -28,6 +28,17 @@ const FrankritEatsMeat = () => {
   const fcm = useRef(null);
 
   const navigate = useNavigate();
+
+  const importantMessage = (
+    <>
+      Note:
+      <Stack py={1} paddingLeft={2}>
+        This game was built using GameMaker Studio. Soon after, I moved to the Unity Engine. It was hard to maintain the Google SDK and some of the dependencies were outdated which resulted in the app being removed from the Google Play Store.
+        <br /><br />
+        I plan to remake this game from scratch in the Unity Engine when time permits.
+      </Stack>
+    </>
+  );
 
   return (
     <>
@@ -167,6 +178,10 @@ const FrankritEatsMeat = () => {
           height={56}
           url="https://play.google.com/store/apps/details?id=com.jgamesentertainment.frankriteatsmeat"
         />
+
+        <Alert variant="outlined" severity="error">
+          {importantMessage}
+        </Alert>
 
         <Stack spacing={0.5}>
           <Typography variant="h6">
@@ -703,6 +718,10 @@ const FrankritEatsMeat = () => {
           <Question size={28} />
           <Typography variant="h5">FAQs</Typography>
         </Stack>
+
+        <Alert variant="outlined" severity="error">
+          {importantMessage}
+        </Alert>
 
         <Stack spacing={3}>
           <Stack spacing={0.5}>

@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { Accordion, AccordionDetails, AccordionSummary, Box, Button, Divider, MenuItem, Stack, Typography } from "@mui/material";
+import { Accordion, AccordionDetails, AccordionSummary, Alert, Box, Button, Divider, MenuItem, Stack, Typography } from "@mui/material";
 import { CaretDown, DownloadSimple, Question, Table } from "phosphor-react";
 import { Gavel } from "@phosphor-icons/react";
 
@@ -27,6 +27,17 @@ const Sharkaboom = () => {
   const fcm = useRef(null);
 
   const navigate = useNavigate();
+
+  const importantMessage = (
+    <>
+      Note:
+      <Stack py={1} paddingLeft={2}>
+        This game was the biggest project I did. Using the Unity Engine I made a game similar to Brawl Stars. It was too big of a project to handle all by myself from programming to artwork to marketing. It started as a fun ambitious project but after a year it became mentally draining. As a result, this game will not be worked on further but will serve as an MVP of my idea.
+        <br /><br />
+        The game can still be downloaded from the Google Play Store as it is still on the Early Access Branch.
+      </Stack>
+    </>
+  );
 
   return (
     <>
@@ -147,6 +158,10 @@ const Sharkaboom = () => {
           url="https://play.google.com/store/apps/details?id=com.jgamesentertainment.sharkpewpew"
         />
 
+        <Alert variant="outlined" severity="warning">
+          {importantMessage}
+        </Alert>
+
         <Stack spacing={0.5}>
           <Typography variant="h6">
             Current version:
@@ -196,6 +211,10 @@ const Sharkaboom = () => {
           <Question size={28} />
           <Typography variant="h5">FAQs</Typography>
         </Stack>
+
+        <Alert variant="outlined" severity="warning">
+          {importantMessage}
+        </Alert>
 
         <Stack spacing={3}>
           <Stack spacing={0.5}>
