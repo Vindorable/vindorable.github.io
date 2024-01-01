@@ -87,6 +87,7 @@ const Contact = () => {
         <Stack alignItems={"center"} justifyContent={"center"}>
           <Typography variant="body2">Drop Me A Message</Typography>
           <Typography variant="subtitle2">Note: This form currently don't have a service/backend api so the submit don't work.</Typography>
+          <Typography inline align="center" variant="subtitle2">For now, you can email me directly at:<br />j.raj93.designer@gmail.com</Typography>
         </Stack>
         <Divider />
         <Spacer amount={10} />

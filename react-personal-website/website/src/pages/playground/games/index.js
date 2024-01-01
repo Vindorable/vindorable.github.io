@@ -25,7 +25,7 @@ const Games = () => {
       <BodyWrapper>
         <Image src={JGamesLogo} height={300} />
 
-        <Box>
+        {/* <Box>
           <Button
             disableElevation
             variant="outlined"
@@ -34,7 +34,7 @@ const Games = () => {
           >
             My Journey as a Solo Indie Game Dev
           </Button>
-        </Box>
+        </Box> */}
 
         <Box>
           <Button

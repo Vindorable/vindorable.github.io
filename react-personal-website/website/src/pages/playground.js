@@ -24,10 +24,9 @@ const Playground = () => {
           />
 
           <StyledImage01
-            imageAlt="vines"
-            imageLink="https://images.squarespace-cdn.com/content/v1/52485ff0e4b016b87cc4bf2f/1469318046060-1W0QMTK6L8YIUOC305ZS/Website+Links+-+Vines.png"
-            url="https://vine.co/u/1058801076616462336"
-            isURLExternal={true}
+            imageAlt="dst mods"
+            imageLink="https://images.squarespace-cdn.com/content/v1/52485ff0e4b016b87cc4bf2f/1469322178513-A0PQINIFRVOFEO5SIJ7S/DST+Mods+Links.png"
+            url={PATH_WEBPAGE.playgroundSubpage.dst}
           />
 
           <StyledImage01
@@ -39,9 +38,10 @@ const Playground = () => {
 
         <Stack direction={"row"}>
           <StyledImage01
-            imageAlt="dst mods"
-            imageLink="https://images.squarespace-cdn.com/content/v1/52485ff0e4b016b87cc4bf2f/1469322178513-A0PQINIFRVOFEO5SIJ7S/DST+Mods+Links.png"
-            url={PATH_WEBPAGE.playgroundSubpage.dst}
+            imageAlt="vines"
+            imageLink="https://images.squarespace-cdn.com/content/v1/52485ff0e4b016b87cc4bf2f/1469318046060-1W0QMTK6L8YIUOC305ZS/Website+Links+-+Vines.png"
+            url="https://vine.co/u/1058801076616462336"
+            isURLExternal={true}
           />
 
           <StyledImage01
