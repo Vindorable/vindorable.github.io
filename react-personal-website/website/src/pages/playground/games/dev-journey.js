@@ -13,6 +13,7 @@ import KRAKENBRINGER from "../../../assets/images/dst/03-dota-weapons-mod/KRAKEN
 import WULDASTRON from "../../../assets/images/dst/03-dota-weapons-mod/WULDASTRON.png"
 import CURSEDWULDAST from "../../../assets/images/dst/03-dota-weapons-mod/CURSED WULDAST.png"
 import FEMArtwork from "../../../assets/images/games/fem-artwork.png";
+import SABLoadingScreen from "../../../assets/images/games/sab-loading-screen-old-new.png";
 
 
 // ---------------------------------------------------------
@@ -68,13 +69,27 @@ const DevJourney = () => {
           As you can see, Frankrit is… Pudge from Dota. Why Pudge? Because I could never land a successful hook in the game so I made a game that was all about hooking. Lol.
           <br /><Spacer amount={10} />
           <Image src={FEMArtwork} />
-          <Stack width={"100%"} maxWidth={"600px"}>
-            <YoutubeEmbed embedId={"-DjaTHVWxrA"} />
-          </Stack>
+          <YoutubeEmbed embedId={"-DjaTHVWxrA"} />
+
+          <br /><br /><Spacer amount={5} />
+
+          As years went by, I changed my job from a Motion Graphics & VFX Artist to Personal Fitness Trainer to Insurance Agent and I got busy and slowly stopped updating Frankrit Eats Meat. Also, it was built on GameMaker Studio (GMS), a game engine that was not so flexible back in the days as it was built on version 1.4. Version 2+ is much better now though.
 
           <br /><br /><br />
 
-          As years went by, I changed my job from a Motion Graphics & VFX Artist to Personal Fitness Trainer to Insurance Agent and I got busy and slowly stopped updating Frankrit Eats Meat. Also, it was built on GameMaker Studio (GMS), a game engine that was not so flexible back in the days as it was built on version 1.4. Version 2+ is much better now though.
+          When Covid happened… I needed to find a way I could earn income through something I love doing. So I went back into making games. I didn’t want to use GMS now because I wanted to build on an engine that was flexible and modular. Articles mentioned Unreal was harder and I didn’t have a team so I stuck with Unity. So I jumped into learning Unity in late August 2019 and learnt everything I could as fast as I can in 3 months. On 5 Dec 2019, that was the start of Shark Pew Pew, now Shark-A-Boom! The name change was just random because I wanted to come up with something more catchy and I got reminded of a childhood Hindi song https://www.youtube.com/watch?v=BxywyrDKbyg. Lmao.
+          <br /><Spacer amount={10} />
+          <Image src={SABLoadingScreen} />
+
+          <br /><br /><Spacer amount={5} />
+
+          Why I didn’t think of porting Frankrit Eats Meat over to Unity and instead create a new game?
+          <br />
+          Because I wanted to challenge myself and add everything that was lacking in it to a new game. Like playing real-time with friends, etc. Personally to me, the way I looked at it was the same as after you have 1 child, why do some want to have another despite knowing that it’s going to be very tough? Shark-A-Boom is my baby too so I didn’t want my idea to go to waste and I acted on it.
+
+          <br /><br />
+
+          So continuing from the Unity Forums link from above, why I have not completely given up hope on this is because I still believe Shark-A-Boom will become something. It’s not just a game nor a business. It’s my baby. It’s still young now so I just have to add more content and make it better with love until it is fully grown. Till that day….
         </Typography>
       </BodyWrapper>
     </>
