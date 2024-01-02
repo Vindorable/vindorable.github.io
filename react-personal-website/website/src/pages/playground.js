@@ -47,6 +47,8 @@ const Playground = () => {
           <StyledImage01
             imageAlt="unruly gent clothing"
             imageLink="https://images.squarespace-cdn.com/content/v1/52485ff0e4b016b87cc4bf2f/1469331347367-55TBODTS5U7Y6HL83PVX/Website+Links+-+Unruly+Gent.png"
+            url="https://unrulygent.threadless.com/"
+            isURLExternal={true}
           />
 
           <StyledImage01

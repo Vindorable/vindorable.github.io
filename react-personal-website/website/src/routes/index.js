@@ -28,7 +28,9 @@ const Playground = Loadable(lazy(() => import("../pages/playground")));
 const Contact = Loadable(lazy(() => import("../pages/contact")));
 
 const Pokemon = Loadable(lazy(() => import("../pages/pokemon")));
-const DST = Loadable(lazy(() => import("../pages/dst")));
+const DST = Loadable(lazy(() => import("../pages/playground/dst-mods")));
+const DSTBDayCakeMod = Loadable(lazy(() => import("../pages/playground/dst-mods/bday-cake-mod")));
+const DSTDotaWeaponsMod = Loadable(lazy(() => import("../pages/playground/dst-mods/dota-weapons-mod")));
 const Games = Loadable(lazy(() => import("../pages/playground/games")));
 const GameFrankritEatsMeat = Loadable(lazy(() => import("../pages/playground/games/frankrit-eats-meat")));
 const GameSharkABoom = Loadable(lazy(() => import("../pages/playground/games/shark-a-boom")));
@@ -56,6 +58,8 @@ export default function Router() {
 
         { path: "playground/pokemon", element: <Pokemon /> },
         { path: "playground/dst", element: <DST /> },
+        { path: "playground/dst/birthday-cake-mod", element: <DSTBDayCakeMod /> },
+        { path: "playground/dst/dota-weapons-mod", element: <DSTDotaWeaponsMod /> },
         { path: "playground/games", element: <Games /> },
         { path: "playground/games/frankrit-eats-meat", element: <GameFrankritEatsMeat /> },
         { path: "playground/games/shark-a-boom", element: <GameSharkABoom /> },
