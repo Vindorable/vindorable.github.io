@@ -25,6 +25,7 @@ export const PATH_WEBPAGE = {
     pokemon: path(`${ROOTS_WEBPAGE}playground/`, "pokemon"),
     dst: path(`${ROOTS_WEBPAGE}playground/`, "dst"),
     dstBDayCakeMod: path(`${ROOTS_WEBPAGE}playground/dst/`, "birthday-cake-mod"),
+    dstBootyPackMod: path(`${ROOTS_WEBPAGE}playground/dst/`, "booty-pack-mod"),
     dstDotaWeaponsMod: path(`${ROOTS_WEBPAGE}playground/dst/`, "dota-weapons-mod"),
     games: path(`${ROOTS_WEBPAGE}playground/`, "games"),
     gameFrankritEatsMeat: path(`${ROOTS_WEBPAGE}playground/games/`, "frankrit-eats-meat"),

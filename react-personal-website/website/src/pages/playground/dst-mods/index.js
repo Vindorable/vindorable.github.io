@@ -38,7 +38,7 @@ const DSTMods = () => {
           <Image
             src={BootyPackModDP}
             height={180}
-            url={PATH_WEBPAGE.playgroundSubpage.gameSharkABoom}
+            url={PATH_WEBPAGE.playgroundSubpage.dstBootyPackMod}
           />
           <Image
             src={DotaWeaponsModDP}

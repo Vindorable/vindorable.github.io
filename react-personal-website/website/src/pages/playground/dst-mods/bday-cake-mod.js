@@ -38,7 +38,7 @@ const BDayCakeMod = () => {
             To spawn the basic "HAPPY" and "BIRTHDAY" cakes that is provided, copy / paste this codes in the console:
 
           </>}
-          steamWorkshopLink={"https://steamcommunity.com/sharedfiles/filedetails/?id=716271544"}
+          steamWorkshopLink={"https://steamcommunity.com/sharedfiles/filedetails/?id=711913479"}
           changelogImgLink={"http://orig03.deviantart.net/ac8f/f/2016/182/e/c/workshop_version_detail___bday_cake_w_creator_kit_by_vindorable-da7sdsz.png"}
         />
       </BodyWrapper>
