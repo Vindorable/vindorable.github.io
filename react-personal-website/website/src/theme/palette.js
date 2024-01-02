@@ -17,7 +17,7 @@ const palette = {
   dark: {
     mode: "dark",
     text: { primary: "#fff", secondary: alpha("#fff", 0.7), disabled: alpha("#fff", 0.5) },
-    background: { paper: "rgb(24, 24, 24)", default: "rgb(22, 22, 22)", defaultInverse: "#fff" },
+    background: { paper: "rgb(24, 24, 24)", default: "rgb(11, 11, 11)", defaultInverse: "#fff" },
     divider: alpha("#fff", 0.12), // default mui theme
     dividerCustom: { strong: alpha("#fff", 0.3) }
   },
