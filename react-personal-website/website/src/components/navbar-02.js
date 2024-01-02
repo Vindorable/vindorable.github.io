@@ -6,7 +6,7 @@ import { LinkedinLogo, UserCircle } from "phosphor-react";
 import { NavTab, NavTabs } from "./nav-tab";
 
 // Routes.
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { PATH_WEBPAGE } from "../routes/paths";
 
 
@@ -20,6 +20,11 @@ const Navbar = () => {
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
+
+  // https://stackoverflow.com/a/76166816
+  // https://stackoverflow.com/a/70151723
+  const { pathname } = useLocation();
+  const [[, currentRoot]] = pathname.matchAll(/^(\/[^/]*)/g);
 
   return (
     <>
@@ -67,14 +72,14 @@ const Navbar = () => {
           {/* Navigation Tabs */}
           {/* --------------- */}
           <Stack direction={"row"} spacing={2} alignItems={"center"} justifyContent={"center"}>
-            <NavTabs value={value} onChange={handleChange}>
-              <NavTab label="Experience" component={Link} to={PATH_WEBPAGE.general.experience} />
+            <NavTabs value={currentRoot} onChange={handleChange}>
+              <NavTab label="Experience" component={Link} to={PATH_WEBPAGE.general.experience} value={PATH_WEBPAGE.general.experience} />
               {/* <NavTab label="Work" component={Link} to={PATH_WEBPAGE.general.work} /> */}
-              <NavTab label="Playground" component={Link} to={PATH_WEBPAGE.general.playground} />
-              <NavTab label="Contact" component={Link} to={PATH_WEBPAGE.general.contact} />
+              <NavTab label="Playground" component={Link} to={PATH_WEBPAGE.general.playground} value={PATH_WEBPAGE.general.playground} />
+              <NavTab label="Contact" component={Link} to={PATH_WEBPAGE.general.contact} value={PATH_WEBPAGE.general.contact} />
             </NavTabs>
             {/* IIFE (Immediately Invoked Function Expressions) */}
-            {(() => {
+            {/* {(() => {
               switch (value) {
                 case 0:
                   // Experience.
@@ -89,7 +94,7 @@ const Navbar = () => {
                   // Contact.
                   break;
               }
-            })()}
+            })()} */}
 
             <IconButton
               onClick={() => window.open("https://www.linkedin.com/in/jay-raj-97508742/", "_blank")}
