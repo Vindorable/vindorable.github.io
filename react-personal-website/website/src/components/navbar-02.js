@@ -1,9 +1,11 @@
 import React from "react";
-import { Box, Icon, IconButton, Stack, Typography } from "@mui/material";
+import { Box, Icon, IconButton, Stack, Tooltip, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { LinkedinLogo, UserCircle } from "phosphor-react";
 
 import { NavTab, NavTabs } from "./nav-tab";
+
+import MyName from "../assets/images/homepage/jay-name.png"
 
 // Routes.
 import { Link, useLocation } from "react-router-dom";
@@ -53,19 +55,38 @@ const Navbar = () => {
               textDecoration: "inherit",
             }}
           >
-            <Stack
-              direction={"row"}
-              spacing={2}
-              sx={{ height: "100%" }}
-              alignItems={"center"}
+            <Tooltip
+              title="HOME"
+              arrow
+              componentsProps={{
+                tooltip: {
+                  sx: {
+                    bgcolor: theme.palette.background.defaultInverse,
+                    color: theme.palette.background.default,
+                  }
+                },
+                arrow: {
+                  sx: {
+                    color: theme.palette.background.defaultInverse,
+                  }
+                }
+              }}
             >
-              <Icon sx={{ width: 32, height: 32, }}>
-                <UserCircle size={32} />
-              </Icon>
-              <Typography variant="h5">
-                JAY RAJ
-              </Typography>
-            </Stack>
+              <Stack
+                direction={"row"}
+                spacing={1}
+                sx={{ height: "100%" }}
+                alignItems={"center"}
+              >
+                <Icon sx={{ width: 42, height: 42, }}>
+                  {/* <UserCircle size={32} /> */}
+                  <img src={MyName} style={{ objectFit: "contain", height: "100%" }} />
+                </Icon>
+                <Typography variant="h5" fontWeight={"600"}>
+                  JAY RAJ
+                </Typography>
+              </Stack>
+            </Tooltip>
           </Link>
 
 
@@ -98,6 +119,12 @@ const Navbar = () => {
 
             <IconButton
               onClick={() => window.open("https://www.linkedin.com/in/jay-raj-97508742/", "_blank")}
+              sx={{
+                color: theme.palette.text.disabled,
+                "&:hover": {
+                  color: theme.palette.text.primary,
+                }
+              }}
             >
               <LinkedinLogo size={32} />
             </IconButton>
