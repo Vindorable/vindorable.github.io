@@ -1,9 +1,11 @@
 import React from "react";
 import { Box, Icon, IconButton, Stack, Tooltip, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { LinkedinLogo, UserCircle } from "phosphor-react";
 
 import { NavTab, NavTabs } from "./nav-tab";
+import MobileDrawer from "./mobile-drawer";
 
 import MyName from "../assets/images/homepage/jay-name.png"
 
@@ -16,6 +18,7 @@ import { PATH_WEBPAGE } from "../routes/paths";
 
 const Navbar = () => {
   const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
   // Tabs.
   const [value, setValue] = React.useState(0);
@@ -93,14 +96,18 @@ const Navbar = () => {
           {/* Navigation Tabs */}
           {/* --------------- */}
           <Stack direction={"row"} spacing={2} alignItems={"center"} justifyContent={"center"}>
-            <NavTabs value={currentRoot} onChange={handleChange}>
-              <NavTab label="Experience" component={Link} to={PATH_WEBPAGE.general.experience} value={PATH_WEBPAGE.general.experience} />
-              {/* <NavTab label="Work" component={Link} to={PATH_WEBPAGE.general.work} /> */}
-              <NavTab label="Playground" component={Link} to={PATH_WEBPAGE.general.playground} value={PATH_WEBPAGE.general.playground} />
-              <NavTab label="Contact" component={Link} to={PATH_WEBPAGE.general.contact} value={PATH_WEBPAGE.general.contact} />
-            </NavTabs>
-            {/* IIFE (Immediately Invoked Function Expressions) */}
-            {/* {(() => {
+            {isMobile ? (
+              <MobileDrawer />
+            ) : (
+              <>
+                <NavTabs value={currentRoot} onChange={handleChange}>
+                  <NavTab label="Experience" component={Link} to={PATH_WEBPAGE.general.experience} value={PATH_WEBPAGE.general.experience} />
+                  {/* <NavTab label="Work" component={Link} to={PATH_WEBPAGE.general.work} /> */}
+                  <NavTab label="Playground" component={Link} to={PATH_WEBPAGE.general.playground} value={PATH_WEBPAGE.general.playground} />
+                  <NavTab label="Contact" component={Link} to={PATH_WEBPAGE.general.contact} value={PATH_WEBPAGE.general.contact} />
+                </NavTabs>
+                {/* IIFE (Immediately Invoked Function Expressions) */}
+                {/* {(() => {
               switch (value) {
                 case 0:
                   // Experience.
@@ -117,17 +124,19 @@ const Navbar = () => {
               }
             })()} */}
 
-            <IconButton
-              onClick={() => window.open("https://www.linkedin.com/in/jay-raj-97508742/", "_blank")}
-              sx={{
-                color: theme.palette.text.disabled,
-                "&:hover": {
-                  color: theme.palette.text.primary,
-                }
-              }}
-            >
-              <LinkedinLogo size={32} />
-            </IconButton>
+                <IconButton
+                  onClick={() => window.open("https://www.linkedin.com/in/jay-raj-97508742/", "_blank")}
+                  sx={{
+                    color: theme.palette.text.disabled,
+                    "&:hover": {
+                      color: theme.palette.text.primary,
+                    }
+                  }}
+                >
+                  <LinkedinLogo size={32} />
+                </IconButton>
+              </>
+            )}
           </Stack>
         </Stack>
       </Box>
