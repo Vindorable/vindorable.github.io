@@ -31,7 +31,7 @@ const Homepage = () => {
           bottom={0}
           width={"auto"}
           height={"100%"}
-          maxHeight={"calc(100vh - 60px)"}
+          maxHeight={"calc(100dvh - 60px)"}
           justifyContent={"space-evenly"}
         // sx={{
         //   borderRadius: "8px",
@@ -42,7 +42,7 @@ const Homepage = () => {
           <Stack height={"1%"} />
 
           <Stack height={"4%"}>
-            <Typography inline align="center" variant="h1" fontWeight={"600"} fontSize={"5vh"}>
+            <Typography inline align="center" variant="h1" fontWeight={"600"} fontSize={"5dvh"}>
               Hi, I'm
             </Typography>
           </Stack>
@@ -54,7 +54,7 @@ const Homepage = () => {
           </Stack>
 
           <Stack height={"2%"}>
-            <Typography inline align="center" variant="body2" fontWeight={"300"} fontSize={"1.6vh"} letterSpacing={"0.1rem"}>
+            <Typography inline align="center" variant="body2" fontWeight={"300"} fontSize={"1.6dvh"} letterSpacing={"0.1rem"}>
               <span ref={glitchText.ref}>
                 Welcome to my personal space.
               </span>
@@ -62,7 +62,7 @@ const Homepage = () => {
           </Stack>
 
           <Stack height={"70%"}>
-            <span ref={glitchAvatar.ref} style={{ maxHeight: "calc((100vh - 60px) / 100 * 70)" }}>
+            <span ref={glitchAvatar.ref} style={{ maxHeight: "calc((100dvh - 60px) / 100 * 70)" }}>
               <img src={MyAvatar} style={{ objectFit: "cover", height: "100%" }} />
             </span>
           </Stack>
