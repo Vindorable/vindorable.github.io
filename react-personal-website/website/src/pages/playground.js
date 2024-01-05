@@ -1,11 +1,11 @@
 import React from "react";
 import { Stack } from "@mui/system";
-import { useTheme } from "@mui/material/styles";
-import useMediaQuery from "@mui/material/useMediaQuery";
 
 import PlaygroundSidebar from "../components/playground-sidebar";
 import BodyWrapper from "../components/body-wrapper";
 import StyledImage01 from "../components/image-styled-01";
+
+import { IsMobile } from "../functions/isMobile";
 
 import { PATH_WEBPAGE } from "../routes/paths";
 
@@ -13,15 +13,12 @@ import { PATH_WEBPAGE } from "../routes/paths";
 // ---------------------------------------------------------
 
 const Playground = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-
   return (
     <>
       {/* <PlaygroundSidebar /> */}
 
       <BodyWrapper>
-        <Stack direction={isMobile ? "column" : "row"}>
+        <Stack direction={IsMobile() ? "column" : "row"}>
           <StyledImage01
             imageAlt="frankrit eats meat mobile game"
             imageLink="https://images.squarespace-cdn.com/content/v1/52485ff0e4b016b87cc4bf2f/1488975377441-L4PULVVO0Q01I0PTNUEG/image-asset.png"
@@ -41,7 +38,7 @@ const Playground = () => {
           />
         </Stack>
 
-        <Stack direction={isMobile ? "column" : "row"}>
+        <Stack direction={IsMobile() ? "column" : "row"}>
           <StyledImage01
             imageAlt="vines"
             imageLink="https://images.squarespace-cdn.com/content/v1/52485ff0e4b016b87cc4bf2f/1469318046060-1W0QMTK6L8YIUOC305ZS/Website+Links+-+Vines.png"
@@ -56,7 +53,7 @@ const Playground = () => {
             isURLExternal={true}
           />
 
-          {!isMobile &&
+          {!IsMobile() &&
             <StyledImage01
               imageAlt=""
               imageLink="https://images.squarespace-cdn.com/content/v1/52485ff0e4b016b87cc4bf2f/1469318046060-1W0QMTK6L8YIUOC305ZS/Website+Links+-+Vines.png"
