@@ -38,7 +38,7 @@ const BodyWrapper = ({ children }) => {
               // borderColor: theme.palette.divider,
 
               width: {
-                xs: "auto", // 0px
+                xs: "100%", // 0px
                 md: "80%",  // 900px
                 lg: "60%",  // 1200px
               },

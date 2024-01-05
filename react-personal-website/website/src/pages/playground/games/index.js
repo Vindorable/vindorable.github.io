@@ -6,6 +6,8 @@ import BodyWrapper from "../../../components/body-wrapper";
 import Image from "../../../components/image/image";
 import Spacer from "../../../components/spacer";
 
+import { IsMobile } from "../../../functions/isMobile";
+
 import JGamesLogo from "../../../assets/images/games/jgames-logo.png";
 import FrankritEatsMeat from "../../../assets/images/games/game-frankrit-eats-meat.png";
 import SharkABoom from "../../../assets/images/games/game-shark-a-boom.png";
@@ -54,20 +56,20 @@ const Games = () => {
           These are the games I created as a solo indie game dev over the years.
         </Typography>
 
-        <Stack direction={"row"} p={2} spacing={3}>
+        <Stack direction={IsMobile() ? "column" : "row"} p={2} spacing={3}>
           <Image
             src={FrankritEatsMeat}
-            height={180}
+            height={IsMobile() ? "100%" : "180px"}
             url={PATH_WEBPAGE.playgroundSubpage.gameFrankritEatsMeat}
           />
           <Image
             src={SharkABoom}
-            height={180}
+            height={IsMobile() ? "100%" : "180px"}
             url={PATH_WEBPAGE.playgroundSubpage.gameSharkABoom}
           />
           <Image
             src={DinoWithAGun}
-            height={180}
+            height={IsMobile() ? "100%" : "180px"}
             url={PATH_WEBPAGE.playgroundSubpage.gameDinoWithAGun}
           />
         </Stack>

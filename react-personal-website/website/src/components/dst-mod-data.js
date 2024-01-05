@@ -5,6 +5,8 @@ import { ArrowElbowLeft } from "phosphor-react";
 
 import ImageGallery from "./image-gallery";
 
+import { IsMobile } from "../functions/isMobile";
+
 
 // ---------------------------------------------------------
 
@@ -34,9 +36,12 @@ const DSTModData = ({ modBanner, modName, modShortDesc, modDescArt, modScreensho
         <Divider />
 
         <>{(modDescArt || modScreenshots) &&
-          <Stack direction={"row"}>
+          <Stack
+            direction={IsMobile() ? "column" : "row"}
+            spacing={IsMobile() ? 3 : 0}
+          >
             <>{modDescArt &&
-              <Stack width={"70%"}>
+              <Stack width={IsMobile() ? "100%" : "70%"}>
                 <Box
                   component="img"
                   sx={{ width: "100%", height: "auto" }}
@@ -46,7 +51,7 @@ const DSTModData = ({ modBanner, modName, modShortDesc, modDescArt, modScreensho
               </Stack>
             }</>
             <>{modScreenshots &&
-              <Stack width={"30%"}>
+              <Stack width={IsMobile() ? "100%" : "30%"}>
                 <ImageGallery
                   imageSet={modScreenshots}
                   height={200}

@@ -63,7 +63,7 @@ const Lightbox = forwardRef(({ imageSet }, ref) => {
           <Box
             sx={{
               width: "100vw",
-              height: "100vh",
+              height: "100dvh",
               backgroundColor: "#000",
             }}
           >
@@ -89,7 +89,7 @@ const Lightbox = forwardRef(({ imageSet }, ref) => {
               style={{ objectFit: "contain", borderRadius: "8px" }}
             />
 
-            <Stack sx={{ width: "100vw", height: "100vh" }}>
+            <Stack sx={{ width: "100vw", height: "100dvh" }}>
               <Stack
                 sx={{ width: "100%", height: "100%" }}
                 p={1}
