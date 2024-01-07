@@ -91,6 +91,14 @@ const DevJourney = () => {
 
           So continuing from the Unity Forums link from above, why I have not completely given up hope on this is because I still believe Shark-A-Boom will become something. It’s not just a game nor a business. It’s my baby. It’s still young now so I just have to add more content and make it better with love until it is fully grown. Till that day….
         </Typography>
+
+        <br />
+
+        <Stack direction={"row"} alignItems={"center"} justifyContent={"end"}>
+          <Typography variant="caption">
+            Mar 12, 2021
+          </Typography>
+        </Stack>
       </BodyWrapper>
     </>
   );
