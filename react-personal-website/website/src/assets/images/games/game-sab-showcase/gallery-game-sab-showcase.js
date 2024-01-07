@@ -13,95 +13,95 @@ const importedImages = importAll(require.context('./', false, /\.(png|jpe?g|svg)
 const imageList = [
   {
     img: importedImages[0],
-    title: "",
+    title: "01+loading+screen",
   },
   {
     img: importedImages[1],
-    title: "",
+    title: "02+connects+to+game+services",
   },
   {
     img: importedImages[2],
-    title: "",
+    title: "03+reads+cloud+game+save",
   },
   {
     img: importedImages[3],
-    title: "",
+    title: "04+shop+menu",
   },
   {
     img: importedImages[4],
-    title: "",
+    title: "05+stats+menu",
   },
   {
     img: importedImages[5],
-    title: "",
+    title: "06+battle+play+menu",
   },
   {
     img: importedImages[6],
-    title: "",
+    title: "07+customization+menu",
   },
   {
     img: importedImages[7],
-    title: "",
+    title: "08+inventory+menu",
   },
   {
     img: importedImages[8],
-    title: "",
+    title: "09+user+name+editor",
   },
   {
     img: importedImages[9],
-    title: "",
+    title: "10+user+avatar+selector",
   },
   {
     img: importedImages[10],
-    title: "",
+    title: "11+game+region+selector+01",
   },
   {
     img: importedImages[11],
-    title: "",
+    title: "12+game+region+selector+02",
   },
   {
     img: importedImages[12],
-    title: "",
+    title: "13+settings+panel",
   },
   {
     img: importedImages[13],
-    title: "",
+    title: "14+daily+rewards",
   },
   {
     img: importedImages[14],
-    title: "",
+    title: "15+auto-matchmaking",
   },
   {
     img: importedImages[15],
-    title: "",
+    title: "16+hosted+game",
   },
   {
     img: importedImages[16],
-    title: "",
+    title: "17+join+hosted+game",
   },
   {
     img: importedImages[17],
-    title: "",
+    title: "18+game+map",
   },
   {
     img: importedImages[18],
-    title: "",
+    title: "19+skill+aimer",
   },
   {
     img: importedImages[19],
-    title: "",
+    title: "20+skill+projectile",
   },
   {
     img: importedImages[20],
-    title: "",
+    title: "21+basic+projectile",
   },
   {
     img: importedImages[21],
-    title: "",
+    title: "22+death+overlay",
   },
   {
     img: importedImages[22],
-    title: "",
+    title: "23+match+results",
   },
 ];
 
