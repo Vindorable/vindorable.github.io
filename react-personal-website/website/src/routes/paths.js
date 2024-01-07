@@ -29,6 +29,7 @@ export const PATH_WEBPAGE = {
     dstDotaWeaponsMod: path(`${ROOTS_WEBPAGE}playground/dst/`, "dota-weapons-mod"),
     games: path(`${ROOTS_WEBPAGE}playground/`, "games"),
     gameFrankritEatsMeat: path(`${ROOTS_WEBPAGE}playground/games/`, "frankrit-eats-meat"),
+    gameFrankritEatsMeatPresskit: path(`${ROOTS_WEBPAGE}playground/games/frankrit-eats-meat/`, "presskit"),
     gameSharkABoom: path(`${ROOTS_WEBPAGE}playground/games/`, "shark-a-boom"),
     gameDinoWithAGun: path(`${ROOTS_WEBPAGE}playground/games/`, "dino-with-a-gun"),
     gameDevJourney: path(`${ROOTS_WEBPAGE}playground/games/`, "dev-journey"),

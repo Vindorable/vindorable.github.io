@@ -34,6 +34,7 @@ const DSTBootyPackMod = Loadable(lazy(() => import("../pages/playground/dst-mods
 const DSTDotaWeaponsMod = Loadable(lazy(() => import("../pages/playground/dst-mods/dota-weapons-mod")));
 const Games = Loadable(lazy(() => import("../pages/playground/games")));
 const GameFrankritEatsMeat = Loadable(lazy(() => import("../pages/playground/games/frankrit-eats-meat")));
+const GameFrankritEatsMeatPresskit = Loadable(lazy(() => import("../pages/playground/games/frankrit-eats-meat-presskit")));
 const GameSharkABoom = Loadable(lazy(() => import("../pages/playground/games/shark-a-boom")));
 const GameDinoWithAGun = Loadable(lazy(() => import("../pages/playground/games/dino-with-a-gun")));
 const GameDevJourney = Loadable(lazy(() => import("../pages/playground/games/dev-journey")));
@@ -64,6 +65,7 @@ export default function Router() {
         { path: "playground/dst/dota-weapons-mod", element: <DSTDotaWeaponsMod /> },
         { path: "playground/games", element: <Games /> },
         { path: "playground/games/frankrit-eats-meat", element: <GameFrankritEatsMeat /> },
+        { path: "playground/games/frankrit-eats-meat/presskit", element: <GameFrankritEatsMeatPresskit /> },
         { path: "playground/games/shark-a-boom", element: <GameSharkABoom /> },
         { path: "playground/games/dino-with-a-gun", element: <GameDinoWithAGun /> },
         { path: "playground/games/dev-journey", element: <GameDevJourney /> },
