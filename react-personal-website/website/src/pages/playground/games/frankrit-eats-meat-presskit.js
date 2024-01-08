@@ -183,7 +183,7 @@ const FrankritEatsMeatPresskit = () => {
             </Typography>
 
             <Typography variant="body2">
-              <a href={PATH_WEBPAGE.playgroundSubpage.gameFrankritEatsMeat} target="_blank">Game Homepage</a>
+              <a href={`#${PATH_WEBPAGE.playgroundSubpage.gameFrankritEatsMeat}`} target="_blank">Game Homepage</a>
               &nbsp;- A simple homepage for the game with FAQs, etc.
             </Typography>
 
