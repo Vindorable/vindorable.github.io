@@ -16,6 +16,7 @@ import { imageList as GameShowcase } from "../../../assets/images/games/game-fem
 import Artwork from "../../../assets/images/games/fem-artwork.png";
 import AppIcon from "../../../assets/images/games/game-frankrit-eats-meat.png";
 import PlayStoreDLButton from "../../../assets/images/games/playstore-download-button.png";
+import HeaderStripFEM from "../../../assets/images/games/header-strip-fem.png";
 
 import { PATH_WEBPAGE } from "../../../routes/paths";
 import { useNavigate } from "react-router-dom";
@@ -59,7 +60,19 @@ const FrankritEatsMeat = () => {
         {/* --------------------------------------------------------- */}
         {/* ABOUT --------------------------------------------------- */}
         {/* --------------------------------------------------------- */}
-        <div id="about"></div>
+        <div id="about" style={{ marginTop: "-22px" }}></div>
+
+        <Stack direction={"row"} alignItems={"center"} justifyContent={"space-between"}>
+          <Stack width={"30%"}>
+            <Image src={HeaderStripFEM} />
+          </Stack>
+          <Stack width={"70%"}>
+            <Typography inline align="right" variant="h4">FRANKRIT EATS MEAT</Typography>
+          </Stack>
+        </Stack>
+
+        <Spacer amount={5} />
+
         <Image src={Artwork} height={400} />
         <Stack>
           <Typography inline align="center" variant="body2">
