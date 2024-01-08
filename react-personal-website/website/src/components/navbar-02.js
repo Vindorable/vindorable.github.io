@@ -3,6 +3,7 @@ import { Box, Icon, IconButton, Stack, Tooltip, Typography } from "@mui/material
 import { useTheme } from "@mui/material/styles";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { LinkedinLogo, UserCircle } from "phosphor-react";
+import { GithubLogo } from "@phosphor-icons/react";
 
 import { NavTab, NavTabs } from "./nav-tab";
 import MobileDrawer from "./mobile-drawer";
@@ -134,6 +135,18 @@ const Navbar = () => {
                   }}
                 >
                   <LinkedinLogo size={32} />
+                </IconButton>
+
+                <IconButton
+                  onClick={() => window.open("https://github.com/Vindorable", "_blank")}
+                  sx={{
+                    color: theme.palette.text.disabled,
+                    "&:hover": {
+                      color: theme.palette.text.primary,
+                    }
+                  }}
+                >
+                  <GithubLogo size={32} />
                 </IconButton>
               </>
             )}

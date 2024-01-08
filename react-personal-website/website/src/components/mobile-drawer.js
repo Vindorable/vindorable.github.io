@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { Box, Drawer, IconButton, Stack } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
 import { LinkedinLogo, List, X } from "phosphor-react";
+import { GithubLogo } from "@phosphor-icons/react";
 
 import { NavTabV, NavTabsV } from "../components/nav-tab";
 
@@ -106,7 +107,7 @@ const MobileDrawer = () => {
             </NavTabsV>
           </Stack>
 
-          <Stack alignItems={"center"} justifyContent={"center"}>
+          <Stack direction={"row"} alignItems={"center"} justifyContent={"center"} spacing={2}>
             <Box>
               <IconButton
                 onClick={() => window.open("https://www.linkedin.com/in/jay-raj-97508742/", "_blank")}
@@ -118,6 +119,19 @@ const MobileDrawer = () => {
                 }}
               >
                 <LinkedinLogo size={32} />
+              </IconButton>
+            </Box>
+            <Box>
+              <IconButton
+                onClick={() => window.open("https://github.com/Vindorable", "_blank")}
+                sx={{
+                  color: theme.palette.text.disabled,
+                  "&:hover": {
+                    color: theme.palette.text.primary,
+                  }
+                }}
+              >
+                <GithubLogo size={32} />
               </IconButton>
             </Box>
           </Stack>
