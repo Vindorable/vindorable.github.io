@@ -1,6 +1,6 @@
 import React, { useRef } from "react";
 import { Accordion, AccordionDetails, AccordionSummary, Alert, Box, Button, Divider, IconButton, Menu, MenuItem, Stack, Typography } from "@mui/material";
-import { CaretDown, DownloadSimple, ListBullets, Question, Table } from "phosphor-react";
+import { CaretDown, DownloadSimple, ListBullets, NewspaperClipping, Question, Table } from "phosphor-react";
 import { Gavel } from "@phosphor-icons/react";
 
 import BodyWrapper from "../../../components/body-wrapper";
@@ -52,6 +52,7 @@ const FrankritEatsMeat = () => {
           <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("faqs")}>◆ &nbsp; FAQs</MenuItem>
           <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("contact")}>◆ &nbsp; Contact</MenuItem>
           <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("privacypolicy")}>◆ &nbsp; Privacy Policy</MenuItem>
+          <MenuItem sx={{ borderRadius: "8px" }} onClick={() => fcm.current.goto("presskit")}>◆ &nbsp; Presskit</MenuItem>
         </FloatingContentMenu>
 
 
@@ -836,6 +837,18 @@ const FrankritEatsMeat = () => {
             onClick={() => navigate(PATH_WEBPAGE.playgroundSubpage.gamePrivacyPolicy)}
           >
             Privacy Policy
+          </Button>
+        </Box>
+
+        <div id="presskit"></div>
+        <Box>
+          <Button
+            disableElevation
+            variant="outlined"
+            startIcon={<NewspaperClipping size={28} />}
+            onClick={() => navigate(PATH_WEBPAGE.playgroundSubpage.gameFrankritEatsMeatPresskit)}
+          >
+            Presskit
           </Button>
         </Box>
       </BodyWrapper>
