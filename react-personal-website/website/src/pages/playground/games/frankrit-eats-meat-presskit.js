@@ -140,7 +140,7 @@ const FrankritEatsMeatPresskit = () => {
             ❖ IMAGES ❖
           </Typography>
 
-          <ImageGallery imageSet={Gallery} columns={2} aspectRatio={16 / 9} />
+          <ImageGallery imageSet={Gallery} columns={2} aspectRatio={16 / 9} objectFit={"contain"} />
         </Stack>
 
         <Spacer amount={30} />

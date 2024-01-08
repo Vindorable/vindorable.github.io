@@ -37,7 +37,7 @@ const ImageListGallery = styled('ul')(({ theme, cols }) => ({
 
 // ---------------------------------------------------------
 
-const ImageGallery = ({ imageSet, width, height, columns, aspectRatio }) => {
+const ImageGallery = ({ imageSet, width, height, columns, aspectRatio, objectFit }) => {
   const theme = useTheme();
 
   const _width = width;
@@ -73,6 +73,7 @@ const ImageGallery = ({ imageSet, width, height, columns, aspectRatio }) => {
                   maxWidth: "100%",
                   maxHeight: "100%",
                   borderRadius: "8px",
+                  objectFit: objectFit ? objectFit : "cover"
                 }}
                 loading="lazy"
                 onClick={(e) => lightboxRef.current.openLightbox(item)}
