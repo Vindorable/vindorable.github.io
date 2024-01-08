@@ -6,6 +6,7 @@ import Image from "../../../components/image/image";
 import Spacer from "../../../components/spacer";
 import YoutubeEmbed from "../../../components/youtube-embed";
 import ImageGallery from "../../../components/image-gallery";
+import { AnimBox } from "../../../components/anim-box";
 
 import Artwork from "../../../assets/images/games/fem-artwork-2.png";
 import AppIcon from "../../../assets/images/games/game-frankrit-eats-meat.png";
@@ -23,7 +24,9 @@ const FrankritEatsMeatPresskit = () => {
   return (
     <>
       <BodyWrapper>
-        <Image src={Artwork} />
+        <AnimBox>
+          <Image src={Artwork} />
+        </AnimBox>
 
         <Spacer amount={10} />
 
