@@ -35,4 +35,7 @@ export const PATH_WEBPAGE = {
     gameDevJourney: path(`${ROOTS_WEBPAGE}playground/games/`, "dev-journey"),
     gamePrivacyPolicy: path(`${ROOTS_WEBPAGE}playground/games/`, "privacy-policy"),
   },
+  workSubpage: {
+    tronDAOStickers: path(`${ROOTS_WEBPAGE}work/`, "trondao-stickers"),
+  },
 };

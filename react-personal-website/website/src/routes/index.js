@@ -40,6 +40,8 @@ const GameDinoWithAGun = Loadable(lazy(() => import("../pages/playground/games/d
 const GameDevJourney = Loadable(lazy(() => import("../pages/playground/games/dev-journey")));
 const GamePrivacyPolicy = Loadable(lazy(() => import("../pages/playground/games/privacy-policy")));
 
+const TronDAOStickers = Loadable(lazy(() => import("../pages/trondao-stickers")));
+
 const Page404 = Loadable(lazy(() => import("../pages/page-404")));
 
 
@@ -70,6 +72,8 @@ export default function Router() {
         { path: "playground/games/dino-with-a-gun", element: <GameDinoWithAGun /> },
         { path: "playground/games/dev-journey", element: <GameDevJourney /> },
         { path: "playground/games/privacy-policy", element: <GamePrivacyPolicy /> },
+
+        { path: "work/trondao-stickers", element: <TronDAOStickers /> },
 
         { path: "404", element: <Page404 /> },
         { path: "*", element: <Navigate to="/404" replace /> },
