@@ -8,7 +8,7 @@ import BodyWrapper from "../components/body-wrapper";
 import Spacer from "../components/spacer";
 
 const ResumeFilePDF = "http://localhost:3000/jayraj-resume.pdf"
-const ResumeFileDocx = "http://localhost:3000/jayraj-resume.docx"
+//const ResumeFileDocx = "http://localhost:3000/jayraj-resume.docx"
 
 
 // ---------------------------------------------------------
@@ -63,7 +63,7 @@ const Experience = () => {
               Download a PDF
             </Button>
 
-            <Button
+            {/* <Button
               variant="contained"
               color="info"
               startIcon={<FileArrowDown size={26} />}
@@ -71,7 +71,7 @@ const Experience = () => {
               sx={{ textTransform: "none" }}
             >
               Download a .docx
-            </Button>
+            </Button> */}
           </Stack>
         </Box>
       </BodyWrapper>
