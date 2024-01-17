@@ -6,6 +6,15 @@ import PlaygroundSidebar from "../components/playground-sidebar";
 import BodyWrapper from "../components/body-wrapper";
 import ImageGallery from "../components/image-gallery";
 import YoutubeEmbed from "../components/youtube-embed";
+import Spacer from "../components/spacer";
+
+import GifAron from "../assets/images/pokemon/gifs/aron.gif"
+import GifLairon from "../assets/images/pokemon/gifs/lairon.gif"
+import GifAggron from "../assets/images/pokemon/gifs/aggron.gif"
+import GifMegaAggron from "../assets/images/pokemon/gifs/mega-aggron.gif"
+import GifCharmander from "../assets/images/pokemon/gifs/charmander.gif"
+import GifCharmeleon from "../assets/images/pokemon/gifs/charmeleon.gif"
+import GifCharizard from "../assets/images/pokemon/gifs/charizard.gif"
 
 import { imageList as PokemonImages } from "../assets/images/pokemon/gallery-ig";
 
@@ -44,6 +53,31 @@ const Pokemon = () => {
           <Typography variant="body2">
             Aron and the naughty little Charmander!
           </Typography>
+          <Spacer amount={5} />
+          <Stack
+            direction={"row"}
+            spacing={2}
+            alignItems={"end"}
+            useFlexGap
+            flexWrap="wrap"
+          >
+            <img src={GifAron} />
+            <img src={GifLairon} />
+            <img src={GifAggron} />
+            <img src={GifMegaAggron} />
+          </Stack>
+          <Spacer amount={5} />
+          <Stack
+            direction={"row"}
+            spacing={2}
+            alignItems={"end"}
+            useFlexGap
+            flexWrap="wrap"
+          >
+            <img src={GifCharmander} />
+            <img src={GifCharmeleon} />
+            <img src={GifCharizard} />
+          </Stack>
         </Stack>
 
         <Divider sx={{ visibility: "hidden" }} />
