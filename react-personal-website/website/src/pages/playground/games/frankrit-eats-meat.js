@@ -9,14 +9,14 @@ import Spacer from "../../../components/spacer";
 import ImageGallery from "../../../components/image-gallery";
 import FloatingContentMenu from "../../../components/floating-content-menu";
 
-import JayProfilePic from "../../../assets/images/games/dev-jay-r.png";
-import CameronProfilePic from "../../../assets/images/games/dev-cameron-e.png";
-import GerardProfilePic from "../../../assets/images/games/dev-gerard-n.png";
-import { imageList as GameShowcase } from "../../../assets/images/games/game-fem-showcase/gallery-game-fem-showcase";
-import Artwork from "../../../assets/images/games/fem-artwork.png";
-import AppIcon from "../../../assets/images/games/game-frankrit-eats-meat.png";
-import PlayStoreDLButton from "../../../assets/images/games/playstore-download-button.png";
-import HeaderStripFEM from "../../../assets/images/games/header-strip-fem.png";
+import JayProfilePic from "../../../assets/images/games/frankrit-eats-meat/devs/jay-r.png";
+import CameronProfilePic from "../../../assets/images/games/frankrit-eats-meat/devs/cameron-e.png";
+import GerardProfilePic from "../../../assets/images/games/frankrit-eats-meat/devs/gerard-n.png";
+import { imageList as GameShowcase } from "../../../assets/images/games/frankrit-eats-meat/gallery-showcase";
+import Artwork from "../../../assets/images/games/frankrit-eats-meat/artwork.png";
+import AppIcon from "../../../assets/images/games/frankrit-eats-meat/game-app-icon.png";
+import PlayStoreDLButton from "../../../assets/images/games/general/playstore-download-button.png";
+import HeaderStripFEM from "../../../assets/images/games/frankrit-eats-meat/header-strip.png";
 
 import { PATH_WEBPAGE } from "../../../routes/paths";
 import { useNavigate } from "react-router-dom";

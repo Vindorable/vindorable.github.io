@@ -8,10 +8,10 @@ import Spacer from "../../../components/spacer";
 
 import { IsMobile } from "../../../functions/isMobile";
 
-import JGamesLogo from "../../../assets/images/games/jgames-logo.png";
-import FrankritEatsMeat from "../../../assets/images/games/game-frankrit-eats-meat.png";
-import SharkABoom from "../../../assets/images/games/game-shark-a-boom.png";
-import DinoWithAGun from "../../../assets/images/games/game-dino-with-a-gun.png";
+import JGamesLogo from "../../../assets/images/games/general/jgames-logo.png";
+import FrankritEatsMeat from "../../../assets/images/games/frankrit-eats-meat/game-app-icon.png";
+import SharkABoom from "../../../assets/images/games/shark-a-boom/game-app-icon.png";
+import DinoWithAGun from "../../../assets/images/games/dino-with-a-gun/game-app-icon.png";
 
 import { PATH_WEBPAGE } from "../../../routes/paths";
 import { useNavigate } from "react-router-dom";

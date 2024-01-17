@@ -6,14 +6,14 @@ import Spacer from "../../../components/spacer";
 import Image from "../../../components/image/image";
 import YoutubeEmbed from "../../../components/youtube-embed";
 
-import DSTBanner from "../../../assets/images/games/article-dst-banner.jpg";
-import DotaBanner from "../../../assets/images/games/article-dota-banner.jpg";
+import DSTBanner from "../../../assets/images/games/dev-journey/article-dst-banner.jpg";
+import DotaBanner from "../../../assets/images/games/dev-journey/article-dota-banner.jpg";
 import NIGHTMAREBLADE from "../../../assets/images/dst/03-dota-weapons-mod/NIGHTMARE BLADE.png"
 import KRAKENBRINGER from "../../../assets/images/dst/03-dota-weapons-mod/KRAKEN BRINGER.png"
 import WULDASTRON from "../../../assets/images/dst/03-dota-weapons-mod/WULDASTRON.png"
 import CURSEDWULDAST from "../../../assets/images/dst/03-dota-weapons-mod/CURSED WULDAST.png"
-import FEMArtwork from "../../../assets/images/games/fem-artwork.png";
-import SABLoadingScreen from "../../../assets/images/games/sab-loading-screen-old-new.png";
+import FEMArtwork from "../../../assets/images/games/frankrit-eats-meat/artwork.png";
+import SABLoadingScreen from "../../../assets/images/games/shark-a-boom/loading-screen-old-new.png";
 
 
 // ---------------------------------------------------------

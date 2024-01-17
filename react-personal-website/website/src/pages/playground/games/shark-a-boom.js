@@ -9,12 +9,12 @@ import Image from "../../../components/image/image";
 import ImageGallery from "../../../components/image-gallery";
 import FloatingContentMenu from "../../../components/floating-content-menu";
 
-import AppIcon from "../../../assets/images/games/game-shark-a-boom.png";
-import PlayStoreDLButton from "../../../assets/images/games/playstore-download-button.png";
-import JayProfilePic from "../../../assets/images/games/dev-jay-r-sab.png";
-import OliverProfilePic from "../../../assets/images/games/dev-oliver.png";
-import { imageList as GameShowcase } from "../../../assets/images/games/game-sab-showcase/gallery-game-sab-showcase";
-import Artwork from "../../../assets/images/games/sab-artwork.png";
+import AppIcon from "../../../assets/images/games/shark-a-boom/game-app-icon.png";
+import PlayStoreDLButton from "../../../assets/images/games/general/playstore-download-button.png";
+import JayProfilePic from "../../../assets/images/games/shark-a-boom/devs/jay-r.png";
+import OliverProfilePic from "../../../assets/images/games/shark-a-boom/devs/oliver.png";
+import { imageList as GameShowcase } from "../../../assets/images/games/shark-a-boom/gallery-showcase";
+import Artwork from "../../../assets/images/games/shark-a-boom/artwork.png";
 
 import { PATH_WEBPAGE } from "../../../routes/paths";
 import { useNavigate } from "react-router-dom";
