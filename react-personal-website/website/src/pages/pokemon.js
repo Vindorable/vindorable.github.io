@@ -7,7 +7,7 @@ import BodyWrapper from "../components/body-wrapper";
 import ImageGallery from "../components/image-gallery";
 import YoutubeEmbed from "../components/youtube-embed";
 
-import { imageList as PokemonImages } from "../assets/images/gallery-pokemon";
+import { imageList as PokemonImages } from "../assets/images/pokemon/gallery-ig";
 
 
 // ---------------------------------------------------------
