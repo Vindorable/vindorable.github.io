@@ -1,12 +1,14 @@
 import React from "react";
 import { Divider, List, ListItem, Stack, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
+import { Image as ImageIcon, VideoCamera } from "phosphor-react";
 
 import PlaygroundSidebar from "../components/playground-sidebar";
 import BodyWrapper from "../components/body-wrapper";
 import ImageGallery from "../components/image-gallery";
 import YoutubeEmbed from "../components/youtube-embed";
 import Spacer from "../components/spacer";
+import Image from "../components/image/image";
 
 import GifAron from "../assets/images/pokemon/gifs/aron.gif"
 import GifLairon from "../assets/images/pokemon/gifs/lairon.gif"
@@ -17,6 +19,8 @@ import GifCharmeleon from "../assets/images/pokemon/gifs/charmeleon.gif"
 import GifCharizard from "../assets/images/pokemon/gifs/charizard.gif"
 
 import { imageList as PokemonImages } from "../assets/images/pokemon/gallery-ig";
+import YTBannerAron from "../assets/images/pokemon/youtube-banner-with-aron.jpeg";
+import { imageList as AronHatch } from "../assets/images/pokemon/gallery-aron-hatch";
 
 
 // ---------------------------------------------------------
@@ -110,15 +114,20 @@ const Pokemon = () => {
           </Typography>
         </Stack>
 
+        <Spacer amount={20} />
         <Divider />
+        <Spacer amount={20} />
 
         <Typography variant="h5">
           MY POKEMON FAN-WORKS
         </Typography>
 
-        <Typography variant="h6">
-          Adding 3D Pokemons To Real-Life Images, Etc (2019)
-        </Typography>
+        <Stack direction={"row"} spacing={1} alignItems={"center"}>
+          <ImageIcon size={28} />
+          <Typography variant="h6">
+            (2019) Adding 3D Pokemons To Real-Life Scenes
+          </Typography>
+        </Stack>
         <Stack direction={"row"} justifyContent={"space-evenly"}>
           <ImageGallery
             imageSet={PokemonImages}
@@ -127,35 +136,83 @@ const Pokemon = () => {
           />
         </Stack>
 
-        <Typography variant="h6">
-          Live-action with Charmander - My First Starter (2019)
-        </Typography>
+        <Spacer amount={30} />
+        <Divider />
+        <Spacer amount={20} />
+
+        <Stack direction={"row"} spacing={1} alignItems={"center"}>
+          <VideoCamera size={28} />
+          <Typography variant="h6">
+            (2019) Live-action with Charmander - My First Starter
+          </Typography>
+        </Stack>
         <Stack direction={"row"} justifyContent={"space-evenly"} width={"100%"}>
           <Stack width={"100%"} maxWidth={"800px"}>
             <YoutubeEmbed embedId={"E7GK102Bw-E"} />
           </Stack>
         </Stack>
 
-        <Typography variant="h6">
-          Outros for my YouTube Videos with Aron (2015)
-        </Typography>
+        <Spacer amount={30} />
+        <Divider />
+        <Spacer amount={20} />
+
+        <Stack direction={"row"} spacing={1} alignItems={"center"}>
+          <VideoCamera size={28} />
+          <Typography variant="h6">
+            (2015) Outros for my YouTube Videos with Aron
+          </Typography>
+        </Stack>
         <Stack p={0.75}>
           <Typography variant="body2">
             There was a time when I was really free... Ahh, how I wish I could go back in time... *snap* Oh sorry!
-            <br /><br />
+            <br />
             So, these are the couple of different outros I did for my YouTube videos.
           </Typography>
         </Stack>
+        <Image src={YTBannerAron} maxWidth={"600px"} />
+        <Spacer />
         <Stack direction={"row"} justifyContent={"space-evenly"} width={"100%"}>
           <Stack width={"100%"} maxWidth={"800px"}>
             <YoutubeEmbed embedId={"foiH9YqUvs4?rel=0&showinfo=0&autohide=1&start=102"} />
           </Stack>
         </Stack>
+        <Spacer />
         <Stack direction={"row"} justifyContent={"space-evenly"} width={"100%"}>
           <Stack width={"100%"} maxWidth={"800px"}>
             <YoutubeEmbed embedId={"2O1720q1vpA?rel=0&showinfo=0&autohide=1&start=137"} />
           </Stack>
         </Stack>
+
+        <Spacer amount={30} />
+        <Divider />
+        <Spacer amount={20} />
+
+        <Stack direction={"row"} spacing={1} alignItems={"center"}>
+          <VideoCamera size={28} />
+          <Typography variant="h6">
+            (2012) 3D Aron Hatching From An Egg
+          </Typography>
+        </Stack>
+        <Stack p={0.75}>
+          <Typography variant="body2">
+            Lets assume Aron is not a mammal and it hatches from an egg and...
+            <br />
+            After mami, Aggron, and papi, Mega Aggron, had a good time and had a baby... This is how epic it will be when baby Aron hatches from its egg!
+          </Typography>
+        </Stack>
+        <Stack direction={"row"} justifyContent={"space-evenly"} width={"100%"}>
+          <Stack width={"100%"} maxWidth={"800px"}>
+            <YoutubeEmbed embedId={"fa9EN6Nz2O8"} />
+          </Stack>
+        </Stack>
+        <Spacer />
+        <ImageGallery
+          imageSet={AronHatch}
+          columns={3}
+          height={164}
+          width={164}
+          aspectRatio={16 / 9}
+        />
       </BodyWrapper>
     </>
   );

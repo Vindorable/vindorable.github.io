@@ -9,7 +9,7 @@ import Lightbox from "./lightbox";
 
 // ---------------------------------------------------------
 
-const Image = ({ src, alt, url, lightbox, height }) => {
+const Image = ({ src, alt, url, lightbox, height, maxWidth }) => {
   const theme = useTheme();
   const navigate = useNavigate();
 
@@ -44,6 +44,7 @@ const Image = ({ src, alt, url, lightbox, height }) => {
             component="img"
             sx={{
               width: "100%",
+              maxWidth: maxWidth,
               height: height ? height : "auto",
               cursor: (url || lightbox) ? "pointer" : "default",
               transition: theme.transitions.create("all", {
