@@ -10,6 +10,8 @@ import YoutubeEmbed from "../components/youtube-embed";
 import Spacer from "../components/spacer";
 import Image from "../components/image/image";
 
+import { IsMobile } from "../functions/isMobile";
+
 import GifAron from "../assets/images/pokemon/gifs/aron.gif"
 import GifLairon from "../assets/images/pokemon/gifs/lairon.gif"
 import GifAggron from "../assets/images/pokemon/gifs/aggron.gif"
@@ -21,6 +23,10 @@ import GifCharizard from "../assets/images/pokemon/gifs/charizard.gif"
 import { imageList as PokemonImages } from "../assets/images/pokemon/gallery-ig";
 import YTBannerAron from "../assets/images/pokemon/youtube-banner-with-aron.jpeg";
 import { imageList as AronHatch } from "../assets/images/pokemon/gallery-aron-hatch";
+import { imageList as AronCookieMonster } from "../assets/images/pokemon/gallery-aron-cookie-monster";
+import TheBadassGang from "../assets/images/pokemon/the-badass-gang.jpg";
+import IrritatingBabyArons from "../assets/images/pokemon/irritating-baby-arons.jpg";
+import BubblyTeam from "../assets/images/pokemon/bubbly-team.png";
 
 
 // ---------------------------------------------------------
@@ -128,6 +134,8 @@ const Pokemon = () => {
             (2019) Adding 3D Pokemons To Real-Life Scenes
           </Typography>
         </Stack>
+        <Image src={BubblyTeam} maxWidth={"800px"} />
+        <Spacer />
         <Stack direction={"row"} justifyContent={"space-evenly"}>
           <ImageGallery
             imageSet={PokemonImages}
@@ -213,6 +221,91 @@ const Pokemon = () => {
           width={164}
           aspectRatio={16 / 9}
         />
+
+        <Spacer amount={30} />
+        <Divider />
+        <Spacer amount={20} />
+
+        <Stack direction={"row"} spacing={1} alignItems={"center"}>
+          <VideoCamera size={28} />
+          <Typography variant="h6">
+            (2012) Turning A Picture Into A 3D Environment & Adding 3D Arons Into It
+          </Typography>
+        </Stack>
+        <Stack p={0.75}>
+          <Typography variant="body2">
+            This was part of my polytechnic assignment, Camera Projection Mapping. Basically this technique is used in movies where a normal picture (2D) is used to create environments by faking depth (making it 3D) into it.
+          </Typography>
+        </Stack>
+        <Stack direction={"row"} justifyContent={"space-evenly"} width={"100%"}>
+          <Stack width={"100%"} maxWidth={"800px"}>
+            <YoutubeEmbed embedId={"kGn7xlVA0Cw"} />
+          </Stack>
+        </Stack>
+        <Spacer />
+        <ImageGallery
+          imageSet={AronCookieMonster}
+          columns={3}
+          height={164}
+          width={164}
+          aspectRatio={16 / 9}
+        />
+
+        <Spacer amount={30} />
+        <Divider />
+        <Spacer amount={20} />
+
+        <Stack direction={"row"} spacing={1} alignItems={"center"}>
+          <ImageIcon size={28} />
+          <Typography variant="h6">
+            (2012) Adding 3D Arons To Real-Life Images
+          </Typography>
+        </Stack>
+        <Stack p={0.75}>
+          <Typography variant="body2">
+            Basically, I added my baby Arons into real-life still shot pictures and made them looked believable and cool!
+          </Typography>
+        </Stack>
+        <Stack
+          direction={IsMobile() ? "column" : "row"}
+          justifyContent={"space-evenly"}
+          width={"100%"}
+          spacing={3}
+          p={IsMobile() ? 0 : 2}
+        >
+          <Stack width={IsMobile() ? "100%" : "40%"}>
+            <Image src={IrritatingBabyArons} lightbox={true} />
+          </Stack>
+          <Stack width={IsMobile() ? "100%" : "60%"}>
+            <Typography variant="body2">
+              This was a collab with a DeviantART artist, Rose-Monster.
+              <br /><br />
+              The Lairon is figurine and my baby Arons just had to wreak havoc in the picture.
+              <br /><br />
+              Now, isn't "havoc" just a normal everyday thing for this cheeky little babies?
+            </Typography>
+          </Stack>
+        </Stack>
+        <Stack
+          direction={IsMobile() ? "column" : "row"}
+          justifyContent={"space-evenly"}
+          width={"100%"}
+          spacing={3}
+          p={IsMobile() ? 0 : 2}
+        >
+          <Stack width={IsMobile() ? "100%" : "40%"}>
+            <Image src={TheBadassGang} lightbox={true} />
+          </Stack>
+          <Stack width={IsMobile() ? "100%" : "60%"}>
+            <Typography variant="body2">
+              This picture was taken at some random carpark.
+              <br /><br />
+              Yet again, the baby Arons, together with their big brother, Registeel, had something to say about this picture!
+              <br /><br />
+              If you intend to park your precious car in this carpark... Boy, you came to the wrong neighbourhood. This guys eat steel for breakfast!
+            </Typography>
+          </Stack>
+        </Stack>
       </BodyWrapper>
     </>
   );
