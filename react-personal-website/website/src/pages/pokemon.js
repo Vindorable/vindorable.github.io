@@ -270,13 +270,13 @@ const Pokemon = () => {
           direction={IsMobile() ? "column" : "row"}
           justifyContent={"space-evenly"}
           width={"100%"}
-          spacing={3}
-          p={IsMobile() ? 0 : 2}
+          spacing={IsMobile() ? 1 : 3}
+          px={IsMobile() ? 0 : 2}
         >
           <Stack width={IsMobile() ? "100%" : "40%"}>
             <Image src={IrritatingBabyArons} lightbox={true} />
           </Stack>
-          <Stack width={IsMobile() ? "100%" : "60%"}>
+          <Stack width={IsMobile() ? "100%" : "60%"} py={IsMobile() ? 0 : 1}>
             <Typography variant="body2">
               This was a collab with a DeviantART artist, Rose-Monster.
               <br /><br />
@@ -286,17 +286,18 @@ const Pokemon = () => {
             </Typography>
           </Stack>
         </Stack>
+        <Spacer />
         <Stack
           direction={IsMobile() ? "column" : "row"}
           justifyContent={"space-evenly"}
           width={"100%"}
-          spacing={3}
-          p={IsMobile() ? 0 : 2}
+          spacing={IsMobile() ? 1 : 3}
+          px={IsMobile() ? 0 : 2}
         >
           <Stack width={IsMobile() ? "100%" : "40%"}>
             <Image src={TheBadassGang} lightbox={true} />
           </Stack>
-          <Stack width={IsMobile() ? "100%" : "60%"}>
+          <Stack width={IsMobile() ? "100%" : "60%"} py={IsMobile() ? 0 : 1}>
             <Typography variant="body2">
               This picture was taken at some random carpark.
               <br /><br />
