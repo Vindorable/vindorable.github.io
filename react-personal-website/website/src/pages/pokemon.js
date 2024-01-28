@@ -27,6 +27,8 @@ import { imageList as AronCookieMonster } from "../assets/images/pokemon/gallery
 import TheBadassGang from "../assets/images/pokemon/the-badass-gang.jpg";
 import IrritatingBabyArons from "../assets/images/pokemon/irritating-baby-arons.jpg";
 import BubblyTeam from "../assets/images/pokemon/bubbly-team.png";
+import { imageList as MamaAggronFam } from "../assets/images/pokemon/gallery-mama-aggron-fam";
+import HeaderStripFEM from "../assets/images/pokemon/header-strip.png";
 
 
 // ---------------------------------------------------------
@@ -39,6 +41,19 @@ const Pokemon = () => {
       {/* <PlaygroundSidebar /> */}
 
       <BodyWrapper>
+        <div style={{ marginTop: "-22px" }}></div>
+
+        <Stack direction={"row"} alignItems={"center"} justifyContent={"space-between"}>
+          <Stack width={"30%"}>
+            <Image src={HeaderStripFEM} />
+          </Stack>
+          <Stack width={"70%"}>
+            <Typography inline align="right" variant="h4">FAN-MADE POKEMON WORKS</Typography>
+          </Stack>
+        </Stack>
+
+        <Spacer amount={5} />
+
         <Typography variant="h5">
           THE BACKGROUND STORY
         </Typography>
@@ -141,6 +156,24 @@ const Pokemon = () => {
             imageSet={PokemonImages}
             height={164}
             width={164}
+          />
+        </Stack>
+
+        <Spacer amount={30} />
+        <Divider />
+        <Spacer amount={20} />
+
+        <Stack direction={"row"} spacing={1} alignItems={"center"}>
+          <ImageIcon size={28} />
+          <Typography variant="h6">
+            (2019) Mama Aggron has 3 baby musketeers ❤️
+          </Typography>
+        </Stack>
+        <Stack direction={"row"} justifyContent={"space-evenly"}>
+          <ImageGallery
+            imageSet={MamaAggronFam}
+            columns={4}
+            aspectRatio={16 / 9}
           />
         </Stack>
 
