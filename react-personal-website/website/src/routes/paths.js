@@ -34,6 +34,7 @@ export const PATH_WEBPAGE = {
     gameDinoWithAGun: path(`${ROOTS_WEBPAGE}playground/games/`, "dino-with-a-gun"),
     gameDevJourney: path(`${ROOTS_WEBPAGE}playground/games/`, "dev-journey"),
     gamePrivacyPolicy: path(`${ROOTS_WEBPAGE}playground/games/`, "privacy-policy"),
+    unrulyGent: path(`${ROOTS_WEBPAGE}playground/`, "unruly-gent"),
   },
   workSubpage: {
     tronDAOStickers: path(`${ROOTS_WEBPAGE}work/`, "trondao-stickers"),
