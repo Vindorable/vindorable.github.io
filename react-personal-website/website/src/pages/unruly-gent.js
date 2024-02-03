@@ -33,7 +33,7 @@ const UnrulyGent = () => {
         />
 
         <ImageGallery imageSet={IGShowcase} columns={5} aspectRatio={1 / 1} />
-        <Link inline align="end" target="_blank" href="https://www.instagram.com/unruly_gent/" color="inherit" variant="body2">View more @ instagram.com/unruly_gent/</Link>
+        <Link inline align="end" target="_blank" href="https://www.instagram.com/unruly_gent/" color="inherit" variant="body2">View more on Instagram</Link>
 
         <Typography variant="h5">
           COLLECTIONS
