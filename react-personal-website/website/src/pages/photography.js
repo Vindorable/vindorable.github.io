@@ -70,26 +70,56 @@ const Photography = () => {
 
         <Typography variant="h5">PERSONAL WORK</Typography>
 
-        <Typography variant="body2">Pets 🐶🐱</Typography>
-        <ImageGallery
-          imageSet={Pets}
-          height={164}
-          width={164}
-        />
+        <Stack
+          spacing={1}
+          p={2}
+          sx={{
+            borderRadius: "8px",
+            border: 1,
+            borderColor: theme.palette.divider,
+          }}
+        >
+          <Typography variant="body2">Pets 🐶🐱</Typography>
+          <ImageGallery
+            imageSet={Pets}
+            height={164}
+            width={164}
+          />
+        </Stack>
 
-        <Typography variant="body2">Automóvil 🏎️🚗</Typography>
-        <ImageGallery
-          imageSet={Cars}
-          height={164}
-          width={164}
-        />
+        <Stack
+          spacing={1}
+          p={2}
+          sx={{
+            borderRadius: "8px",
+            border: 1,
+            borderColor: theme.palette.divider,
+          }}
+        >
+          <Typography variant="body2">Automóvil 🏎️🚗</Typography>
+          <ImageGallery
+            imageSet={Cars}
+            height={164}
+            width={164}
+          />
+        </Stack>
 
-        <Typography variant="body2">Others 🤘🤙</Typography>
-        <ImageGallery
-          imageSet={Others}
-          height={164}
-          width={164}
-        />
+        <Stack
+          spacing={1}
+          p={2}
+          sx={{
+            borderRadius: "8px",
+            border: 1,
+            borderColor: theme.palette.divider,
+          }}
+        >
+          <Typography variant="body2">Others 🤘🤙</Typography>
+          <ImageGallery
+            imageSet={Others}
+            height={164}
+            width={164}
+          />
+        </Stack>
       </BodyWrapper>
     </>
   );
