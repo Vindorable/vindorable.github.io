@@ -1,5 +1,5 @@
 import React from "react";
-import { Stack } from "@mui/system";
+import { Link, Stack } from "@mui/material";
 
 import PlaygroundSidebar from "../components/playground-sidebar";
 import BodyWrapper from "../components/body-wrapper";
@@ -8,11 +8,14 @@ import StyledImage01 from "../components/image-styled-01";
 import { IsMobile } from "../functions/isMobile";
 
 import { PATH_WEBPAGE } from "../routes/paths";
+import { useNavigate } from "react-router-dom";
 
 
 // ---------------------------------------------------------
 
 const Playground = () => {
+  const navigate = useNavigate();
+
   return (
     <>
       {/* <PlaygroundSidebar /> */}
@@ -62,6 +65,15 @@ const Playground = () => {
             />
           }
         </Stack>
+
+        <Link
+          href={"javascript:void(0)"}
+          onClick={() => navigate(PATH_WEBPAGE.playgroundSubpage.photography)}
+          color="inherit"
+          variant="body2"
+        >
+          Photography
+        </Link>
       </BodyWrapper>
     </>
   );
