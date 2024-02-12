@@ -8,11 +8,13 @@ import { NavTab, NavTabs } from "../../../components/nav-tab";
 import Image from "../../../components/image/image";
 import ImageGallery from "../../../components/image-gallery";
 import Spacer from "../../../components/spacer";
+import { AnimBox } from "../../../components/anim-box";
 
 import ProvocationCollage from "../../../assets/images/unruly-gent/collection-provocation.jpg"
 import ShapesCollage from "../../../assets/images/unruly-gent/collection-shapes.jpg"
 import ThreadlessBanner from "../../../assets/images/unruly-gent/threadless_banner.png"
 import { imageList as IGShowcase } from "../../../assets/images/unruly-gent/gallery-ig";
+import SkullCollarLogo from "../../../assets/images/unruly-gent/skull-collar-logo.png";
 
 import { PATH_WEBPAGE } from "../../../routes/paths";
 import { useNavigate } from "react-router-dom";
@@ -33,10 +35,36 @@ const UnrulyGent = () => {
   return (
     <>
       <BodyWrapper>
-        <Image
-          src={ThreadlessBanner}
-          url="https://unrulygent.threadless.com/"
-        />
+        <AnimBox>
+          <Image
+            src={ThreadlessBanner}
+            url="https://unrulygent.threadless.com/"
+          />
+        </AnimBox>
+
+        <Spacer />
+        <Image src={SkullCollarLogo} height={300} />
+        <Spacer />
+
+        <Typography inline align="center" variant="h5">DON'T BE SORRY. BE VINDICTIVE.</Typography>
+
+        <Typography inline align="center" variant="body2">
+          When we are born, we are little angels with aspirations and dreams clenched in our fists.<br />
+          No negative emotions; just glad to be born.
+          <br /><br />
+          As we take a step into life, we learn the reasons behind our anger, disappointment, stress... and grief.<br />
+          Our journey towards decay begins.
+          <br /><br />
+          To survive, we seek a "balance" by relying on our darkness. The Yin in all Yang. In the process of our innocence slowly changing into vindiction and arrogance for the unworthy - we learn the truth.<br />
+          <b>The Unruly</b>.
+          <br /><br />
+          Despite the doings of this modern world, we remain humble and dedicated to the ones who care for us. Their support through our hard times will not be forgotten. After all, we were all born innocent - to be loved.<br />
+          <b>The Gentleman</b>.
+          <br /><br />
+          The brand/label, <b>Unruly Gent</b>, does not tie itself down to a specific theme. We love to venture where our heart takes us. Into the darkness <i>(unruly)</i> or into the light <i>(gent)</i>, we seek a balance in life as we grow.
+        </Typography>
+
+        <Spacer />
 
         <ImageGallery imageSet={IGShowcase} columns={5} aspectRatio={1 / 1} />
         <Link inline align="end" target="_blank" href="https://www.instagram.com/unruly_gent/" color="inherit" variant="body2">View more on Instagram</Link>
