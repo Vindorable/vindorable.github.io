@@ -1,14 +1,14 @@
 import React from "react";
 import { Stack, Typography } from "@mui/material";
 
-import BodyWrapper from "../components/body-wrapper";
-import ImageGallery from "../components/image-gallery";
-import Spacer from "../components/spacer";
-import Image from "../components/image/image";
+import BodyWrapper from "../../../../components/body-wrapper";
+import ImageGallery from "../../../../components/image-gallery";
+import Spacer from "../../../../components/spacer";
+import Image from "../../../../components/image/image";
 
-import { imageList as Gallery } from "../assets/images/unruly-gent/blog/post-1/gallery-1";
-import DiamondTee from "../assets/images/unruly-gent/blog/post-1/diamond-tee.jpeg";
-import SkullCollarLogo from "../assets/images/unruly-gent/skull-collar-logo.png";
+import { imageList as Gallery } from "../../../../assets/images/unruly-gent/blog/post-1/gallery-1";
+import DiamondTee from "../../../../assets/images/unruly-gent/blog/post-1/diamond-tee.jpeg";
+import SkullCollarLogo from "../../../../assets/images/unruly-gent/skull-collar-logo.png";
 
 
 // ---------------------------------------------------------

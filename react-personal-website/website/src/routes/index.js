@@ -39,9 +39,9 @@ const GameSharkABoom = Loadable(lazy(() => import("../pages/playground/games/sha
 const GameDinoWithAGun = Loadable(lazy(() => import("../pages/playground/games/dino-with-a-gun")));
 const GameDevJourney = Loadable(lazy(() => import("../pages/playground/games/dev-journey")));
 const GamePrivacyPolicy = Loadable(lazy(() => import("../pages/playground/games/privacy-policy")));
-const UnrulyGent = Loadable(lazy(() => import("../pages/unruly-gent")));
-const UnrulyGentBlogPost01 = Loadable(lazy(() => import("../pages/unruly-gent-blog-post-1")));
-const UnrulyGentBlogPost02 = Loadable(lazy(() => import("../pages/unruly-gent-blog-post-2")));
+const UnrulyGent = Loadable(lazy(() => import("../pages/playground/unruly-gent")));
+const UnrulyGentBlogPost01 = Loadable(lazy(() => import("../pages/playground/unruly-gent/blog/post-1")));
+const UnrulyGentBlogPost02 = Loadable(lazy(() => import("../pages/playground/unruly-gent/blog/post-2")));
 const Photography = Loadable(lazy(() => import("../pages/photography")));
 
 const TronDAOStickers = Loadable(lazy(() => import("../pages/trondao-stickers")));
@@ -77,8 +77,8 @@ export default function Router() {
         { path: "playground/games/dev-journey", element: <GameDevJourney /> },
         { path: "playground/games/privacy-policy", element: <GamePrivacyPolicy /> },
         { path: "playground/unruly-gent", element: <UnrulyGent /> },
-        { path: "playground/unruly-gent-blog-post-1", element: <UnrulyGentBlogPost01 /> },
-        { path: "playground/unruly-gent-blog-post-2", element: <UnrulyGentBlogPost02 /> },
+        { path: "playground/unruly-gent/blog/post-1", element: <UnrulyGentBlogPost01 /> },
+        { path: "playground/unruly-gent/blog/post-2", element: <UnrulyGentBlogPost02 /> },
         { path: "playground/photography", element: <Photography /> },
 
         { path: "work/trondao-stickers", element: <TronDAOStickers /> },
