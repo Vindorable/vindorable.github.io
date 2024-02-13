@@ -6,6 +6,7 @@ import { ReadCvLogo } from "@phosphor-icons/react";
 
 import BodyWrapper from "../components/body-wrapper";
 import Spacer from "../components/spacer";
+import ExperienceTimeline from "../components/experience-timeline";
 
 const ResumeFilePDF = "http://localhost:3000/jayraj-resume.pdf"
 //const ResumeFileDocx = "http://localhost:3000/jayraj-resume.docx"
@@ -74,6 +75,8 @@ const Experience = () => {
             </Button> */}
           </Stack>
         </Box>
+
+        <ExperienceTimeline />
       </BodyWrapper>
     </>
   );
