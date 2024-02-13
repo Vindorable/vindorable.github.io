@@ -10,7 +10,8 @@ import {
 } from "@mui/lab";
 import { Paper, Stack, Typography } from "@mui/material";
 import { useTheme } from "@mui/material/styles";
-import { Buildings, CalendarBlank, Code, EyedropperSample, GameController, MagicWand } from "phosphor-react";
+import { Backpack, Buildings, CalendarBlank, Code, EyedropperSample, GameController, GraduationCap, MagicWand } from "phosphor-react";
+import { MedalMilitary } from "@phosphor-icons/react";
 
 import { IsMobile } from "../functions/isMobile";
 
@@ -136,6 +137,7 @@ const ExperienceTimeline = () => {
             <TimelineDot sx={{ backgroundColor: theme.palette.background.paper }}>
               <MagicWand size={22} />
             </TimelineDot>
+            <TimelineConnector />
           </TimelineSeparator>
           <TimelineContent>
             <Paper>
@@ -150,6 +152,80 @@ const ExperienceTimeline = () => {
                 <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
                   <Buildings size={22} />
                   <Typography variant="body2">Monochromatic Pictures</Typography>
+                </Stack>
+              </Stack>
+            </Paper>
+          </TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineSeparator>
+            <TimelineDot sx={{ backgroundColor: theme.palette.background.paper }}>
+              <MedalMilitary size={22} />
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>
+            <Paper>
+              <Stack p={2} spacing={1}>
+                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
+                  <CalendarBlank size={16} />
+                  <Typography variant="caption">2013-2015</Typography>
+                </Stack>
+
+                <Typography inline align="left" variant="body2"><b>NATIONAL SERVICE</b></Typography>
+
+                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
+                  <Buildings size={22} />
+                  <Typography variant="body2">RSAF Tengah Airbase</Typography>
+                </Stack>
+              </Stack>
+            </Paper>
+          </TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineSeparator>
+            <TimelineDot sx={{ backgroundColor: theme.palette.background.paper }}>
+              <Backpack size={22} />
+            </TimelineDot>
+            <TimelineConnector />
+          </TimelineSeparator>
+          <TimelineContent>
+            <Paper>
+              <Stack p={2} spacing={1}>
+                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
+                  <CalendarBlank size={16} />
+                  <Typography variant="caption">2010-2013</Typography>
+                </Stack>
+
+                <Typography inline align="left" variant="body2"><b>DIPLOMA IN VISUAL EFFECT AND MOTION GRAPHICS</b></Typography>
+
+                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
+                  <GraduationCap size={22} />
+                  <Typography variant="body2">Singapore Polytecnic</Typography>
+                </Stack>
+              </Stack>
+            </Paper>
+          </TimelineContent>
+        </TimelineItem>
+        <TimelineItem>
+          <TimelineSeparator>
+            <TimelineDot sx={{ backgroundColor: theme.palette.background.paper }}>
+              <Backpack size={22} />
+            </TimelineDot>
+          </TimelineSeparator>
+          <TimelineContent>
+            <Paper>
+              <Stack p={2} spacing={1}>
+                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
+                  <CalendarBlank size={16} />
+                  <Typography variant="caption">2006-2009</Typography>
+                </Stack>
+
+                <Typography inline align="left" variant="body2"><b>"O" LEVELS</b></Typography>
+
+                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
+                  <GraduationCap size={22} />
+                  <Typography variant="body2">Jurong Secondary School</Typography>
                 </Stack>
               </Stack>
             </Paper>
