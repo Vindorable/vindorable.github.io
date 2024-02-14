@@ -11,7 +11,11 @@ const ExperienceCertification = ({ HideHealthAndFitness, HideBusinessAndFinance 
 
   return (
     <>
-      <Typography variant="h6">Certifications</Typography>
+      {/* IIFE (Immediately Invoked Function Expressions) */}
+      {(() => {
+        if (!(HideHealthAndFitness && HideBusinessAndFinance))
+          return <Typography variant="h6">Certifications</Typography>
+      })()}
 
       {/* ========================= */}
       {/* ========================= */}
