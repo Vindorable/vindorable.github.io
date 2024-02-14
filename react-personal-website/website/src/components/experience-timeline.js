@@ -23,6 +23,8 @@ const ExperienceTimeline = () => {
 
   return (
     <>
+      <Typography variant="h6">Education - Career Timeline</Typography>
+
       <Timeline
         position={IsMobile() ? "" : "alternate-reverse"}
         sx={{

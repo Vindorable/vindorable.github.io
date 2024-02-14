@@ -11,6 +11,8 @@ const ExperienceCertification = ({ HideHealthAndFitness, HideBusinessAndFinance 
 
   return (
     <>
+      <Typography variant="h6">Certifications</Typography>
+
       {/* ========================= */}
       {/* ========================= */}
       {!HideHealthAndFitness &&

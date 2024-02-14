@@ -8,6 +8,7 @@ import BodyWrapper from "../components/body-wrapper";
 import Spacer from "../components/spacer";
 import ExperienceTimeline from "../components/experience-timeline";
 import ExperienceCertification from "../components/experience-certification";
+import ExperienceProficiency from "../components/experience-proficiency";
 
 const ResumeFilePDF = "http://localhost:3000/jayraj-resume.pdf"
 //const ResumeFileDocx = "http://localhost:3000/jayraj-resume.docx"
@@ -82,6 +83,7 @@ const Experience = () => {
         //HideHealthAndFitness={true}
         //HideBusinessAndFinance={true}
         />
+        <ExperienceProficiency />
       </BodyWrapper>
     </>
   );
