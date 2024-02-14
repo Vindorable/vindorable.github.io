@@ -78,11 +78,16 @@ const Experience = () => {
           </Stack>
         </Box>
 
+        <Spacer amount={10} />
         <ExperienceTimeline />
+
+        {/* <Spacer amount={10} /> */}
         <ExperienceCertification
-        //HideHealthAndFitness={true}
-        //HideBusinessAndFinance={true}
+          HideHealthAndFitness={true}
+          HideBusinessAndFinance={true}
         />
+
+        <Spacer amount={10} />
         <ExperienceProficiency />
       </BodyWrapper>
     </>
