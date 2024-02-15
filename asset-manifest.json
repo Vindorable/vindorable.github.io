@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.124bf41a.css",
-    "main.js": "/static/js/main.2acd514d.js",
+    "main.js": "/static/js/main.3156c919.js",
     "static/js/578.55457d37.chunk.js": "/static/js/578.55457d37.chunk.js",
-    "static/js/337.6420f7f3.chunk.js": "/static/js/337.6420f7f3.chunk.js",
+    "static/js/534.02a0e468.chunk.js": "/static/js/534.02a0e468.chunk.js",
     "static/js/230.a08ed94c.chunk.js": "/static/js/230.a08ed94c.chunk.js",
     "static/js/573.a2b8fc1d.chunk.js": "/static/js/573.a2b8fc1d.chunk.js",
     "static/js/796.5d66ff8a.chunk.js": "/static/js/796.5d66ff8a.chunk.js",
@@ -101,6 +101,7 @@
     "static/media/irritating-baby-arons.jpg": "/static/media/irritating-baby-arons.3da3f16a1887712e7712.jpg",
     "static/media/pic-12.jpg": "/static/media/pic-12.7dedcb052ec4e4e3d895.jpg",
     "static/media/pic-1.jpg": "/static/media/pic-1.519eda5da08cdfb90848.jpg",
+    "static/media/jay-r.jpg": "/static/media/jay-r.6071801758f778cbaf79.jpg",
     "static/media/[15]noir+dance+closeup.png": "/static/media/[15]noir+dance+closeup.a32fdddfed3bff340ffb.png",
     "static/media/pic-6.jpg": "/static/media/pic-6.a20e07c0118b045fe6e0.jpg",
     "static/media/pic-11.jpg": "/static/media/pic-11.d7df6369044cc075e1c1.jpg",
@@ -128,7 +129,6 @@
     "static/media/pic-2.jpeg": "/static/media/pic-2.ce53fc991a014312a8ee.jpeg",
     "static/media/pic-13.jpg": "/static/media/pic-13.5e2afdd5352ed2b1e0d4.jpg",
     "static/media/pic-22.jpg": "/static/media/pic-22.6f571990c1c759be27ce.jpg",
-    "static/media/jay-r.jpg": "/static/media/jay-r.6071801758f778cbaf79.jpg",
     "static/media/dst+booty+pack+mod+desc+art.png": "/static/media/dst+booty+pack+mod+desc+art.4f257efa283ac0ddf504.png",
     "static/media/booty-pack-mod-dp.jpg": "/static/media/booty-pack-mod-dp.e69b7b5cd30f5bca55ab.jpg",
     "static/media/article-dota-banner.jpg": "/static/media/article-dota-banner.ec6f6b366e00e2d9986a.jpg",
@@ -155,9 +155,9 @@
     "static/media/jgames-logo.png": "/static/media/jgames-logo.168cdd23051d0559bcb3.png",
     "index.html": "/index.html",
     "main.124bf41a.css.map": "/static/css/main.124bf41a.css.map",
-    "main.2acd514d.js.map": "/static/js/main.2acd514d.js.map",
+    "main.3156c919.js.map": "/static/js/main.3156c919.js.map",
     "578.55457d37.chunk.js.map": "/static/js/578.55457d37.chunk.js.map",
-    "337.6420f7f3.chunk.js.map": "/static/js/337.6420f7f3.chunk.js.map",
+    "534.02a0e468.chunk.js.map": "/static/js/534.02a0e468.chunk.js.map",
     "230.a08ed94c.chunk.js.map": "/static/js/230.a08ed94c.chunk.js.map",
     "573.a2b8fc1d.chunk.js.map": "/static/js/573.a2b8fc1d.chunk.js.map",
     "796.5d66ff8a.chunk.js.map": "/static/js/796.5d66ff8a.chunk.js.map",
@@ -192,6 +192,6 @@
   },
   "entrypoints": [
     "static/css/main.124bf41a.css",
-    "static/js/main.2acd514d.js"
+    "static/js/main.3156c919.js"
   ]
 }
