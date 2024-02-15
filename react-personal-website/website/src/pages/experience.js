@@ -9,6 +9,9 @@ import Spacer from "../components/spacer";
 import ExperienceTimeline from "../components/experience-timeline";
 import ExperienceCertification from "../components/experience-certification";
 import ExperienceProficiency from "../components/experience-proficiency";
+import ExperienceProfile from "../components/experience-profile";
+
+import { IsMobile } from "../functions/isMobile";
 
 const ResumeFilePDF = "http://localhost:3000/jayraj-resume.pdf"
 //const ResumeFileDocx = "http://localhost:3000/jayraj-resume.docx"
@@ -88,7 +91,18 @@ const Experience = () => {
         />
 
         <Spacer amount={10} />
-        <ExperienceProficiency />
+        <Stack direction={!IsMobile() ? "row" : "column"} justifyContent={"space-between"}>
+          <Stack spacing={1}>
+            <ExperienceProficiency />
+          </Stack>
+
+          {IsMobile() && <Spacer amount={20} />}
+
+          <Stack width={"150px"}>
+            <ExperienceProfile />
+            <Typography inline align="right" variant="caption"><b>Dream • Learn • Grow</b></Typography>
+          </Stack>
+        </Stack>
       </BodyWrapper>
     </>
   );
