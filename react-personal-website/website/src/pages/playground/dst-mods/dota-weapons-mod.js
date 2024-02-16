@@ -4,6 +4,8 @@ import { Sword } from "phosphor-react";
 
 import BodyWrapper from "../../../components/body-wrapper";
 import DSTModData from "../../../components/dst-mod-data";
+import Spacer from "../../../components/spacer";
+import Image from "../../../components/image/image";
 
 import DotaWeaponModBanner from "../../../assets/images/dst/03-dota-weapons-mod/dst+dota+weapon+mod+steam+dp.png";
 import DSTDotaWeaponData from "../../../components/dst-dota-weapon-data";
@@ -13,6 +15,7 @@ import KRAKENBRINGER from "../../../assets/images/dst/03-dota-weapons-mod/weapon
 import { imageList as KrakenBringerShowcase } from "../../../assets/images/dst/03-dota-weapons-mod/weapons/2-kraken-bringer/gallery-showcase";
 import WULDASTRON from "../../../assets/images/dst/03-dota-weapons-mod/weapons/3-wuldastron/weapon.png"
 import CURSEDWULDAST from "../../../assets/images/dst/03-dota-weapons-mod/weapons/4-cursed-wuldast/weapon.png"
+import HeaderStrip from "../../../assets/images/dst/header-strip.png";
 
 
 // ---------------------------------------------------------
@@ -21,6 +24,19 @@ const DotaWeaponsMod = () => {
   return (
     <>
       <BodyWrapper>
+        <div style={{ marginTop: "-22px" }}></div>
+
+        <Stack direction={"row"} alignItems={"center"} justifyContent={"space-between"}>
+          <Stack width={"30%"}>
+            <Image src={HeaderStrip} />
+          </Stack>
+          <Stack width={"70%"}>
+            <Typography inline align="right" variant="h4">DOTA2 X DST MOD</Typography>
+          </Stack>
+        </Stack>
+
+        <Spacer amount={10} />
+
         <DSTModData
           modBanner={DotaWeaponModBanner}
           modName={"DOTA2 X DON'T STARVE TOGETHER WEAPONS COLLECTION"}

@@ -1,11 +1,15 @@
 import React from "react";
+import { Stack, Typography } from "@mui/material";
 
 import BodyWrapper from "../../../components/body-wrapper";
 import DSTModData from "../../../components/dst-mod-data";
+import Spacer from "../../../components/spacer";
+import Image from "../../../components/image/image";
 
 import BDayCakeModBanner from "../../../assets/images/dst/02-booty-pack-mod/dst+booty+pack+mod+steam+dp.png";
 import BDayCakeDescArt from "../../../assets/images/dst/02-booty-pack-mod/dst+booty+pack+mod+desc+art.png";
 import { imageList as BootyPackModScreenshots } from "../../../assets/images/dst/02-booty-pack-mod/screenshots/booty-pack-mod-screenshots";
+import HeaderStrip from "../../../assets/images/dst/header-strip.png";
 
 
 // ---------------------------------------------------------
@@ -14,6 +18,19 @@ const BootyPackMod = () => {
   return (
     <>
       <BodyWrapper>
+        <div style={{ marginTop: "-22px" }}></div>
+
+        <Stack direction={"row"} alignItems={"center"} justifyContent={"space-between"}>
+          <Stack width={"30%"}>
+            <Image src={HeaderStrip} />
+          </Stack>
+          <Stack width={"70%"}>
+            <Typography inline align="right" variant="h4">BOOTY PACK MOD</Typography>
+          </Stack>
+        </Stack>
+
+        <Spacer amount={10} />
+
         <DSTModData
           modBanner={BDayCakeModBanner}
           modName={"BOOTY PACK"}
