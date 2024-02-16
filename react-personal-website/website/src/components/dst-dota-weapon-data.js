@@ -5,6 +5,8 @@ import { styled, useTheme } from "@mui/material/styles";
 import { NavTab, NavTabs } from "./nav-tab";
 import ImageGallery from "./image-gallery";
 
+import { IsMobile } from "../functions/isMobile";
+
 
 // ---------------------------------------------------------
 
@@ -32,8 +34,8 @@ const DSTDotaWeaponData = ({ weaponIcon, weaponName, dotaHeroName, releaseStatus
   return (
     <>
       <Stack
-        spacing={1.25}
-        p={1}
+        spacing={1.5}
+        p={2}
         sx={{
           borderRadius: "8px",
           border: 1,
@@ -49,12 +51,20 @@ const DSTDotaWeaponData = ({ weaponIcon, weaponName, dotaHeroName, releaseStatus
           />
           <Stack>
             <Typography variant="h6">{weaponName}</Typography>
-            <Typography variant="body2">{dotaHeroName}'s weapon.</Typography>
-            <Typography variant="body2">Status: {releaseStatus}</Typography>
+            <Stack px={1}>
+              <Typography variant="body2">{dotaHeroName}'s weapon.</Typography>
+              <Typography variant="body2">Status: {releaseStatus}</Typography>
+            </Stack>
           </Stack>
         </Stack>
 
-        <NavTabs value={value} onChange={handleChange}>
+        <NavTabs
+          value={value}
+          onChange={handleChange}
+          variant="scrollable"
+          scrollButtons={IsMobile() ? true : false}
+          allowScrollButtonsMobile={IsMobile() ? true : false}
+        >
           <NavTab label="Lore" />
           <NavTab label="Abilities" />
           <NavTab label="More Info" />
@@ -72,14 +82,16 @@ const DSTDotaWeaponData = ({ weaponIcon, weaponName, dotaHeroName, releaseStatus
 
         <Stack spacing={0.75}>
           <Typography variant="body2">Screenshots</Typography>
-          {screenshots ?
-            <ImageGallery
-              imageSet={screenshots}
-              aspectRatio={16 / 9}
-            />
-            :
-            <Typography variant="caption">&nbsp;&nbsp;&nbsp;...no screenshots taken...</Typography>
-          }
+          <Stack px={2}>
+            {screenshots ?
+              <ImageGallery
+                imageSet={screenshots}
+                aspectRatio={16 / 9}
+              />
+              :
+              <Typography variant="caption">...no screenshots taken...</Typography>
+            }
+          </Stack>
         </Stack>
       </Stack>
     </>

@@ -41,7 +41,7 @@ const DotaWeaponsMod = () => {
               <Sword size={26} mirrored />
             </Stack>
 
-            <Divider sx={{ borderBottomWidth: 5, visibility: "hidden" }} />
+            <Divider sx={{ borderBottomWidth: 10, visibility: "hidden" }} />
 
             <DSTDotaWeaponData
               weaponIcon={NIGHTMAREBLADE}
@@ -114,7 +114,7 @@ const DotaWeaponsMod = () => {
               screenshots={NightmareBladeShowcase}
             />
 
-            <Divider sx={{ visibility: "hidden", borderBottomWidth: 10 }} />
+            <Divider sx={{ visibility: "hidden", borderBottomWidth: 15 }} />
 
             <DSTDotaWeaponData
               weaponIcon={KRAKENBRINGER}
@@ -187,7 +187,7 @@ const DotaWeaponsMod = () => {
               screenshots={KrakenBringerShowcase}
             />
 
-            <Divider sx={{ visibility: "hidden", borderBottomWidth: 10 }} />
+            <Divider sx={{ visibility: "hidden", borderBottomWidth: 15 }} />
 
             <DSTDotaWeaponData
               weaponIcon={WULDASTRON}
@@ -252,7 +252,7 @@ const DotaWeaponsMod = () => {
               }
             />
 
-            <Divider sx={{ visibility: "hidden", borderBottomWidth: 10 }} />
+            <Divider sx={{ visibility: "hidden", borderBottomWidth: 15 }} />
 
             <DSTDotaWeaponData
               weaponIcon={CURSEDWULDAST}
