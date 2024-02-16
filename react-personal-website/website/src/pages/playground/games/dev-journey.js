@@ -8,10 +8,10 @@ import YoutubeEmbed from "../../../components/youtube-embed";
 
 import DSTBanner from "../../../assets/images/games/dev-journey/article-dst-banner.jpg";
 import DotaBanner from "../../../assets/images/games/dev-journey/article-dota-banner.jpg";
-import NIGHTMAREBLADE from "../../../assets/images/dst/03-dota-weapons-mod/NIGHTMARE BLADE.png"
-import KRAKENBRINGER from "../../../assets/images/dst/03-dota-weapons-mod/KRAKEN BRINGER.png"
-import WULDASTRON from "../../../assets/images/dst/03-dota-weapons-mod/WULDASTRON.png"
-import CURSEDWULDAST from "../../../assets/images/dst/03-dota-weapons-mod/CURSED WULDAST.png"
+import NIGHTMAREBLADE from "../../../assets/images/dst/03-dota-weapons-mod/weapons/1-nightmare-blade/weapon.png"
+import KRAKENBRINGER from "../../../assets/images/dst/03-dota-weapons-mod/weapons/2-kraken-bringer/weapon.png"
+import WULDASTRON from "../../../assets/images/dst/03-dota-weapons-mod/weapons/3-wuldastron/weapon.png"
+import CURSEDWULDAST from "../../../assets/images/dst/03-dota-weapons-mod/weapons/4-cursed-wuldast/weapon.png"
 import FEMArtwork from "../../../assets/images/games/frankrit-eats-meat/artwork.png";
 import SABLoadingScreen from "../../../assets/images/games/shark-a-boom/loading-screen-old-new.png";
 

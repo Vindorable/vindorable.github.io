@@ -1,5 +1,5 @@
 import React from "react";
-import { Divider, List, ListItem, Stack, Typography } from "@mui/material";
+import { Divider, Link, List, ListItem, Stack, Typography } from "@mui/material";
 import { Sword } from "phosphor-react";
 
 import BodyWrapper from "../../../components/body-wrapper";
@@ -7,10 +7,12 @@ import DSTModData from "../../../components/dst-mod-data";
 
 import DotaWeaponModBanner from "../../../assets/images/dst/03-dota-weapons-mod/dst+dota+weapon+mod+steam+dp.png";
 import DSTDotaWeaponData from "../../../components/dst-dota-weapon-data";
-import NIGHTMAREBLADE from "../../../assets/images/dst/03-dota-weapons-mod/NIGHTMARE BLADE.png"
-import KRAKENBRINGER from "../../../assets/images/dst/03-dota-weapons-mod/KRAKEN BRINGER.png"
-import WULDASTRON from "../../../assets/images/dst/03-dota-weapons-mod/WULDASTRON.png"
-import CURSEDWULDAST from "../../../assets/images/dst/03-dota-weapons-mod/CURSED WULDAST.png"
+import NIGHTMAREBLADE from "../../../assets/images/dst/03-dota-weapons-mod/weapons/1-nightmare-blade/weapon.png"
+import { imageList as NightmareBladeShowcase } from "../../../assets/images/dst/03-dota-weapons-mod/weapons/1-nightmare-blade/gallery-showcase";
+import KRAKENBRINGER from "../../../assets/images/dst/03-dota-weapons-mod/weapons/2-kraken-bringer/weapon.png"
+import { imageList as KrakenBringerShowcase } from "../../../assets/images/dst/03-dota-weapons-mod/weapons/2-kraken-bringer/gallery-showcase";
+import WULDASTRON from "../../../assets/images/dst/03-dota-weapons-mod/weapons/3-wuldastron/weapon.png"
+import CURSEDWULDAST from "../../../assets/images/dst/03-dota-weapons-mod/weapons/4-cursed-wuldast/weapon.png"
 
 
 // ---------------------------------------------------------
@@ -102,10 +104,14 @@ const DotaWeaponsMod = () => {
 
               disclaimer={
                 <Typography variant="body2">
-                  This weapon art is based of this. <br />
+                  This weapon art is based of&nbsp;
+                  <Link target="_blank" href="https://dota2.fandom.com/wiki/Nightmare_Blade" color="inherit">this</Link>.
+                  <br />
                   The weapon is adapted, modified, and/or build upon its original content to fit the Don't Starve Together's gameplay.
                 </Typography>
               }
+
+              screenshots={NightmareBladeShowcase}
             />
 
             <Divider sx={{ visibility: "hidden", borderBottomWidth: 10 }} />
@@ -171,10 +177,14 @@ const DotaWeaponsMod = () => {
 
               disclaimer={
                 <Typography variant="body2">
-                  This weapon art is based of this. <br />
+                  This weapon art is based of&nbsp;
+                  <Link target="_blank" href="https://dota2.fandom.com/wiki/Krakenbringer" color="inherit">this</Link>.
+                  <br />
                   The weapon is adapted, modified, and/or build upon its original content to fit the Don't Starve Together's gameplay.
                 </Typography>
               }
+
+              screenshots={KrakenBringerShowcase}
             />
 
             <Divider sx={{ visibility: "hidden", borderBottomWidth: 10 }} />
@@ -234,7 +244,9 @@ const DotaWeaponsMod = () => {
 
               disclaimer={
                 <Typography variant="body2">
-                  This weapon art is based of this. <br />
+                  This weapon art is based of&nbsp;
+                  <Link target="_blank" href="https://dota2.fandom.com/wiki/Wuldastron_the_Twin-Blade_of_Giants" color="inherit">this</Link>.
+                  <br />
                   The weapon is adapted, modified, and/or build upon its original content to fit the Don't Starve Together's gameplay.
                 </Typography>
               }
@@ -297,7 +309,9 @@ const DotaWeaponsMod = () => {
 
               disclaimer={
                 <Typography variant="body2">
-                  This weapon art is based of this. <br />
+                  This weapon art is based of&nbsp;
+                  <Link target="_blank" href="https://dota2.fandom.com/wiki/Wuldastron_the_Twin-Blade_of_Giants" color="inherit">this</Link>.
+                  <br />
                   The weapon is adapted, modified, and/or build upon its original content to fit the Don't Starve Together's gameplay.
                 </Typography>
               }

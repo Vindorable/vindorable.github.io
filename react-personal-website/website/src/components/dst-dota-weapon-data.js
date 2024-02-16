@@ -3,6 +3,7 @@ import { Box, Stack, Typography, } from "@mui/material";
 import { styled, useTheme } from "@mui/material/styles";
 
 import { NavTab, NavTabs } from "./nav-tab";
+import ImageGallery from "./image-gallery";
 
 
 // ---------------------------------------------------------
@@ -19,7 +20,7 @@ const BoxText = styled(Box)(({ theme }) => ({
 
 // ---------------------------------------------------------
 
-const DSTDotaWeaponData = ({ weaponIcon, weaponName, dotaHeroName, releaseStatus, lore, abilities, moreInfo, disclaimer }) => {
+const DSTDotaWeaponData = ({ weaponIcon, weaponName, dotaHeroName, releaseStatus, lore, abilities, moreInfo, disclaimer, screenshots }) => {
   const theme = useTheme();
 
   // Tabs.
@@ -68,6 +69,18 @@ const DSTDotaWeaponData = ({ weaponIcon, weaponName, dotaHeroName, releaseStatus
             case 3: return <BoxText>{disclaimer}</BoxText>
           }
         })()}
+
+        <Stack spacing={0.75}>
+          <Typography variant="body2">Screenshots</Typography>
+          {screenshots ?
+            <ImageGallery
+              imageSet={screenshots}
+              aspectRatio={16 / 9}
+            />
+            :
+            <Typography variant="caption">&nbsp;&nbsp;&nbsp;...no screenshots taken...</Typography>
+          }
+        </Stack>
       </Stack>
     </>
   );

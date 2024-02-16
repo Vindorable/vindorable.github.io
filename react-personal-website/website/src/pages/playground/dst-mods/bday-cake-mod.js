@@ -1,4 +1,5 @@
 import React from "react";
+import { Stack, Typography } from "@mui/material";
 
 import BodyWrapper from "../../../components/body-wrapper";
 import DSTModData from "../../../components/dst-mod-data";
@@ -37,6 +38,24 @@ const BDayCakeMod = () => {
             <br />
             To spawn the basic "HAPPY" and "BIRTHDAY" cakes that is provided, copy / paste this codes in the console:
 
+            <Stack py={2} px={3}>
+              <Typography variant="subtitle2" sx={{ fontFamily: 'monospace' }}>
+                c_give"cake_happy"
+                <br />
+                c_give"cake_birthday"
+              </Typography>
+            </Stack>
+
+            If you have any questions / comments / requests please leave a comment below.
+            <br /><br />
+            ...and give my well wishes to your special someone on my behalf on their birthday! Have fun!
+            <br /><br />
+            Side Note:
+            <br />
+            If you're interested in working on this mod with me in: <br />
+            1. Adding more variety of cakes. <br />
+            2. Adding cute addons on the cake (Eg: Cherries, strawberries, etc.) <br />
+            Please add me and we can make this happen!
           </>}
           steamWorkshopLink={"https://steamcommunity.com/sharedfiles/filedetails/?id=711913479"}
           changelogImgLink={"http://orig03.deviantart.net/ac8f/f/2016/182/e/c/workshop_version_detail___bday_cake_w_creator_kit_by_vindorable-da7sdsz.png"}
