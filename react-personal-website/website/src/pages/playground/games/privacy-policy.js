@@ -15,7 +15,7 @@ const PrivacyPolicy = () => {
           PRIVACY POLICY
         </Typography>
         <Typography variant="h6">
-          Effective Date: 17th April 2020
+          Effective Date: 05th July 2024
         </Typography>
 
         <Typography variant="body2">
@@ -36,24 +36,24 @@ const PrivacyPolicy = () => {
         <Spacer amount={30} />
 
         <Typography variant="h6">
-          Information Collection and Use
+          Entity Reference
         </Typography>
         <Typography variant="body2">
-          For a better experience, while using this Service, I may require you to provide me with certain personally identifiable information. The information that I request will be retained on your device and is not collected by me in any way.
-          <br /><br />
-          The app does use third-party services that may collect information used to identify you.
-          <br /><br />
-          &nbsp; &nbsp; ◆ &nbsp; Google Play Games Services<br />
-          &nbsp; &nbsp; ◆ &nbsp; Admob
+          J. Games Entertainment, referred to as "the company", is responsible for this Service. The developer, Jay Raj, operates under this company as a solo indie game dev.
         </Typography>
 
         <Spacer amount={30} />
 
         <Typography variant="h6">
-          Log Data
+          Information Collection and Use
         </Typography>
         <Typography variant="body2">
-          I want to inform you that whenever you use my Service, in the case of an error in the app, I collect data and information (through third-party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (IP) address, device name, operating system version, the configuration of the app when utilizing my Service, the time and date of your use of my Service, and other statistics.
+          For a better experience, while using this Service, I may require you to provide me with certain personally identifiable information, including but not limited to your name, email address, and usage data. This information is retained on your device and is also collected by me and/or third-party services.
+          <br /><br />
+          The app does use third-party services that may collect information used to identify you.
+          <br /><br />
+          &nbsp; &nbsp; ◆ &nbsp; Google Play Games Services<br />
+          &nbsp; &nbsp; ◆ &nbsp; Admob
         </Typography>
 
         <Spacer amount={30} />
@@ -84,6 +84,39 @@ const PrivacyPolicy = () => {
         <Spacer amount={30} />
 
         <Typography variant="h6">
+          Log Data
+        </Typography>
+        <Typography variant="body2">
+          I want to inform you that whenever you use my Service, in the case of an error in the app, I collect data and information (through third-party products) on your phone called Log Data. This Log Data may include information such as your device Internet Protocol (IP) address, device name, operating system version, the configuration of the app when utilizing my Service, the time and date of your use of my Service, and other statistics.
+        </Typography>
+
+        <Spacer amount={30} />
+
+        <Typography variant="h6">
+          Data Types and Sharing
+        </Typography>
+        <Typography variant="body2">
+          The app collects the following types of personal and sensitive user data:
+          <br /><br />
+          &nbsp; &nbsp; ◆ &nbsp; Personal identifiers (e.g., name, email address)<br />
+          &nbsp; &nbsp; ◆ &nbsp; Device information (e.g., IP address, device name, operating system version)<br />
+          &nbsp; &nbsp; ◆ &nbsp; Usage data (e.g., interaction with the app, time and date of use)
+          <br /><br />
+          This data is shared with third-party services such as Google Play Games Services and Admob for the purpose of providing and improving the Service.
+        </Typography>
+
+        <Spacer amount={30} />
+
+        <Typography variant="h6">
+          Data Retention and Deletion Policy
+        </Typography>
+        <Typography variant="body2">
+          I retain personal information for as long as necessary to provide the Service and fulfill the purposes described in this Privacy Policy. You may request deletion of your personal data by contacting me at the email provided below.
+        </Typography>
+
+        <Spacer amount={30} />
+
+        <Typography variant="h6">
           Links to Other Sites
         </Typography>
         <Typography variant="body2">
@@ -106,6 +139,19 @@ const PrivacyPolicy = () => {
         </Typography>
         <Typography variant="body2">
           I may update my Privacy Policy from time to time. Thus, you are advised to review this page periodically for any changes. I will notify you of any changes by posting the new Privacy Policy on this page. These changes are effective immediately after they are posted on this page.
+        </Typography>
+
+        <Spacer amount={30} />
+
+        <Typography variant="h6">
+          Point of Contact
+        </Typography>
+        <Typography variant="body2">
+          If you have any inquiries you may reach out to me at:
+          <br /><br />
+          &nbsp; &nbsp; Developer: Jay Raj
+          <br />
+          &nbsp; &nbsp; Email: j.raj93.designer@gmail.com
         </Typography>
       </BodyWrapper>
     </>
