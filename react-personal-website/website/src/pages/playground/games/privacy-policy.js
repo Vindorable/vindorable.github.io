@@ -112,6 +112,10 @@ const PrivacyPolicy = () => {
         </Typography>
         <Typography variant="body2">
           I retain personal information for as long as necessary to provide the Service and fulfill the purposes described in this Privacy Policy. You may request deletion of your personal data by contacting me at the email provided below.
+          <br /><br />
+          Want to delete your account and associated game data?
+          <br />
+          Please fill out the account deletion request form via the provided Google Form link: <a href="https://forms.gle/KA6Jrw3hLFuhJ1GR9" target="_blank">https://forms.gle/KA6Jrw3hLFuhJ1GR9</a>
         </Typography>
 
         <Spacer amount={30} />
