@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.124bf41a.css",
-    "main.js": "/static/js/main.d03f2b41.js",
+    "main.js": "/static/js/main.1a016073.js",
     "static/js/578.55457d37.chunk.js": "/static/js/578.55457d37.chunk.js",
-    "static/js/534.02a0e468.chunk.js": "/static/js/534.02a0e468.chunk.js",
+    "static/js/192.f266b5ad.chunk.js": "/static/js/192.f266b5ad.chunk.js",
     "static/js/230.a08ed94c.chunk.js": "/static/js/230.a08ed94c.chunk.js",
     "static/js/573.a2b8fc1d.chunk.js": "/static/js/573.a2b8fc1d.chunk.js",
     "static/js/796.5d66ff8a.chunk.js": "/static/js/796.5d66ff8a.chunk.js",
@@ -32,7 +32,7 @@
     "static/js/938.50ecf665.chunk.js": "/static/js/938.50ecf665.chunk.js",
     "static/js/67.d3eb20c4.chunk.js": "/static/js/67.d3eb20c4.chunk.js",
     "static/js/444.421514da.chunk.js": "/static/js/444.421514da.chunk.js",
-    "static/js/810.08a2bf77.chunk.js": "/static/js/810.08a2bf77.chunk.js",
+    "static/js/221.e31e1513.chunk.js": "/static/js/221.e31e1513.chunk.js",
     "static/js/388.08143d11.chunk.js": "/static/js/388.08143d11.chunk.js",
     "static/js/229.b1c5118c.chunk.js": "/static/js/229.b1c5118c.chunk.js",
     "static/media/pic-3.png": "/static/media/pic-3.bcc16ce74b6b8c809283.png",
@@ -129,6 +129,7 @@
     "static/media/pic-2.jpeg": "/static/media/pic-2.ce53fc991a014312a8ee.jpeg",
     "static/media/pic-13.jpg": "/static/media/pic-13.5e2afdd5352ed2b1e0d4.jpg",
     "static/media/pic-22.jpg": "/static/media/pic-22.6f571990c1c759be27ce.jpg",
+    "static/media/badge-ace-certified-personal-trainer.png": "/static/media/badge-ace-certified-personal-trainer.4bb527710dba9ae37c3e.png",
     "static/media/dst+booty+pack+mod+desc+art.png": "/static/media/dst+booty+pack+mod+desc+art.4f257efa283ac0ddf504.png",
     "static/media/booty-pack-mod-dp.jpg": "/static/media/booty-pack-mod-dp.e69b7b5cd30f5bca55ab.jpg",
     "static/media/article-dota-banner.jpg": "/static/media/article-dota-banner.ec6f6b366e00e2d9986a.jpg",
@@ -140,6 +141,7 @@
     "static/media/pic-1,p_swhhCcBb5A.jpg": "/static/media/pic-1,p_swhhCcBb5A.e8e60b4d4ed0c2497f3a.jpg",
     "static/media/pic-4,p_5r03c6Bbx6.jpg": "/static/media/pic-4,p_5r03c6Bbx6.eb853120db033acbd4c2.jpg",
     "static/media/gerard-n.png": "/static/media/gerard-n.fe3a9c94d3dbaf2f20fd.png",
+    "static/media/badge-aws-certified-cloud-practitioner.png": "/static/media/badge-aws-certified-cloud-practitioner.bbf7c33bccce66b0b5fd.png",
     "static/media/cameron-e.png": "/static/media/cameron-e.d7e967dad45c9329142b.png",
     "static/media/pic-5,p_5WJbsxBb7N.jpg": "/static/media/pic-5,p_5WJbsxBb7N.a12e307516865f706176.jpg",
     "static/media/aron-hatch-02.jpg": "/static/media/aron-hatch-02.f2e53cd075b49412f237.jpg",
@@ -152,9 +154,9 @@
     "static/media/jgames-logo.png": "/static/media/jgames-logo.168cdd23051d0559bcb3.png",
     "index.html": "/index.html",
     "main.124bf41a.css.map": "/static/css/main.124bf41a.css.map",
-    "main.d03f2b41.js.map": "/static/js/main.d03f2b41.js.map",
+    "main.1a016073.js.map": "/static/js/main.1a016073.js.map",
     "578.55457d37.chunk.js.map": "/static/js/578.55457d37.chunk.js.map",
-    "534.02a0e468.chunk.js.map": "/static/js/534.02a0e468.chunk.js.map",
+    "192.f266b5ad.chunk.js.map": "/static/js/192.f266b5ad.chunk.js.map",
     "230.a08ed94c.chunk.js.map": "/static/js/230.a08ed94c.chunk.js.map",
     "573.a2b8fc1d.chunk.js.map": "/static/js/573.a2b8fc1d.chunk.js.map",
     "796.5d66ff8a.chunk.js.map": "/static/js/796.5d66ff8a.chunk.js.map",
@@ -183,12 +185,12 @@
     "938.50ecf665.chunk.js.map": "/static/js/938.50ecf665.chunk.js.map",
     "67.d3eb20c4.chunk.js.map": "/static/js/67.d3eb20c4.chunk.js.map",
     "444.421514da.chunk.js.map": "/static/js/444.421514da.chunk.js.map",
-    "810.08a2bf77.chunk.js.map": "/static/js/810.08a2bf77.chunk.js.map",
+    "221.e31e1513.chunk.js.map": "/static/js/221.e31e1513.chunk.js.map",
     "388.08143d11.chunk.js.map": "/static/js/388.08143d11.chunk.js.map",
     "229.b1c5118c.chunk.js.map": "/static/js/229.b1c5118c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.124bf41a.css",
-    "static/js/main.d03f2b41.js"
+    "static/js/main.1a016073.js"
   ]
 }
