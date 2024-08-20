@@ -10,6 +10,7 @@ import ExperienceTimeline from "../components/experience-timeline";
 import ExperienceCertification from "../components/experience-certification";
 import ExperienceProficiency from "../components/experience-proficiency";
 import ExperienceProfile from "../components/experience-profile";
+import ExperienceBadges from "../components/experience-badges";
 
 import { IsMobile } from "../functions/isMobile";
 
@@ -89,6 +90,9 @@ const Experience = () => {
           HideHealthAndFitness={true}
           HideBusinessAndFinance={true}
         />
+
+        <Spacer amount={10} />
+        <ExperienceBadges />
 
         <Spacer amount={10} />
         <Stack direction={!IsMobile() ? "row" : "column"} justifyContent={"space-between"}>
