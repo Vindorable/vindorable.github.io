@@ -109,6 +109,37 @@ const DinoWithAGun = () => {
           height={56}
           url="https://play.google.com/store/apps/details?id=com.jgamesentertainment.dinowithagun"
         />
+
+        <Stack spacing={0.5}>
+          <Typography variant="h6">
+            Current version:
+          </Typography>
+          <Stack p={0.75}>
+            <Typography variant="body2">
+              Join my Discord and see the Releases channels. <br />
+              <a href="https://discord.gg/vhB5hkqpFU" target="_blank">https://discord.gg/vhB5hkqpFU</a>
+            </Typography>
+          </Stack>
+        </Stack>
+
+        <div id="changelog"></div>
+        <Stack spacing={0.5}>
+          <Typography variant="h6">Changelog</Typography>
+
+          <Stack p={0.75}>
+            <Typography variant="body2">
+              Dino official Wiki.gg - Changelog: <a href="https://dinowithagun.wiki.gg/wiki/Changelog" target="_blank">https://dinowithagun.wiki.gg/wiki/Changelog</a>
+              <br /><br />
+              Note: I will first post the changes of a new release on my Discord under the Releases channels. When time permits, I will update the wiki.
+            </Typography>
+          </Stack>
+        </Stack>
+
+        {/* ========================= */}
+        {/* ========================= */}
+        <Spacer amount={20} />
+        <Divider />
+        <Spacer amount={20} />
       </BodyWrapper>
     </>
   );

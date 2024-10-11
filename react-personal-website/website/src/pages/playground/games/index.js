@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Divider, Stack, Typography } from "@mui/material";
+import { Alert, Box, Button, Divider, Stack, Typography } from "@mui/material";
 import { DevToLogo, Gavel } from "@phosphor-icons/react";
 
 import BodyWrapper from "../../../components/body-wrapper";
@@ -57,21 +57,32 @@ const Games = () => {
         </Typography>
 
         <Stack direction={IsMobile() ? "column" : "row"} p={2} spacing={3}>
-          <Image
-            src={FrankritEatsMeat}
-            height={IsMobile() ? "100%" : "180px"}
-            url={PATH_WEBPAGE.playgroundSubpage.gameFrankritEatsMeat}
-          />
-          <Image
-            src={SharkABoom}
-            height={IsMobile() ? "100%" : "180px"}
-            url={PATH_WEBPAGE.playgroundSubpage.gameSharkABoom}
-          />
-          <Image
-            src={DinoWithAGun}
-            height={IsMobile() ? "100%" : "180px"}
-            url={PATH_WEBPAGE.playgroundSubpage.gameDinoWithAGun}
-          />
+          <Stack width={"100%"} spacing={2}>
+            <Image
+              src={FrankritEatsMeat}
+              height={IsMobile() ? "100%" : "180px"}
+              url={PATH_WEBPAGE.playgroundSubpage.gameFrankritEatsMeat}
+            />
+            <Alert severity="error">Taken down... :(</Alert>
+          </Stack>
+
+          <Stack width={"100%"} spacing={2}>
+            <Image
+              src={SharkABoom}
+              height={IsMobile() ? "100%" : "180px"}
+              url={PATH_WEBPAGE.playgroundSubpage.gameSharkABoom}
+            />
+            <Alert severity="error">Taken down... :(</Alert>
+          </Stack>
+
+          <Stack width={"100%"} spacing={2}>
+            <Image
+              src={DinoWithAGun}
+              height={IsMobile() ? "100%" : "180px"}
+              url={PATH_WEBPAGE.playgroundSubpage.gameDinoWithAGun}
+            />
+            <Alert severity="success">Live on Play Store!</Alert>
+          </Stack>
         </Stack>
       </BodyWrapper>
     </>

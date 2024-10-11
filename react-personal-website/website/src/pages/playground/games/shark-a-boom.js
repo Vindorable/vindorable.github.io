@@ -34,7 +34,9 @@ const Sharkaboom = () => {
       <Stack py={1} paddingLeft={2}>
         This game was the biggest project I did. Using the Unity Engine I made a game similar to Brawl Stars. It was too big of a project to handle all by myself from programming to artwork to marketing. It started as a fun ambitious project but after a year it became mentally draining. As a result, this game will not be worked on further but will serve as an MVP of my idea.
         <br /><br />
-        The game can still be downloaded from the Google Play Store as it is still on the Early Access Branch.
+        <s>The game can still be downloaded from the Google Play Store as it is still on the Early Access Branch.</s>
+        <br />
+        The game has been in early access for far too long and have been taken down by Google.
       </Stack>
     </>
   );
@@ -158,7 +160,7 @@ const Sharkaboom = () => {
           url="https://play.google.com/store/apps/details?id=com.jgamesentertainment.sharkpewpew"
         />
 
-        <Alert variant="outlined" severity="warning">
+        <Alert variant="outlined" severity="error">
           {importantMessage}
         </Alert>
 
@@ -212,7 +214,7 @@ const Sharkaboom = () => {
           <Typography variant="h5">FAQs</Typography>
         </Stack>
 
-        <Alert variant="outlined" severity="warning">
+        <Alert variant="outlined" severity="error">
           {importantMessage}
         </Alert>
 
