@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.124bf41a.css",
-    "main.js": "/static/js/main.7636fcfa.js",
+    "main.js": "/static/js/main.a84eb753.js",
     "static/js/578.55457d37.chunk.js": "/static/js/578.55457d37.chunk.js",
     "static/js/192.f266b5ad.chunk.js": "/static/js/192.f266b5ad.chunk.js",
     "static/js/230.a08ed94c.chunk.js": "/static/js/230.a08ed94c.chunk.js",
@@ -154,7 +154,7 @@
     "static/media/jgames-logo.png": "/static/media/jgames-logo.168cdd23051d0559bcb3.png",
     "index.html": "/index.html",
     "main.124bf41a.css.map": "/static/css/main.124bf41a.css.map",
-    "main.7636fcfa.js.map": "/static/js/main.7636fcfa.js.map",
+    "main.a84eb753.js.map": "/static/js/main.a84eb753.js.map",
     "578.55457d37.chunk.js.map": "/static/js/578.55457d37.chunk.js.map",
     "192.f266b5ad.chunk.js.map": "/static/js/192.f266b5ad.chunk.js.map",
     "230.a08ed94c.chunk.js.map": "/static/js/230.a08ed94c.chunk.js.map",
@@ -191,6 +191,6 @@
   },
   "entrypoints": [
     "static/css/main.124bf41a.css",
-    "static/js/main.7636fcfa.js"
+    "static/js/main.a84eb753.js"
   ]
 }
