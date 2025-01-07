@@ -50,6 +50,30 @@ const Page404 = Loadable(lazy(() => import("../pages/page-404")));
 
 
 // ---------------------------------------------------------
+// REDIRECT ROUTES SECTION
+
+const Redirect7d67b = () => {
+  // Usage: Amazon KDP QR code printed on the back of the Dino with a Gun weekday vibes notebooks.
+  // Reason:
+  //   I generate my QR code from https://mini-qr-code-generator.vercel.app/ (Github: https://github.com/lyqht/mini-qr).
+  //   But this QR code is static. Once printed I cannot change the link it directs to. I intend to send the link to my Dino with a Gun's Linktree.
+  //   What if Linktree is down? Whatever the reasons, Linktree is a business and anything can happen.
+  //   I decide to link the QR code to 'https://vindorable.github.io/#/redirect/7d67b' (Note: Not 'http://localhost:3000/#/redirect/7d67b'.).
+  //   This is also risky... Because Github Pages too may be down and what if they change their URL like previously from '.com' to now '.io'?
+  //   Safest is to link it to my domain. But I have to look into it.
+  //   Because even though 'Jayondope.com' is now free from Squarespace, idk if I want to change to a more professional sounding one.
+  //   So I just use the Github Pages link for now.
+  //   Instead of redirecting users directly to my Linktree when they scan the QR code which brings them here, I want to send them to Bit.ly.
+  //   This will provide me with tracking data. From Bit.ly I will send users to my Linktree.
+  //   Why am I not using Bit.y for QR generation? Because the design is limited unless I subscribe. Also, no capability to change the redirect link unless subscribed.
+  //   This method lets me customize a nice QR code design and also gives me the flexibility to change the redirect link if needed.
+  //   QR code image and SVG is in the same folder as this script.
+  window.location.href = "https://bit.ly/7d67b";
+  return null;
+};
+
+
+// ---------------------------------------------------------
 
 export default function Router() {
   return useRoutes([
@@ -82,6 +106,10 @@ export default function Router() {
         { path: "playground/photography", element: <Photography /> },
 
         { path: "work/trondao-stickers", element: <TronDAOStickers /> },
+
+        // Redirect routes.
+        // DO NOT CHANGE THIS. READ THE 'element:' INFO ABOVE IN THE 'REDIRECT ROUTES SECTION'.
+        { path: "redirect/7d67b", element: <Redirect7d67b /> },
 
         { path: "404", element: <Page404 /> },
         { path: "*", element: <Navigate to="/404" replace /> },

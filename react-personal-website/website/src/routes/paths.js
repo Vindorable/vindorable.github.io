@@ -42,4 +42,9 @@ export const PATH_WEBPAGE = {
   workSubpage: {
     tronDAOStickers: path(`${ROOTS_WEBPAGE}work/`, "trondao-stickers"),
   },
+  // Redirect routes.
+  // DO NOT CHANGE THIS. READ THE 'REDIRECT ROUTES SECTION' IN THE 'ROUTES > INDEX.JS' SCRIPT.
+  redirect: {
+    path7d67b: path(ROOTS_WEBPAGE, "redirect/7d67b"),
+  },
 };
