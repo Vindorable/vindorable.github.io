@@ -4,6 +4,7 @@ import { Stack } from "@mui/material";
 
 import Navbar from "../components/navbar";
 import Navbar02 from "../components/navbar-02";
+import Footer from "../components/footer";
 
 
 // ---------------------------------------------------------
@@ -11,9 +12,10 @@ import Navbar02 from "../components/navbar-02";
 const MainLayout = () => {
   return (
     <>
-      <Stack height={"100%"} maxHeight={"100dvh"} width={"auto"}>
+      <Stack height={"100%"} minHeight={"100dvh"} maxHeight={"100dvh"} width={"auto"}>
         <Navbar02 />
         <Outlet />
+        <Footer />
       </Stack>
     </>
   );
