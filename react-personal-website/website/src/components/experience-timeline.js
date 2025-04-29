@@ -23,7 +23,14 @@ const ExperienceTimeline = () => {
 
   const timelineData = [
     {
-      period: "Aug 2023-Present",
+      period: "May 2024-Present",
+      title: "REACT-PYTHON DEVELOPER (AWS) - PROJECT STAFF",
+      organization: "Republic Polytechnic",
+      icon: <Code size={22} />,
+      isEducation: false
+    },
+    {
+      period: "Aug 2023-May 2024",
       title: "FULL STACK DEVELOPER (TRAINEESHIP)",
       organization: "Aires Applied Technology",
       icon: <Code size={22} />,
