@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.124bf41a.css",
-    "main.js": "/static/js/main.a84eb753.js",
+    "main.js": "/static/js/main.20da2b4c.js",
     "static/js/578.55457d37.chunk.js": "/static/js/578.55457d37.chunk.js",
-    "static/js/192.f266b5ad.chunk.js": "/static/js/192.f266b5ad.chunk.js",
+    "static/js/192.7e4d5870.chunk.js": "/static/js/192.7e4d5870.chunk.js",
     "static/js/230.a08ed94c.chunk.js": "/static/js/230.a08ed94c.chunk.js",
     "static/js/573.a2b8fc1d.chunk.js": "/static/js/573.a2b8fc1d.chunk.js",
     "static/js/796.5d66ff8a.chunk.js": "/static/js/796.5d66ff8a.chunk.js",
@@ -12,11 +12,11 @@
     "static/js/121.5ab6fb6c.chunk.js": "/static/js/121.5ab6fb6c.chunk.js",
     "static/js/855.82059abf.chunk.js": "/static/js/855.82059abf.chunk.js",
     "static/js/960.afa95ad4.chunk.js": "/static/js/960.afa95ad4.chunk.js",
-    "static/js/722.33e2d34d.chunk.js": "/static/js/722.33e2d34d.chunk.js",
+    "static/js/722.75458976.chunk.js": "/static/js/722.75458976.chunk.js",
     "static/js/250.d5bc2fc1.chunk.js": "/static/js/250.d5bc2fc1.chunk.js",
     "static/js/368.6a401f56.chunk.js": "/static/js/368.6a401f56.chunk.js",
     "static/js/965.e1381ac7.chunk.js": "/static/js/965.e1381ac7.chunk.js",
-    "static/js/778.4a1bac3b.chunk.js": "/static/js/778.4a1bac3b.chunk.js",
+    "static/js/967.194c4ed2.chunk.js": "/static/js/967.194c4ed2.chunk.js",
     "static/js/894.bf0dce40.chunk.js": "/static/js/894.bf0dce40.chunk.js",
     "static/js/893.0629eea0.chunk.js": "/static/js/893.0629eea0.chunk.js",
     "static/js/859.3395a004.chunk.js": "/static/js/859.3395a004.chunk.js",
@@ -152,11 +152,13 @@
     "static/media/logo.png": "/static/media/logo.b52c1cf600e7d0bb5b4d.png",
     "static/media/jay-name.png": "/static/media/jay-name.25a07c1b15b64c07c5ea.png",
     "static/media/jgames-logo.png": "/static/media/jgames-logo.168cdd23051d0559bcb3.png",
+    "static/media/apple-app-store-download-button.png": "/static/media/apple-app-store-download-button.3ed6cb905bcc406d88fb.png",
+    "static/media/google-play-store-download-button.png": "/static/media/google-play-store-download-button.45234e602fae9ca9b0b8.png",
     "index.html": "/index.html",
     "main.124bf41a.css.map": "/static/css/main.124bf41a.css.map",
-    "main.a84eb753.js.map": "/static/js/main.a84eb753.js.map",
+    "main.20da2b4c.js.map": "/static/js/main.20da2b4c.js.map",
     "578.55457d37.chunk.js.map": "/static/js/578.55457d37.chunk.js.map",
-    "192.f266b5ad.chunk.js.map": "/static/js/192.f266b5ad.chunk.js.map",
+    "192.7e4d5870.chunk.js.map": "/static/js/192.7e4d5870.chunk.js.map",
     "230.a08ed94c.chunk.js.map": "/static/js/230.a08ed94c.chunk.js.map",
     "573.a2b8fc1d.chunk.js.map": "/static/js/573.a2b8fc1d.chunk.js.map",
     "796.5d66ff8a.chunk.js.map": "/static/js/796.5d66ff8a.chunk.js.map",
@@ -165,11 +167,11 @@
     "121.5ab6fb6c.chunk.js.map": "/static/js/121.5ab6fb6c.chunk.js.map",
     "855.82059abf.chunk.js.map": "/static/js/855.82059abf.chunk.js.map",
     "960.afa95ad4.chunk.js.map": "/static/js/960.afa95ad4.chunk.js.map",
-    "722.33e2d34d.chunk.js.map": "/static/js/722.33e2d34d.chunk.js.map",
+    "722.75458976.chunk.js.map": "/static/js/722.75458976.chunk.js.map",
     "250.d5bc2fc1.chunk.js.map": "/static/js/250.d5bc2fc1.chunk.js.map",
     "368.6a401f56.chunk.js.map": "/static/js/368.6a401f56.chunk.js.map",
     "965.e1381ac7.chunk.js.map": "/static/js/965.e1381ac7.chunk.js.map",
-    "778.4a1bac3b.chunk.js.map": "/static/js/778.4a1bac3b.chunk.js.map",
+    "967.194c4ed2.chunk.js.map": "/static/js/967.194c4ed2.chunk.js.map",
     "894.bf0dce40.chunk.js.map": "/static/js/894.bf0dce40.chunk.js.map",
     "893.0629eea0.chunk.js.map": "/static/js/893.0629eea0.chunk.js.map",
     "859.3395a004.chunk.js.map": "/static/js/859.3395a004.chunk.js.map",
@@ -191,6 +193,6 @@
   },
   "entrypoints": [
     "static/css/main.124bf41a.css",
-    "static/js/main.a84eb753.js"
+    "static/js/main.20da2b4c.js"
   ]
 }
