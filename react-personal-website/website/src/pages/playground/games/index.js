@@ -81,7 +81,7 @@ const Games = () => {
               height={IsMobile() ? "100%" : "180px"}
               url={PATH_WEBPAGE.playgroundSubpage.gameDinoWithAGun}
             />
-            <Alert severity="success">Live on Play Store!</Alert>
+            <Alert severity="success">Live on Play Store & App Store!</Alert>
           </Stack>
         </Stack>
       </BodyWrapper>

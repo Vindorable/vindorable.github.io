@@ -11,6 +11,8 @@ import FloatingContentMenu from "../../../components/floating-content-menu";
 
 import AppIcon from "../../../assets/images/games/dino-with-a-gun/game-app-icon.png";
 import PlayStoreDLButton from "../../../assets/images/games/general/playstore-download-button.png";
+import PlayStoreDLButtonV2 from "../../../assets/images/games/general/google-play-store-download-button.png";
+import AppStoreDLButton from "../../../assets/images/games/general/apple-app-store-download-button.png";
 import JayProfilePic from "../../../assets/images/games/dino-with-a-gun/devs/jay-r.jpg";
 import { imageList as GameShowcase } from "../../../assets/images/games/dino-with-a-gun/gallery-showcase";
 import Artwork from "../../../assets/images/games/dino-with-a-gun/artwork.png";
@@ -104,11 +106,18 @@ const DinoWithAGun = () => {
           src={AppIcon}
           height={180}
         />
-        <Image
-          src={PlayStoreDLButton}
-          height={56}
-          url="https://play.google.com/store/apps/details?id=com.jgamesentertainment.dinowithagun"
-        />
+        <Stack spacing={-0.5}>
+          <Image
+            src={PlayStoreDLButtonV2}
+            height={70}
+            url="https://play.google.com/store/apps/details?id=com.jgamesentertainment.dinowithagun"
+          />
+          <Image
+            src={AppStoreDLButton}
+            height={70}
+            url="https://apps.apple.com/us/app/dino-with-a-gun/id6736557518"
+          />
+        </Stack>
 
         <Stack spacing={0.5}>
           <Typography variant="h6">
