@@ -1,9 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.124bf41a.css",
-    "main.js": "/static/js/main.20da2b4c.js",
+    "main.js": "/static/js/main.3ce18d3f.js",
     "static/js/578.55457d37.chunk.js": "/static/js/578.55457d37.chunk.js",
-    "static/js/192.7e4d5870.chunk.js": "/static/js/192.7e4d5870.chunk.js",
+    "static/js/192.9b4379af.chunk.js": "/static/js/192.9b4379af.chunk.js",
     "static/js/230.a08ed94c.chunk.js": "/static/js/230.a08ed94c.chunk.js",
     "static/js/573.a2b8fc1d.chunk.js": "/static/js/573.a2b8fc1d.chunk.js",
     "static/js/796.5d66ff8a.chunk.js": "/static/js/796.5d66ff8a.chunk.js",
@@ -156,9 +156,9 @@
     "static/media/google-play-store-download-button.png": "/static/media/google-play-store-download-button.45234e602fae9ca9b0b8.png",
     "index.html": "/index.html",
     "main.124bf41a.css.map": "/static/css/main.124bf41a.css.map",
-    "main.20da2b4c.js.map": "/static/js/main.20da2b4c.js.map",
+    "main.3ce18d3f.js.map": "/static/js/main.3ce18d3f.js.map",
     "578.55457d37.chunk.js.map": "/static/js/578.55457d37.chunk.js.map",
-    "192.7e4d5870.chunk.js.map": "/static/js/192.7e4d5870.chunk.js.map",
+    "192.9b4379af.chunk.js.map": "/static/js/192.9b4379af.chunk.js.map",
     "230.a08ed94c.chunk.js.map": "/static/js/230.a08ed94c.chunk.js.map",
     "573.a2b8fc1d.chunk.js.map": "/static/js/573.a2b8fc1d.chunk.js.map",
     "796.5d66ff8a.chunk.js.map": "/static/js/796.5d66ff8a.chunk.js.map",
@@ -193,6 +193,6 @@
   },
   "entrypoints": [
     "static/css/main.124bf41a.css",
-    "static/js/main.20da2b4c.js"
+    "static/js/main.3ce18d3f.js"
   ]
 }
