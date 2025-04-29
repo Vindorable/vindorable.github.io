@@ -21,6 +21,65 @@ import { IsMobile } from "../functions/isMobile";
 const ExperienceTimeline = () => {
   const theme = useTheme();
 
+  const timelineData = [
+    {
+      period: "Aug 2023-Present",
+      title: "FULL STACK DEVELOPER (TRAINEESHIP)",
+      organization: "Aires Applied Technology",
+      icon: <Code size={22} />,
+      isEducation: false
+    },
+    {
+      period: "Dec 2022-Aug 2023",
+      title: "SOLO GAME DEVELOPER",
+      organization: "J. Games Entertainment",
+      icon: <GameController size={22} />,
+      isEducation: false
+    },
+    {
+      period: "Nov 2021-Dec 2022",
+      title: "CREATIVE LEAD",
+      organization: "Tron Dao (WINk Web3.0 GameFi)",
+      icon: <EyedropperSample size={22} />,
+      isEducation: false
+    },
+    {
+      period: "Apr 2021-Nov 2021",
+      title: "GAME DESIGNER",
+      organization: "Game Reign Pte Ltd",
+      icon: <GameController size={22} />,
+      isEducation: false
+    },
+    {
+      period: "2018-2021",
+      title: "VFX SUPERVISOR - MOGRAPH ARTIST",
+      organization: "Monochromatic Pictures",
+      icon: <MagicWand size={22} />,
+      isEducation: false
+    },
+    {
+      period: "2013-2015",
+      title: "NATIONAL SERVICE",
+      organization: "RSAF Tengah Airbase",
+      icon: <MedalMilitary size={22} />,
+      isEducation: false
+    },
+    {
+      period: "2010-2013",
+      title: "DIPLOMA IN VISUAL EFFECT AND MOTION GRAPHICS",
+      organization: "Singapore Polytecnic",
+      icon: <Backpack size={22} />,
+      isEducation: true
+    },
+    {
+      period: "2006-2009",
+      title: "\"O\" LEVELS",
+      organization: "Jurong Secondary School",
+      icon: <Backpack size={22} />,
+      isEducation: true
+    }
+  ]
+
   return (
     <>
       <Typography variant="h6">Education - Career Timeline</Typography>
@@ -34,205 +93,33 @@ const ExperienceTimeline = () => {
           } : {},
         }}
       >
-        <TimelineItem>
-          <TimelineSeparator>
-            <TimelineDot sx={{ backgroundColor: theme.palette.background.paper }}>
-              <Code size={22} />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            <Paper>
-              <Stack p={2} spacing={1}>
-                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
-                  <CalendarBlank size={16} />
-                  <Typography variant="caption">Aug 2023-Present</Typography>
-                </Stack>
+        {timelineData.map((item, index) => (
+          <TimelineItem key={index}>
+            <TimelineSeparator>
+              <TimelineDot sx={{ backgroundColor: theme.palette.background.paper }}>
+                {item.icon}
+              </TimelineDot>
+              {index < timelineData.length - 1 && <TimelineConnector />}
+            </TimelineSeparator>
+            <TimelineContent>
+              <Paper>
+                <Stack p={2} spacing={1}>
+                  <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
+                    <CalendarBlank size={16} />
+                    <Typography variant="caption">{item.period}</Typography>
+                  </Stack>
 
-                <Typography inline align="left" variant="body2"><b>FULL STACK DEVELOPER (TRAINEESHIP)</b></Typography>
+                  <Typography inline align="left" variant="body2"><b>{item.title}</b></Typography>
 
-                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
-                  <Buildings size={22} />
-                  <Typography variant="body2">Aires Applied Technology</Typography>
+                  <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
+                    {item.isEducation ? <GraduationCap size={22} /> : <Buildings size={22} />}
+                    <Typography variant="body2">{item.organization}</Typography>
+                  </Stack>
                 </Stack>
-              </Stack>
-            </Paper>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineSeparator>
-            <TimelineDot sx={{ backgroundColor: theme.palette.background.paper }}>
-              <GameController size={22} />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            <Paper>
-              <Stack p={2} spacing={1}>
-                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
-                  <CalendarBlank size={16} />
-                  <Typography variant="caption">Dec 2022-Aug 2023</Typography>
-                </Stack>
-
-                <Typography inline align="left" variant="body2"><b>SOLO GAME DEVELOPER</b></Typography>
-
-                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
-                  <Buildings size={22} />
-                  <Typography variant="body2">J. Games Entertainment</Typography>
-                </Stack>
-              </Stack>
-            </Paper>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineSeparator>
-            <TimelineDot sx={{ backgroundColor: theme.palette.background.paper }}>
-              <EyedropperSample size={22} />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            <Paper>
-              <Stack p={2} spacing={1}>
-                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
-                  <CalendarBlank size={16} />
-                  <Typography variant="caption">Nov 2021-Dec 2022</Typography>
-                </Stack>
-
-                <Typography inline align="left" variant="body2"><b>CREATIVE LEAD</b></Typography>
-
-                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
-                  <Buildings size={22} />
-                  <Typography variant="body2">Tron Dao (WINk Web3.0 GameFi)</Typography>
-                </Stack>
-              </Stack>
-            </Paper>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineSeparator>
-            <TimelineDot sx={{ backgroundColor: theme.palette.background.paper }}>
-              <GameController size={22} />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            <Paper>
-              <Stack p={2} spacing={1}>
-                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
-                  <CalendarBlank size={16} />
-                  <Typography variant="caption">Apr 2021-Nov 2021</Typography>
-                </Stack>
-
-                <Typography inline align="left" variant="body2"><b>GAME DESIGNER</b></Typography>
-
-                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
-                  <Buildings size={22} />
-                  <Typography variant="body2">Game Reign Pte Ltd</Typography>
-                </Stack>
-              </Stack>
-            </Paper>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineSeparator>
-            <TimelineDot sx={{ backgroundColor: theme.palette.background.paper }}>
-              <MagicWand size={22} />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            <Paper>
-              <Stack p={2} spacing={1}>
-                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
-                  <CalendarBlank size={16} />
-                  <Typography variant="caption">2018-2021</Typography>
-                </Stack>
-
-                <Typography inline align="left" variant="body2"><b>VFX SUPERVISOR - MOGRAPH ARTIST</b></Typography>
-
-                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
-                  <Buildings size={22} />
-                  <Typography variant="body2">Monochromatic Pictures</Typography>
-                </Stack>
-              </Stack>
-            </Paper>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineSeparator>
-            <TimelineDot sx={{ backgroundColor: theme.palette.background.paper }}>
-              <MedalMilitary size={22} />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            <Paper>
-              <Stack p={2} spacing={1}>
-                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
-                  <CalendarBlank size={16} />
-                  <Typography variant="caption">2013-2015</Typography>
-                </Stack>
-
-                <Typography inline align="left" variant="body2"><b>NATIONAL SERVICE</b></Typography>
-
-                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
-                  <Buildings size={22} />
-                  <Typography variant="body2">RSAF Tengah Airbase</Typography>
-                </Stack>
-              </Stack>
-            </Paper>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineSeparator>
-            <TimelineDot sx={{ backgroundColor: theme.palette.background.paper }}>
-              <Backpack size={22} />
-            </TimelineDot>
-            <TimelineConnector />
-          </TimelineSeparator>
-          <TimelineContent>
-            <Paper>
-              <Stack p={2} spacing={1}>
-                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
-                  <CalendarBlank size={16} />
-                  <Typography variant="caption">2010-2013</Typography>
-                </Stack>
-
-                <Typography inline align="left" variant="body2"><b>DIPLOMA IN VISUAL EFFECT AND MOTION GRAPHICS</b></Typography>
-
-                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
-                  <GraduationCap size={22} />
-                  <Typography variant="body2">Singapore Polytecnic</Typography>
-                </Stack>
-              </Stack>
-            </Paper>
-          </TimelineContent>
-        </TimelineItem>
-        <TimelineItem>
-          <TimelineSeparator>
-            <TimelineDot sx={{ backgroundColor: theme.palette.background.paper }}>
-              <Backpack size={22} />
-            </TimelineDot>
-          </TimelineSeparator>
-          <TimelineContent>
-            <Paper>
-              <Stack p={2} spacing={1}>
-                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
-                  <CalendarBlank size={16} />
-                  <Typography variant="caption">2006-2009</Typography>
-                </Stack>
-
-                <Typography inline align="left" variant="body2"><b>"O" LEVELS</b></Typography>
-
-                <Stack direction={"row"} alignItems={"center"} justifyContent={"start"} spacing={0.75}>
-                  <GraduationCap size={22} />
-                  <Typography variant="body2">Jurong Secondary School</Typography>
-                </Stack>
-              </Stack>
-            </Paper>
-          </TimelineContent>
-        </TimelineItem>
+              </Paper>
+            </TimelineContent>
+          </TimelineItem>
+        ))}
       </Timeline>
     </>
   );
