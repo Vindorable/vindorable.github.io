@@ -15,7 +15,7 @@ const MainLayout = () => {
       <Stack height={"100%"} minHeight={"100dvh"} maxHeight={"100dvh"} width={"auto"}>
         <Navbar02 />
         <Outlet />
-        <Footer />
+        {/* <Footer /> */}
       </Stack>
     </>
   );
