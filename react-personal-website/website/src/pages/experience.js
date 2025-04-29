@@ -14,7 +14,7 @@ import ExperienceBadges from "../components/experience-badges";
 
 import { IsMobile } from "../functions/isMobile";
 
-const ResumeFilePDF = "http://localhost:3000/jayraj-resume.pdf"
+const ResumeFilePDF = process.env.PUBLIC_URL + "/jayraj-resume.pdf"
 //const ResumeFileDocx = "http://localhost:3000/jayraj-resume.docx"
 
 
